@@ -83,7 +83,7 @@
                 </div>
 
                 <div class="links">
-                    <a href="https://exploremart.herokuapp.com/">Coming Soon</a>
+                    <a href="https://exploremart.herokuapp.com/"><b>Coming Soon </b></a>
 
                 </div>
             </div>
