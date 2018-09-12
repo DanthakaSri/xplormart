@@ -1,5 +1,7 @@
 @extends('layouts.baseApp')
 
+@section('title','Home')
+
 @section('content')
     <!-- BANNER SECTION -->
     <section class="clearfix homeBanner" style="background-image: url(img/banner/banner1.jpg);">
