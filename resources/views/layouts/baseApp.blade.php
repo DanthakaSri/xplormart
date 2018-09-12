@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{ config('app.name', 'Laravel') }} | @yield('title')</title>
+    <title>@yield('title') | {{ config('app.name', 'Laravel') }}</title>
 
     <!-- PLUGINS CSS STYLE -->
    {{-- <link href="plugins/jquery-ui/jquery-ui.min.css" rel="stylesheet">
