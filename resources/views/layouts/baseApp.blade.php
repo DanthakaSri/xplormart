@@ -9,23 +9,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>@yield('title') | {{ config('app.name', 'Laravel') }}</title>
 
-    <!-- PLUGINS CSS STYLE -->
-   {{-- <link href="plugins/jquery-ui/jquery-ui.min.css" rel="stylesheet">
-    <link href="plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    <link href="plugins/listtyicons/style.css" rel="stylesheet">
-    <link href="plugins/bootstrapthumbnail/bootstrap-thumbnail.css" rel="stylesheet">
-    <link href="plugins/datepicker/datepicker.min.css" rel="stylesheet">
-    <link href="plugins/selectbox/select_option1.css" rel="stylesheet">
-    <link href="plugins/owl-carousel/owl.carousel.min.css" rel="stylesheet">
-    <link href="plugins/slick/slick.css" rel="stylesheet">
-    <link href="plugins/slick/slick-theme.css" rel="stylesheet">
-    <link href="plugins/fancybox/jquery.fancybox.min.css" rel="stylesheet"/>
-    <link href="plugins/isotope/isotope.min.css" rel="stylesheet">
-    <link href="plugins/map/css/map.css" rel="stylesheet">
-    <link href="plugins/rateyo/jquery.rateyo.min.css" rel="stylesheet">
-    <link href="plugins/animate/animate.css" rel="stylesheet">
---}}
     @include('includes.header')
 
     <!-- GOOGLE FONT -->

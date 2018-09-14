@@ -4,13 +4,13 @@
 
 @section('content')
     <!-- BANNER SECTION -->
-    <section class="clearfix homeBanner" style="background-image: url(img/banner/banner1.jpg);">
+    <section class="clearfix homeBanner" style="background-image: url(img/banner/banner1.png);">
         <div class="container">
             <div class="row">
                 <div class="col-xs-12">
                     <div class="banerInfo">
-                        <h1>Explore. Discover. Share</h1>
-                        <p>Listty helps to find out great things arround you</p>
+                        <h1>Xplore Your Local Market</h1>
+                        <p>XploreMart helps to find out local markets arround you</p>
                         <form class="form-inline" action="listing-sidebar-map-left.html" method="">
                             <div class="form-group">
                                 <div class="input-group">
@@ -61,7 +61,7 @@
                     <a href="category-grid.html" class="interestContent">
 					<span>
 						<i class="icon-listy icon-martini"></i>
-						Nightclubs
+						Fairs
 					</span>
                     </a>
                 </div>
@@ -70,38 +70,6 @@
 					<span>
 						<i class="icon-listy icon-car-1"></i>
 						Auto Motive
-					</span>
-                    </a>
-                </div>
-                <div class="col-sm-3 col-xs-12">
-                    <a href="category-grid-right.html" class="interestContent">
-					<span>
-						<i class="icon-listy icon-castle"></i>
-						Museums
-					</span>
-                    </a>
-                </div>
-                <div class="col-sm-3 col-xs-12">
-                    <a href="category-list-right.html" class="interestContent">
-					<span>
-						<i class="icon-listy icon-television"></i>
-						Movie Theaters
-					</span>
-                    </a>
-                </div>
-                <div class="col-sm-3 col-xs-12">
-                    <a href="category-grid-full.html" class="interestContent">
-					<span>
-						<i class="icon-listy icon-mall-1"></i>
-						Shopping
-					</span>
-                    </a>
-                </div>
-                <div class="col-sm-3 col-xs-12">
-                    <a href="all-business.html" class="interestContent">
-					<span>
-						<i class="icon-listy icon-more"></i>
-						View All
 					</span>
                     </a>
                 </div>
@@ -276,7 +244,7 @@
 
 
     <!-- COUNT UP SECTION -->
-    <section class="clearfix countUpSection">
+   {{-- <section class="clearfix countUpSection">
         <div class="container">
             <div class="page-header text-center">
                 <h2>Why Listy?</h2>
@@ -315,10 +283,10 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section>--}}
 
     <!-- WORKS SECTION -->
-    <section class="clearfix worksArea">
+   {{-- <section class="clearfix worksArea">
         <div class="container">
             <div class="page-header text-center">
                 <h2>How it Works? <small>This are some of most popular listing</small></h2>
@@ -358,10 +326,10 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section>--}}
 
     <!-- ARTICLES SECTION-->
-    <section class="clearfix articlesArea">
+    {{--<section class="clearfix articlesArea">
         <div class="container">
             <div class="page-header text-center">
                 <h2>Articles <small>Brouse latest tips from our blog </small></h2>
@@ -400,10 +368,10 @@
             </div>
         </div>
     </section>
-
+--}}
 
     <!-- CALL TO ACTION SECTION -->
-    <section class="clearfix callAction">
+    {{--<section class="clearfix callAction">
         <div class="container">
             <div class="row">
                 <div class="col-md-10 col-sm-9 col-xs-12">
@@ -418,6 +386,6 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section>--}}
 
 @endsection
