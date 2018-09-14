@@ -3397,7 +3397,7 @@ footer {
 }
 
 .footerText .footerLogo {
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   display: block;
 }
 
@@ -6443,10 +6443,10 @@ figure:hover .overlay {
 }
 
 /*
-.checkbox input[type="checkbox"]:focus + label::before, 
+.checkbox input[type="checkbox"]:focus + label::before,
 .checkbox input[type="radio"]:focus + label::before,
-input[type=file]:focus, 
-input[type=checkbox]:focus, 
+input[type=file]:focus,
+input[type=checkbox]:focus,
 input[type=radio]:focus,
 .radio input[type="radio"]:focus + label::before{
   outline: 0;

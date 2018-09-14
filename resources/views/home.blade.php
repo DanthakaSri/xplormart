@@ -104,7 +104,7 @@
                                 <div class="col-md-4 col-sm-6 col-xs-12">
                                     <div class="thingsBox">
                                         <div class="thingsImage">
-                                            <img src="img/things/things-4.jpg" alt="Image things">
+                                            <img src="img/things/bk.png" alt="Image things">
                                             <div class="thingsMask">
                                                 <ul class="list-inline rating">
                                                     <li><i class="fa fa-star" aria-hidden="true"></i></li>
@@ -113,8 +113,8 @@
                                                     <li><i class="fa fa-star" aria-hidden="true"></i></li>
                                                     <li><i class="fa fa-star" aria-hidden="true"></i></li>
                                                 </ul>
-                                                <a href="listing-details-left.html"><h2>Think Coffee <i class="fa fa-check-circle" aria-hidden="true"></i></h2></a>
-                                                <p>215 Terry Lane, New York</p>
+                                                <a href="listing-details-left.html"><h2>Asian Market <i class="fa fa-check-circle" aria-hidden="true"></i></h2></a>
+                                                <p>215 Terry Lane, Darwin</p>
                                             </div>
                                         </div>
                                         <div class="thingsCaption ">
@@ -131,7 +131,7 @@
                                 <div class="col-md-4 col-sm-6 col-xs-12">
                                     <div class="thingsBox">
                                         <div class="thingsImage">
-                                            <img src="img/things/things-5.jpg" alt="Image things">
+                                            <img src="img/things/bk.png" alt="Image things">
                                             <div class="thingsMask">
                                                 <ul class="list-inline rating">
                                                     <li><i class="fa fa-star" aria-hidden="true"></i></li>
@@ -140,8 +140,8 @@
                                                     <li><i class="fa fa-star" aria-hidden="true"></i></li>
                                                     <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
                                                 </ul>
-                                                <a href="listing-details-left.html"><h2>Burger House</h2></a>
-                                                <p>2726 Shinn Street, New York</p>
+                                                <a href="listing-details-left.html"><h2>Korean Market</h2></a>
+                                                <p>2726 Shinn Street, Rapid Creek</p>
                                             </div>
                                         </div>
                                         <div class="thingsCaption ">
@@ -158,7 +158,7 @@
                                 <div class="col-md-4 col-sm-6 col-xs-12">
                                     <div class="thingsBox">
                                         <div class="thingsImage">
-                                            <img src="img/things/things-8.jpg" alt="Image things">
+                                            <img src="img/things/bk.png" alt="Image things">
                                             <div class="thingsMask">
                                                 <ul class="list-inline rating">
                                                     <li><i class="fa fa-star" aria-hidden="true"></i></li>
@@ -167,8 +167,8 @@
                                                     <li><i class="fa fa-star" aria-hidden="true"></i></li>
                                                     <li><i class="fa fa-star" aria-hidden="true"></i></li>
                                                 </ul>
-                                                <a href="listing-details-left.html"><h2>Hotel Govendor <i class="fa fa-check-circle" aria-hidden="true"></i></h2></a>
-                                                <p>778 Country Street, New York</p>
+                                                <a href="listing-details-left.html"><h2>Sunday Sri Lankan Market <i class="fa fa-check-circle" aria-hidden="true"></i></h2></a>
+                                                <p>778 Country Street, Palmerston</p>
                                             </div>
                                         </div>
                                         <div class="thingsCaption ">
@@ -185,7 +185,7 @@
                                 <div class="col-md-4 col-sm-6 col-xs-12">
                                     <div class="thingsBox">
                                         <div class="thingsImage">
-                                            <img src="img/things/things-10.jpg" alt="Image things">
+                                            <img src="img/things/bk.png" alt="Image things">
                                             <div class="thingsMask">
                                                 <ul class="list-inline rating">
                                                     <li><i class="fa fa-star" aria-hidden="true"></i></li>
@@ -194,14 +194,14 @@
                                                     <li><i class="fa fa-star" aria-hidden="true"></i></li>
                                                     <li><i class="fa fa-star" aria-hidden="true"></i></li>
                                                 </ul>
-                                                <a href="listing-details-left.html"><h2>Water Grill</h2></a>
-                                                <p>31 Union Square, New York</p>
+                                                <a href="listing-details-left.html"><h2>Indian Market</h2></a>
+                                                <p>31 Union Square, Woodrofe</p>
                                             </div>
                                         </div>
                                         <div class="thingsCaption ">
                                             <ul class="list-inline captionItem">
                                                 <li><i class="fa fa-heart-o" aria-hidden="true"></i> 10 k</li>
-                                                <li><a href="category-grid.html"> Eat & Drink</a></li>
+                                                <li><a href="category-grid.html"> Taiwan Market</a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -211,7 +211,7 @@
                                 <div class="col-md-4 col-sm-6 col-xs-12">
                                     <div class="thingsBox ">
                                         <div class="thingsImage">
-                                            <img src="img/things/things-11.jpg" alt="Image things">
+                                            <img src="img/things/bk.png" alt="Image things">
                                             <div class="thingsMask">
                                                 <ul class="list-inline rating">
                                                     <li><i class="fa fa-star" aria-hidden="true"></i></li>
@@ -220,8 +220,8 @@
                                                     <li><i class="fa fa-star" aria-hidden="true"></i></li>
                                                     <li><i class="fa fa-star" aria-hidden="true"></i></li>
                                                 </ul>
-                                                <a href="listing-details-left.html"><h2>John F. Kennedy Airport <i class="fa fa-check-circle" aria-hidden="true"></i></h2></a>
-                                                <p>Queens, NY 11430, new York</p>
+                                                <a href="listing-details-left.html"><h2>Italian Food Market <i class="fa fa-check-circle" aria-hidden="true"></i></h2></a>
+                                                <p>Queens, NY 11430, Banksia Street</p>
                                             </div>
                                         </div>
                                         <div class="thingsCaption ">
