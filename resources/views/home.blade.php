@@ -69,7 +69,7 @@
                     <a href="category-list-left.html" class="interestContent">
 					<span>
 						<i class="icon-listy icon-car-1"></i>
-						Auto Motive
+						Ingredients
 					</span>
                     </a>
                 </div>
