@@ -19,4 +19,4 @@
 
 <link href="{{ asset('css/style.css') }}" rel="stylesheet">
 {{--<link href="{{ asset('css/color-option1.css') }}" rel="stylesheet">--}}
-<link href="{{ asset('css/default.css') }}" rel="stylesheet" id="option_color">
+<link href="{{ asset('css/color-option1.css') }}" rel="stylesheet" id="option_color">

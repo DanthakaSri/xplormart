@@ -7,7 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>@yield('title') | {{ config('app.name', 'Laravel') }}</title>
+    <!--<title>@yield('title') | {{ config('app.name', 'Laravel') }}</title>-->
+    <title>Xplormart</title>
 
     @include('includes.header')
 
@@ -16,6 +17,7 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Herr+Von+Muellerhoff" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
 
 
     <!-- FAVICON -->

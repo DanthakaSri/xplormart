@@ -9,8 +9,8 @@
             <div class="row">
                 <div class="col-xs-12">
                     <div class="banerInfo">
-                        <h1>Xplore Your Local Market</h1>
-                        <p>XploreMart helps to find out local markets arround you</p>
+                        <h1>Explore Your Local Market</h1>
+                        <p>Xplormart helps to find out local markets arround you</p>
                         <form class="form-inline" action="listing-sidebar-map-left.html" method="">
                             <div class="form-group">
                                 <div class="input-group">
@@ -26,7 +26,7 @@
                                     <div class="input-group-addon addon-right"><i class="icon-listy icon-target" aria-hidden="true"></i></div>
                                 </div>
                             </div>
-                            <button type="submit" class="btn btn-primary">Search <i class="fa fa-search" aria-hidden="true"></i></button>
+                            <button type="submit" class="btn btn-primary"><i class="fa fa-search" aria-hidden="true"></i> Search</button>
                         </form>
                     </div>
                 </div>

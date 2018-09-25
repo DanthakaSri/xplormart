@@ -257,6 +257,11 @@ a:hover, a:focus {
   position: relative;
 }
 
+/*custom styles - by Chrishan*/
+.xm-logo-black {
+  display: none;
+}
+
 .form-control:focus {
   box-shadow: none;
 }
@@ -3188,8 +3193,20 @@ a.link:hover {
   border-color: #2196f3;
 }
 
+.navbar.navbar-default .xm-logo-black {
+ display: none;
+}
+
 .navbar.navbar-default.transparent-navbar.navbar-sticky .logo-svg .path-1 {
   fill: #2196f3;
+}
+
+.navbar.navbar-default.transparent-navbar.navbar-sticky .xm-logo-white{
+  display: none;
+}
+
+.navbar.navbar-default.transparent-navbar.navbar-sticky .xm-logo-black{
+  display: block;
 }
 
 /*=== 3.3 NAVBAR DASHBOARD ===*/
@@ -5664,7 +5681,7 @@ figure:hover .overlay {
 
 .smooth-loader-wrapper .smooth-loader {
   position: absolute;
-  top: 50%;
+  top: 30%;
   left: 50%;
   z-index: 2100;
   line-height: 0;
@@ -5693,10 +5710,10 @@ figure:hover .overlay {
   border-radius: 50%;
   -webkit-transform: rotate(45deg) translateZ(0);
           transform: rotate(45deg) translateZ(0);
-  background: #00C9FF;
+  background: #00CC67;
   /* fallback for old browsers */
   /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #2196f3, #00C9FF);
+  background: linear-gradient(to right, #03793f, #49fda5);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   -webkit-animation-name: qodefTargetRotate;
           animation-name: qodefTargetRotate;
@@ -5745,10 +5762,10 @@ figure:hover .overlay {
   z-index: 100;
   opacity: 0;
   border-radius: 50%;
-  background: #00C9FF;
+  background: #00CC67;
   /* fallback for old browsers */
   /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #2196f3, #00C9FF);
+  background: linear-gradient(to right, #03793f, #49fda5);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   -webkit-animation-name: targetScale;
           animation-name: targetScale;
@@ -5808,6 +5825,70 @@ figure:hover .overlay {
   opacity: 0;
   visibility: hidden;
   transition: all 0.7s ease-out;
+}
+
+/*custom spinner*/
+
+.sk-cube-grid {
+  width: 60px;
+  height: 60px;
+  margin: 100px auto;
+}
+
+.sk-cube-grid .sk-cube {
+  width: 33%;
+  height: 33%;
+  background-color: #00cc67;
+  float: left;
+  -webkit-animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out;
+          animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out; 
+}
+.sk-cube-grid .sk-cube1 {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s; }
+.sk-cube-grid .sk-cube2 {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s; }
+.sk-cube-grid .sk-cube3 {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s; }
+.sk-cube-grid .sk-cube4 {
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s; }
+.sk-cube-grid .sk-cube5 {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s; }
+.sk-cube-grid .sk-cube6 {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s; }
+.sk-cube-grid .sk-cube7 {
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s; }
+.sk-cube-grid .sk-cube8 {
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s; }
+.sk-cube-grid .sk-cube9 {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s; }
+
+@-webkit-keyframes sk-cubeGridScaleDelay {
+  0%, 70%, 100% {
+    -webkit-transform: scale3D(1, 1, 1);
+            transform: scale3D(1, 1, 1);
+  } 35% {
+    -webkit-transform: scale3D(0, 0, 1);
+            transform: scale3D(0, 0, 1); 
+  }
+}
+
+@keyframes sk-cubeGridScaleDelay {
+  0%, 70%, 100% {
+    -webkit-transform: scale3D(1, 1, 1);
+            transform: scale3D(1, 1, 1);
+  } 35% {
+    -webkit-transform: scale3D(0, 0, 1);
+            transform: scale3D(0, 0, 1);
+  } 
 }
 
 .listy-logo-svg {
