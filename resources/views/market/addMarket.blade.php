@@ -1,6 +1,8 @@
 @extends('layouts.baseApp')
 
 @section('title','Add Market')
+@section('nvClass','navbarWhite')
+@section('nvClass2','lightHeader')
 
 @section('content')
 

@@ -44,9 +44,13 @@ class MarketController extends Controller
      * @param  \App\Market  $market
      * @return \Illuminate\Http\Response
      */
-    public function show(Market $market)
+   /* public function show(Market $market)
     {
         //
+    }*/
+ public function show()
+    {
+        return view('market.viewMarket');
     }
 
     /**

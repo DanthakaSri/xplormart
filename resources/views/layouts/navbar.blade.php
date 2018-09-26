@@ -3,9 +3,11 @@
 
     <!-- TOP INFO BAR -->
 
-    <div class="nav-wrapper">
+    {{--<div class="nav-wrapper ">--}}
+    <div class="nav-wrapper @yield('nvClass')">
         <!-- NAVBAR -->
-        <nav id="menuBar" class="navbar navbar-default transparent-navbar" role="navigation">
+        {{--<nav id="menuBar" class="navbar navbar-default transparent-navbar" role="navigation">--}}
+        <nav id="menuBar" class="navbar navbar-default @yield('nvClass2')" role="navigation">
             <div class="container">
 
                 <!-- Brand and toggle get grouped for better mobile display -->
