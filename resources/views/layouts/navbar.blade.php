@@ -21,6 +21,7 @@
                     <a class="navbar-brand" href="index.html">
                         <img src="{{asset('img/logo.png')}}" alt="" class="xm-logo-white">
                         <img src="{{asset('img/logo_black.png')}}" alt="" class="xm-logo-black">
+                        <img src="{{asset('img/logo_black.png')}}" alt="" class="xm-logo-black_whitebg">
                     </a>
                 </div>
 

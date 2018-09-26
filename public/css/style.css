@@ -262,6 +262,10 @@ a:hover, a:focus {
   display: none;
 }
 
+.xm-logo-black_whitebg {
+  display: none;
+}
+
 .form-control:focus {
   box-shadow: none;
 }
@@ -3193,7 +3197,7 @@ a.link:hover {
   border-color: #2196f3;
 }
 
-.navbar.navbar-default .xm-logo-black {
+.navbar.navbar-default .xm-logo-black, .navbar.navbar-default .xm-logo-black_whitebg {
  display: none;
 }
 
@@ -3206,6 +3210,22 @@ a.link:hover {
 }
 
 .navbar.navbar-default.transparent-navbar.navbar-sticky .xm-logo-black{
+  display: block;
+}
+
+.navbarWhite .navbar.navbar-default .xm-logo-black_whitebg{
+  display: block;
+}
+
+.navbarWhite .xm-logo-white{
+  display: none;
+}
+
+.lightHeader.navbar-sticky .xm-logo-white {
+  display: none;
+}
+
+.lightHeader.navbar-sticky .xm-logo-black_whitebg {
   display: block;
 }
 
