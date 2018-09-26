@@ -7,8 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!--<title>@yield('title') | {{ config('app.name', 'Laravel') }}</title>-->
-    <title>Xplormart</title>
+    <title>@yield('title') | {{ config('app.name', 'Laravel') }}</title>
 
     @include('includes.header')
 

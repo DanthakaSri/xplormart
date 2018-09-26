@@ -47,49 +47,6 @@
         </div>
     </section>
 
-    <!-- INTEREST SECTION -->
-    <section class="clearfix interestArea">
-        <div class="container">
-            <div class="page-header text-center">
-                <h2>What are You Interested in? <small>Explore and connect with great local businesses</small></h2>
-            </div>
-            <div class="row">
-                <div class="col-sm-3 col-xs-12">
-                    <a href="category-grid-full.html" class="interestContent">
-					<span>
-						<i class="icon-listy icon-tea-cup-1"></i>
-						Restaurant
-					</span>
-                    </a>
-                </div>
-                <div class="col-sm-3 col-xs-12">
-                    <a href="category-list-full.html" class="interestContent">
-					<span>
-						<i class="icon-listy icon-building"></i>
-						Hotels
-					</span>
-                    </a>
-                </div>
-                <div class="col-sm-3 col-xs-12">
-                    <a href="category-grid.html" class="interestContent">
-					<span>
-						<i class="icon-listy icon-martini"></i>
-						Fairs
-					</span>
-                    </a>
-                </div>
-                <div class="col-sm-3 col-xs-12">
-                    <a href="category-list-left.html" class="interestContent">
-					<span>
-						<i class="icon-listy icon-car-1"></i>
-						Ingredients
-					</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- THINGS SECTION -->
     <section class="clearfix thingsArea">
         <div class="container">
