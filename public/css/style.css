@@ -3836,6 +3836,16 @@ footer {
   }
 }
 
+@media (min-width: 992px) {
+  .banerInfo .inputGroup {
+    width: 290px;
+  }
+}
+
+.btnWrapper {
+  padding: 20px;
+}
+
 .banerInfo .input-group {
   width: 100%;
 }

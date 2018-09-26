@@ -12,21 +12,34 @@
                         <h1>Explore Your Local Market</h1>
                         <p>Xplormart helps to find out local markets arround you</p>
                         <form class="form-inline" action="listing-sidebar-map-left.html" method="">
-                            <div class="form-group">
+                            <div class="form-group inputGroup">
                                 <div class="input-group">
                                     <div class="input-group-addon">Find</div>
-                                    <input type="text" class="form-control" id="findItem" placeholder="What are you looking for?">
+                                    <input type="text" class="form-control" id="findItem" placeholder="What are you looking?">
                                     <div class="input-group-addon addon-right"></div>
                                 </div>
                             </div>
-                            <div class="form-group">
+                            <div class="form-group inputGroup">
+                                <div class="input-group">
+                                    <div class="input-group-addon">Type</div>
+                                    <select class="form-control" id="type" placeholder="">
+                                        <option>Korean</option>
+                                        <option>Sri Lanakan</option>
+                                        <option>Indian</option>
+                                        <option>Japanese</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group inputGroup">
                                 <div class="input-group">
                                     <div class="input-group-addon">Near</div>
                                     <input type="text" class="form-control" id="nearLocation" placeholder="Location">
                                     <div class="input-group-addon addon-right"><i class="icon-listy icon-target" aria-hidden="true"></i></div>
                                 </div>
                             </div>
+                            <div class="btnWrapper">
                             <button type="submit" class="btn btn-primary"><i class="fa fa-search" aria-hidden="true"></i> Search</button>
+                            </div>
                         </form>
                     </div>
                 </div>
