@@ -6,7 +6,7 @@
             <div class="row">
                 <div class="col-sm-7 col-xs-12">
                     <div class="footerText">
-                        <a href="index.html" class="footerLogo">
+                        <a href="{{route('home')}}" class="footerLogo">
 
                             <img src="{{asset('img/logo.png')}}" alt="footer_log">
                         </a>
@@ -25,8 +25,8 @@
                     </div>
                     <div class="useLink">
                         <ul class="list-unstyled">
-                            <li><a href="dashboard.html">Dashboard</a></li>
-                            <li><a href="login.html">Login</a></li>
+                            <li><a href="#">Dashboard</a></li>
+                            <li><a href="#">Login</a></li>
 
                         </ul>
                     </div>
@@ -37,9 +37,9 @@
                     </div>
                     <div class="useLink">
                         <ul class="list-unstyled">
-                            <li><a href="contact-us.html">Contact Us</a></li>
-                            <li><a href="terms-of-services.html">Terms and Conditions</a></li>
-                            <li><a href="how-it-works.html">How It Works</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">Terms and Conditions</a></li>
+                            <li><a href="#">How It Works</a></li>
                         </ul>
                     </div>
                 </div>

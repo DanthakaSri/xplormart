@@ -18,7 +18,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="index.html">
+                    <a class="navbar-brand" href="{{ route('home') }}">
                         <img src="{{asset('img/logo.png')}}" alt="" class="xm-logo-white">
                         <img src="{{asset('img/logo_black.png')}}" alt="" class="xm-logo-black">
                         <img src="{{asset('img/logo_black.png')}}" alt="" class="xm-logo-black_whitebg">
@@ -28,8 +28,8 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse navbar-ex1-collapse">
                     <ul class="nav navbar-nav navbar-right">
-                        <li class=""><a href="blog.html">Home </a></li>
-                        <li class=""><a href="blog.html">Markets </a></li>
+                        <li class=""><a href="{{route('home')}}">Home </a></li>
+                        <li class=""><a href="{{route('shop.index')}}">Markets </a></li>
                     </ul>
                 </div>
                 <a class="btn btn-default navbar-btn" href="{{ route('shop.create') }}"> + <span>Add Market</span></a>
