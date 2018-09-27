@@ -8205,13 +8205,22 @@ table.dataTable thead .sorting_desc_disabled:after {
 
 .listingImage li {
   padding: 0;
-  float: left;
-  width: 100%;
+  width: 1140px;
+  display: block;
+  overflow: auto;
+  margin: 0 auto;
 }
 
 @media (min-width: 768px) {
   .listingImage li {
-    width: 25%;
+    /*width: 25%;*/
+    height: 247px;
+  }
+}
+
+@media (max-width: 768px) {
+  .listingImage li {
+    width: 100%;
   }
 }
 
