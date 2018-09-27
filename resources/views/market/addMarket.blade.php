@@ -10,44 +10,70 @@
         <div class="container">
             <div class="row">
                 <div class="col-xs-12">
-                    <form action="{{ url('/shop') }}" method="post" class="listing__form">
+                    <form action="{{ route('shop.store') }}" method="post" class="listing__form">
                         <div class="dashboardBoxBg mb30">
                             <div class="profileIntro paraMargin">
                                 <h3>About</h3>
-                                <p>Please provide accurate marketplace information and we are not responsible for adding inacurate information and it will cause removing your marketplace automatically based on public verification.</p>
+                                <p>Please provide accurate marketplace information and we are not responsible for adding
+                                    inacurate information and it will cause removing your marketplace automatically
+                                    based on public verification.</p>
                                 <div class="row">
+                                    {{--error validation--}}
+                                    @csrf
+
+
                                     <div class="form-group col-sm-6 col-xs-12">
                                         <label for="listingTitle">Market Title</label>
-                                        <input type="text" class="form-control" name="name" id="listingTitle" placeholder="Market Title">
+                                        <input type="text" class="form-control" name="name" id="listingTitle"
+                                               placeholder="Market Title">
+
+                                        @if ($errors->has('name'))
+                                            <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('name') }}</strong>
+                                    </span>
+                                        @endif
                                     </div>
                                     <div class="form-group col-sm-6 col-xs-12">
                                         <label for="listingCategory">Type</label>
                                         <div class="contactSelect">
                                             <select name="type" id="guiest_id9" class="select-drop">
-                                            <option>Korean</option>
-                                            <option>Japaneese</option>
-                                            <option>Sri Lankan</option>
-                                            <option>Indian</option>
-                                            <option>Malaysian</option>
-                                            <option>Taiwanese</option>
-                                            <option>Thai</option>
-                                            <option>Vietnamese</option>
-                                            <option>Indonesian</option>
-                                            <option>Chinese</option>
-                                            <option>Italian</option>
-                                            <option>French</option>
-                                            <option>American</option>
-                                            <option>African</option>
-                                            <option>Australian</option>
-                                            <option>Russian</option>
-                                            <option>Singapore</option>
-                                            <option>Turkish</option>
+                                                <option>Korean</option>
+                                                <option>Japaneese</option>
+                                                <option>Sri Lankan</option>
+                                                <option>Indian</option>
+                                                <option>Malaysian</option>
+                                                <option>Taiwanese</option>
+                                                <option>Thai</option>
+                                                <option>Vietnamese</option>
+                                                <option>Indonesian</option>
+                                                <option>Chinese</option>
+                                                <option>Italian</option>
+                                                <option>French</option>
+                                                <option>American</option>
+                                                <option>African</option>
+                                                <option>Australian</option>
+                                                <option>Russian</option>
+                                                <option>Singapore</option>
+                                                <option>Turkish</option>
                                             </select>
                                         </div>
+
+                                        @if ($errors->has('type'))
+                                            <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('type') }}</strong>
+                                    </span>
+                                        @endif
                                     </div>
                                     <div class="form-group col-xs-12">
                                         <label for="discribeTheListing">Description</label>
-                                        <textarea name="description" class="form-control" rows="3" placeholder="Description"></textarea>
+                                        <textarea name="description" class="form-control" rows="3"
+                                                  placeholder="Description"></textarea>
+                                        @if ($errors->has('description'))
+                                            <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('description') }}</strong>
+                                    </span>
+                                        @endif
+
                                     </div>
                                 </div>
                             </div>
@@ -66,25 +92,52 @@
                                                 <option value="3">Other</option>
                                             </select>
                                         </div>
+                                        @if ($errors->has('country'))
+                                            <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('country') }}</strong>
+                                    </span>
+                                        @endif
                                     </div>
                                     <div class="form-group col-sm-6 col-xs-12">
                                         <label for="listingAddress">Address</label>
-                                        <input type="text"name="address" class="form-control" id="listingAddress" placeholder="Listing Address">
+                                        <input type="text" name="address" class="form-control" id="listingAddress"
+                                               placeholder="Listing Address">
+
+                                        @if ($errors->has('address'))
+                                            <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('address') }}</strong>
+                                    </span>
+                                        @endif
                                     </div>
 
                                     <div class="form-group col-sm-6 col-xs-12">
                                         <label for="listingPhone">Phone</label>
-                                        <input type="text" name="phone_num" class="form-control" id="listingPhone" placeholder="0450 123 456">
+                                        <input type="text" name="phone_num" class="form-control" id="listingPhone"
+                                               placeholder="0450 123 456">
                                     </div>
 
                                     <div class="form-group col-sm-6 col-xs-12">
                                         <label for="listingEmail">Email</label>
-                                        <input type="text" class="form-control" id="listingEmail" placeholder="market@market.com">
+                                        <input type="text" class="form-control" id="listingEmail"
+                                               placeholder="market@market.com">
+                                        @if ($errors->has('email'))
+                                            <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('email') }}</strong>
+                                    </span>
+                                        @endif
+
                                     </div>
 
                                     <div class="form-group col-sm-6 col-xs-12">
                                         <label for="listingWebsite">Website</label>
-                                        <input type="text" name="website" class="form-control" id="listingWebsite" placeholder="http://">
+                                        <input type="text" name="website" class="form-control" id="listingWebsite"
+                                               placeholder="http://">
+
+                                        @if ($errors->has('website'))
+                                            <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('website') }}</strong>
+                                    </span>
+                                        @endif
                                     </div>
                                 </div>
                             </div>
@@ -98,7 +151,14 @@
                                             <div class="file-upload">
                                                 <div class="upload-area">
                                                     <input type="file" name="image" class="file">
-                                                    <button class="browse" type="button">Click here to upload your market banner image</button>
+                                                    <button class="browse" type="button">Click here to upload your
+                                                        market banner image
+                                                    </button>
+                                                    @if ($errors->has('image'))
+                                                        <span class="invalid-feedback" role="alert">
+                                                        <strong>{{ $errors->first('image') }}</strong>
+                                                    </span>
+                                                    @endif
                                                 </div>
                                             </div>
                                         </div>
@@ -109,20 +169,38 @@
                         <div class="dashboardBoxBg mb30">
                             <div class="profileIntro paraMargin">
                                 <h3>Social</h3>
-                               <div class="row">
+                                <div class="row">
                                     <div class="form-group col-sm-6 col-xs-12">
                                         <label for="facebookUrl">Facebook URL</label>
-                                        <input type="text" name="fb_url" class="form-control" id="facebookUrl" placeholder="http://facebook.com/listty">
+                                        <input type="text" name="fb_url" class="form-control" id="facebookUrl"
+                                               placeholder="http://facebook.com/listty">
+                                        @if ($errors->has('fb_url'))
+                                            <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('fb_url') }}</strong>
+                                    </span>
+                                        @endif
                                     </div>
 
                                     <div class="form-group col-sm-6 col-xs-12">
                                         <label for="twitterUrl">Twitter URL</label>
-                                        <input type="text" name="teitter_url" class="form-control" id="twitterUrl" placeholder="http://twitter.com/listty">
+                                        <input type="text" name="twitter_url" class="form-control" id="twitterUrl"
+                                               placeholder="http://twitter.com/listty">
+                                        @if ($errors->has('twitter_url'))
+                                            <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('twitter_url') }}</strong>
+                                    </span>
+                                        @endif
                                     </div>
 
                                     <div class="form-group col-sm-6 col-xs-12">
                                         <label for="youtubeUrl">You Tube URL</label>
-                                        <input type="text" name="youtube_url"  class="form-control" id="youtubeUrl" placeholder="http://youtube.com/listty">
+                                        <input type="text" name="youtube_url" class="form-control" id="youtubeUrl"
+                                               placeholder="http://youtube.com/listty">
+                                        @if ($errors->has('youtube_url'))
+                                            <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('youtube_url') }}</strong>
+                                    </span>
+                                        @endif
                                     </div>
                                 </div>
                             </div>
@@ -134,37 +212,79 @@
                                 <div class="row">
                                     <div class="form-group col-md-4 col-sm-6 col-xs-12">
                                         <label for="mondayTime">Monday</label>
-                                        <input type="text" name="monday" class="form-control" id="mondayTime" placeholder="10.00am - 5.00pm">
+                                        <input type="text" name="monday" class="form-control" id="mondayTime"
+                                               placeholder="10.00am - 5.00pm">
+                                        @if ($errors->has('monday'))
+                                            <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('monday') }}</strong>
+                                    </span>
+                                        @endif
                                     </div>
 
                                     <div class="form-group col-md-4 col-sm-6 col-xs-12">
                                         <label for="tuesdayTime">Tuesday</label>
-                                        <input type="text" name="tuesday" class="form-control" id="tuesdayTime" placeholder="10.00am - 5.00pm">
+                                        <input type="text" name="tuesday" class="form-control" id="tuesdayTime"
+                                               placeholder="10.00am - 5.00pm">
+                                        @if ($errors->has('tuesday'))
+                                            <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('tuesday') }}</strong>
+                                    </span>
+                                        @endif
                                     </div>
 
                                     <div class="form-group col-md-4 col-sm-6 col-xs-12">
                                         <label for="wednesdayTime">Wednesday</label>
-                                        <input type="text" name="wednesday" class="form-control" id="wednesdayTime" placeholder="10.00am - 5.00pm">
+                                        <input type="text" name="wednesday" class="form-control" id="wednesdayTime"
+                                               placeholder="10.00am - 5.00pm">
+                                        @if ($errors->has('wednesday'))
+                                            <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('wednesday') }}</strong>
+                                    </span>
+                                        @endif
                                     </div>
 
                                     <div class="form-group col-md-4 col-sm-6 col-xs-12">
                                         <label for="thrusdayTime">Thrusday</label>
-                                        <input type="text" name="thursday" class="form-control" id="thrusdayTime" placeholder="10.00am - 5.00pm">
+                                        <input type="text" name="thursday" class="form-control" id="thrusdayTime"
+                                               placeholder="10.00am - 5.00pm">
+                                        @if ($errors->has('thursday'))
+                                            <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('thursday') }}</strong>
+                                    </span>
+                                        @endif
                                     </div>
 
                                     <div class="form-group col-md-4 col-sm-6 col-xs-12">
                                         <label for="fridayTime">Friday</label>
-                                        <input type="text" name="friday" class="form-control" id="fridayTime" placeholder="10.00am - 5.00pm">
+                                        <input type="text" name="friday" class="form-control" id="fridayTime"
+                                               placeholder="10.00am - 5.00pm">
+                                        @if ($errors->has('friday'))
+                                            <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('friday') }}</strong>
+                                    </span>
+                                        @endif
                                     </div>
 
                                     <div class="form-group col-md-4 col-sm-6 col-xs-12">
                                         <label for="saturdayTime">Saturday</label>
-                                        <input type="text" name="saturday" class="form-control" id="saturdayTime" placeholder="10.00am - 5.00pm">
+                                        <input type="text" name="saturday" class="form-control" id="saturdayTime"
+                                               placeholder="10.00am - 5.00pm">
+                                        @if ($errors->has('type'))
+                                            <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('type') }}</strong>
+                                    </span>
+                                        @endif
                                     </div>
 
                                     <div class="form-group col-md-4 col-sm-6 col-xs-12">
                                         <label for="sundayTime">Sunday</label>
-                                        <input type="text" name="sunday" class="form-control" id="sundayTime" placeholder="Closed">
+                                        <input type="text" name="sunday" class="form-control" id="sundayTime"
+                                               placeholder="Closed">
+                                        @if ($errors->has('sunday'))
+                                            <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('sunday') }}</strong>
+                                    </span>
+                                        @endif
                                     </div>
                                 </div>
                             </div>

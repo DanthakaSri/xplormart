@@ -32,7 +32,7 @@
                         <li class=""><a href="blog.html">Markets </a></li>
                     </ul>
                 </div>
-                <a class="btn btn-default navbar-btn" href="{{ action('MarketController@index') }}"> + <span>Add Market</span></a>
+                <a class="btn btn-default navbar-btn" href="{{ route('shop.create') }}"> + <span>Add Market</span></a>
             </div>
         </nav>
     </div>

@@ -98,13 +98,13 @@
                                                     <li><i class="fa fa-star" aria-hidden="true"></i></li>
                                                     <li><i class="fa fa-star" aria-hidden="true"></i></li>
                                                 </ul>
-                                                <a href="{{ action('MarketController@show') }}"><h2>Asian Market <i class="fa fa-check-circle" aria-hidden="true"></i></h2></a>
+                                                <a href="{{ route('shop.show',1) }}"><h2>Asian Market <i class="fa fa-check-circle" aria-hidden="true"></i></h2></a>
                                                 <p>215 Terry Lane, Darwin</p>
                                             </div>
                                         </div>
                                         <div class="thingsCaption ">
                                             <ul class="list-inline captionItem">
-                                                <li><a href="{{ action('MarketController@show') }}">Eat & Drink</a></li>
+                                                <li><a href="{{ route('shop.show',1) }}">Eat & Drink</a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -124,13 +124,13 @@
                                                     <li><i class="fa fa-star" aria-hidden="true"></i></li>
                                                     <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
                                                 </ul>
-                                                <a href="{{ action('MarketController@show') }}"><h2>Korean Market</h2></a>
+                                                <a href="{{ route('shop.show',1) }}"><h2>Korean Market</h2></a>
                                                 <p>2726 Shinn Street, Rapid Creek</p>
                                             </div>
                                         </div>
                                         <div class="thingsCaption ">
                                             <ul class="list-inline captionItem">
-                                                <li><a href="{{ action('MarketController@show') }}">Eat & Drink</a></li>
+                                                <li><a href="{{ route('shop.show',1) }}">Eat & Drink</a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -150,13 +150,13 @@
                                                     <li><i class="fa fa-star" aria-hidden="true"></i></li>
                                                     <li><i class="fa fa-star" aria-hidden="true"></i></li>
                                                 </ul>
-                                                <a href="{{ action('MarketController@show') }}"><h2>Sunday Sri Lankan Market <i class="fa fa-check-circle" aria-hidden="true"></i></h2></a>
+                                                <a href="{{ route('shop.show',1) }}"><h2>Sunday Sri Lankan Market <i class="fa fa-check-circle" aria-hidden="true"></i></h2></a>
                                                 <p>778 Country Street, Palmerston</p>
                                             </div>
                                         </div>
                                         <div class="thingsCaption ">
                                             <ul class="list-inline captionItem">
-                                                <li><a href="{{ action('MarketController@show') }}">Hotels</a></li>
+                                                <li><a href="{{ route('shop.show',1) }}">Hotels</a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -176,13 +176,13 @@
                                                     <li><i class="fa fa-star" aria-hidden="true"></i></li>
                                                     <li><i class="fa fa-star" aria-hidden="true"></i></li>
                                                 </ul>
-                                                <a href="{{ action('MarketController@show') }}"><h2>Indian Market</h2></a>
+                                                <a href="{{ route('shop.show',1) }}"><h2>Indian Market</h2></a>
                                                 <p>31 Union Square, Woodrofe</p>
                                             </div>
                                         </div>
                                         <div class="thingsCaption ">
                                             <ul class="list-inline captionItem">
-                                                <li><a href="{{ action('MarketController@show') }}"> Taiwan Market</a></li>
+                                                <li><a href="{{ route('shop.show',1) }}"> Taiwan Market</a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -201,13 +201,13 @@
                                                     <li><i class="fa fa-star" aria-hidden="true"></i></li>
                                                     <li><i class="fa fa-star" aria-hidden="true"></i></li>
                                                 </ul>
-                                                <a href="{{ action('MarketController@show') }}"><h2>Italian Food Market <i class="fa fa-check-circle" aria-hidden="true"></i></h2></a>
+                                                <a href="{{ route('shop.show',1) }}"><h2>Italian Food Market <i class="fa fa-check-circle" aria-hidden="true"></i></h2></a>
                                                 <p>Queens, NY 11430, Banksia Street</p>
                                             </div>
                                         </div>
                                         <div class="thingsCaption ">
                                             <ul class="list-inline captionItem">
-                                                <li><a href="{{ action('MarketController@show') }}">Others</a></li>
+                                                <li><a href="{{ route('shop.show',1) }}">Others</a></li>
                                             </ul>
                                         </div>
                                     </div>

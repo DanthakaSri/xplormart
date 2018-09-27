@@ -24,7 +24,7 @@ class MarketController extends Controller
      */
     public function create()
     {
-        //
+        return view('market.addMarket');
     }
 
     /**
@@ -35,7 +35,7 @@ class MarketController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        return $request;
     }
 
     /**
@@ -46,7 +46,7 @@ class MarketController extends Controller
      */
    /* public function show(Market $market)
     {
-        //
+        return view('market.viewMarket');
     }*/
  public function show()
     {
