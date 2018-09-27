@@ -72,26 +72,17 @@
                                         <input type="text" class="form-control" id="listingAddress" placeholder="Listing Address">
                                     </div>
 
-                                    <div class="form-group col-sm-6 col-sm-push-6 col-xs-12">
-                                        <div class="mapArea">
-                                            <div class="clearfix">
-                                                <div id="map-canvas"></div>
-                                            </div>
-                                            <span class="help-block">Enter the exact address or drag the map marker to position</span>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group col-sm-6 col-sm-pull-6 col-xs-12">
+                                    <div class="form-group col-sm-6 col-xs-12">
                                         <label for="listingPhone">Phone</label>
                                         <input type="text" class="form-control" id="listingPhone" placeholder="0450 123 456">
                                     </div>
 
-                                    <div class="form-group col-sm-6 col-sm-pull-6 col-xs-12">
+                                    <div class="form-group col-sm-6 col-xs-12">
                                         <label for="listingEmail">Email</label>
                                         <input type="text" class="form-control" id="listingEmail" placeholder="market@market.com">
                                     </div>
 
-                                    <div class="form-group col-sm-6 col-sm-pull-6 col-xs-12">
+                                    <div class="form-group col-sm-6 col-xs-12">
                                         <label for="listingWebsite">Website</label>
                                         <input type="text" class="form-control" id="listingWebsite" placeholder="http://">
                                     </div>
@@ -107,15 +98,10 @@
                                             <div class="file-upload">
                                                 <div class="upload-area">
                                                     <input type="file" name="img[]" class="file">
-                                                    <button class="browse" type="button">Click or Drag images here</button>
+                                                    <button class="browse" type="button">Click here to upload your market banner image</button>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-
-                                    <div class="form-group col-xs-12">
-                                        <label for="videoUrl">Video URL</label>
-                                        <input type="text" class="form-control" id="videoUrl" placeholder="http://">
                                     </div>
                                 </div>
                             </div>
