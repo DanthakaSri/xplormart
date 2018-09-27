@@ -13,11 +13,11 @@
 
 Route::get('/', function () {
     return view('home');
-});
+})->name('home');
 
 Auth::routes();
 
 Route::resource('/shop','MarketController');
 /*Route::get('/shop','MarketController@index');
 Route::get('/view','MarketController@show');*/
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'HomeController@index')->name('admin');
