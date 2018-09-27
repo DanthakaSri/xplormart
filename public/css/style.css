@@ -7202,6 +7202,12 @@ input[type=radio]:focus,
   transition: opacity 0.2s ease;
 }
 
+.listing__form .btn-default-1 {
+  width: 130px;
+  height: 50px;
+  font-size: 15px;
+}
+
 .listing__form .btn-submit:hover {
   opacity: 0.9;
 }

@@ -104,7 +104,6 @@
                                         </div>
                                         <div class="thingsCaption ">
                                             <ul class="list-inline captionItem">
-                                                <li><i class="fa fa-heart-o" aria-hidden="true"></i> 8 k</li>
                                                 <li><a href="{{ action('MarketController@show') }}">Eat & Drink</a></li>
                                             </ul>
                                         </div>
@@ -131,7 +130,6 @@
                                         </div>
                                         <div class="thingsCaption ">
                                             <ul class="list-inline captionItem">
-                                                <li><i class="fa fa-heart-o" aria-hidden="true"></i> 9.2 k</li>
                                                 <li><a href="{{ action('MarketController@show') }}">Eat & Drink</a></li>
                                             </ul>
                                         </div>
@@ -158,7 +156,6 @@
                                         </div>
                                         <div class="thingsCaption ">
                                             <ul class="list-inline captionItem">
-                                                <li><i class="fa fa-heart-o" aria-hidden="true"></i> 5k</li>
                                                 <li><a href="{{ action('MarketController@show') }}">Hotels</a></li>
                                             </ul>
                                         </div>
@@ -185,7 +182,6 @@
                                         </div>
                                         <div class="thingsCaption ">
                                             <ul class="list-inline captionItem">
-                                                <li><i class="fa fa-heart-o" aria-hidden="true"></i> 10 k</li>
                                                 <li><a href="{{ action('MarketController@show') }}"> Taiwan Market</a></li>
                                             </ul>
                                         </div>
@@ -211,7 +207,6 @@
                                         </div>
                                         <div class="thingsCaption ">
                                             <ul class="list-inline captionItem">
-                                                <li><i class="fa fa-heart-o" aria-hidden="true"></i> 15 k</li>
                                                 <li><a href="{{ action('MarketController@show') }}">Others</a></li>
                                             </ul>
                                         </div>

@@ -14,30 +14,40 @@
                         <div class="dashboardBoxBg mb30">
                             <div class="profileIntro paraMargin">
                                 <h3>About</h3>
-                                <p>We are not responsible for any damages caused by the use of this website, or by posting business listings here. Please use our site at your own discretion and exercise good judgement as well as common sense when advertising business here.</p>
+                                <p>Please provide accurate marketplace information and we are not responsible for adding inacurate information and it will cause removing your marketplace automatically based on public verification.</p>
                                 <div class="row">
                                     <div class="form-group col-sm-6 col-xs-12">
-                                        <label for="listingTitle">Listing Title</label>
-                                        <input type="text" class="form-control" id="listingTitle" placeholder="Listing Title">
+                                        <label for="listingTitle">Market Title</label>
+                                        <input type="text" class="form-control" id="listingTitle" placeholder="Market Title">
                                     </div>
                                     <div class="form-group col-sm-6 col-xs-12">
-                                        <label for="listingCategory">Category</label>
+                                        <label for="listingCategory">Type</label>
                                         <div class="contactSelect">
                                             <select name="guiest_id9" id="guiest_id9" class="select-drop">
-                                                <option value="0">All Category</option>
-                                                <option value="1">Restaurant</option>
-                                                <option value="2">Bar</option>
-                                                <option value="3">Cafe</option>
+                                            <option>Korean</option>
+                                            <option>Japaneese</option>
+                                            <option>Sri Lankan</option>
+                                            <option>Indian</option>
+                                            <option>Malaysian</option>
+                                            <option>Taiwanese</option>
+                                            <option>Thai</option>
+                                            <option>Vietnamese</option>
+                                            <option>Indonesian</option>
+                                            <option>Chinese</option>
+                                            <option>Italian</option>
+                                            <option>French</option>
+                                            <option>American</option>
+                                            <option>African</option>
+                                            <option>Australian</option>
+                                            <option>Russian</option>
+                                            <option>Singapore</option>
+                                            <option>Turkish</option>
                                             </select>
                                         </div>
                                     </div>
                                     <div class="form-group col-xs-12">
-                                        <label for="discribeTheListing">Discribe the listing</label>
-                                        <textarea class="form-control" rows="3" placeholder="Discribe the listing"></textarea>
-                                    </div>
-                                    <div class="form-group col-xs-12">
-                                        <label for="addTags">Tags</label>
-                                        <input type="text" class="form-control" id="addTags" placeholder="Add Tags">
+                                        <label for="discribeTheListing">Description</label>
+                                        <textarea class="form-control" rows="3" placeholder="Description"></textarea>
                                     </div>
                                 </div>
                             </div>
@@ -45,21 +55,20 @@
                         <div class="dashboardBoxBg mb30">
                             <div class="profileIntro paraMargin">
                                 <h3>Contact</h3>
-                                <p>We are not responsible for any damages caused by the use of this website, or by posting business listings here. Please use our site at your own discretion and exercise good judgement as well as common sense when advertising business here.</p>
                                 <div class="row">
                                     <div class="form-group col-sm-6 col-xs-12">
-                                        <label for="listingRegion">Listing Region</label>
+                                        <label for="listingRegion">Country</label>
                                         <div class="contactSelect">
                                             <select name="guiest_id19" id="guiest_id19" class="select-drop">
-                                                <option value="0">All Region</option>
-                                                <option value="1">London</option>
-                                                <option value="2">Canada</option>
-                                                <option value="3">New York</option>
+                                                <option value="0">Korea</option>
+                                                <option value="1">Japan</option>
+                                                <option value="2">Thaiwan</option>
+                                                <option value="3">Other</option>
                                             </select>
                                         </div>
                                     </div>
                                     <div class="form-group col-sm-6 col-xs-12">
-                                        <label for="listingAddress">Listing Address</label>
+                                        <label for="listingAddress">Address</label>
                                         <input type="text" class="form-control" id="listingAddress" placeholder="Listing Address">
                                     </div>
 
@@ -73,17 +82,17 @@
                                     </div>
 
                                     <div class="form-group col-sm-6 col-sm-pull-6 col-xs-12">
-                                        <label for="listingPhone">Listing Phone</label>
-                                        <input type="text" class="form-control" id="listingPhone" placeholder="546 - 545 - 2546">
+                                        <label for="listingPhone">Phone</label>
+                                        <input type="text" class="form-control" id="listingPhone" placeholder="0450 123 456">
                                     </div>
 
                                     <div class="form-group col-sm-6 col-sm-pull-6 col-xs-12">
-                                        <label for="listingEmail">Listing Email</label>
-                                        <input type="text" class="form-control" id="listingEmail" placeholder="hello@example.com">
+                                        <label for="listingEmail">Email</label>
+                                        <input type="text" class="form-control" id="listingEmail" placeholder="market@market.com">
                                     </div>
 
                                     <div class="form-group col-sm-6 col-sm-pull-6 col-xs-12">
-                                        <label for="listingWebsite">Listing Website</label>
+                                        <label for="listingWebsite">Website</label>
                                         <input type="text" class="form-control" id="listingWebsite" placeholder="http://">
                                     </div>
                                 </div>
@@ -92,7 +101,6 @@
                         <div class="dashboardBoxBg mb30">
                             <div class="profileIntro paraMargin">
                                 <h3>Gallery</h3>
-                                <p>We are not responsible for any damages caused by the use of this website, or by posting business listings here. Please use our site at your own discretion and exercise good judgement as well as common sense when advertising business here.</p>
                                 <div class="row">
                                     <div class="form-group col-xs-12">
                                         <div class="imageUploader text-center">
@@ -115,13 +123,7 @@
                         <div class="dashboardBoxBg mb30">
                             <div class="profileIntro paraMargin">
                                 <h3>Social</h3>
-                                <p>We are not responsible for any damages caused by the use of this website, or by posting business listings here. Please use our site at your own discretion and exercise good judgement as well as common sense when advertising business here.</p>
-                                <div class="row">
-                                    <div class="form-group col-sm-6 col-xs-12">
-                                        <label for="linkedUrl">Linked in URL</label>
-                                        <input type="text" class="form-control" id="linkedUrl" placeholder="http://linkedin.com/listty">
-                                    </div>
-
+                               <div class="row">
                                     <div class="form-group col-sm-6 col-xs-12">
                                         <label for="facebookUrl">Facebook URL</label>
                                         <input type="text" class="form-control" id="facebookUrl" placeholder="http://facebook.com/listty">
@@ -182,7 +184,7 @@
                             </div>
                         </div>
                         <div class="form-footer text-center">
-                            <button type="submit" class="btn-submit">Submit</button>
+                            <button type="submit" class="btn-submit btn-default-1">Submit</button>
                         </div>
                     </form>
                 </div>
