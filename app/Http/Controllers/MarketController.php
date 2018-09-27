@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Market;
+use App\Type;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
@@ -25,7 +26,10 @@ class MarketController extends Controller
      */
     public function create()
     {
-        return view('market.addMarket');
+
+        $types=Type::all();
+        return view('market.addMarket',compact('types'));
+
     }
 
 
@@ -53,12 +57,12 @@ class MarketController extends Controller
         }
 
         //image uploading and save
-        $name = $request['name'];
+        $type = $request['type'];
 
         if ($request->hasFile('image')) {
             $file = $request->file('image');
             $extension = $file->getClientOriginalExtension(); // getting image extension
-            $filename = $name . '_' . +time() . '.' . $extension;
+            $filename = $type . '_' . +time() . '.' . $extension;
             $destination=public_path('img/uploads/market');
             $file->move($destination, $filename);
         }

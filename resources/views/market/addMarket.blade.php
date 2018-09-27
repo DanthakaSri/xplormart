@@ -43,24 +43,10 @@
                                         <label for="listingCategory">Type</label>
                                         <div class="contactSelect">
                                             <select name="type" id="guiest_id9" class="select-drop">
-                                                <option>Korean</option>
-                                                <option>Japaneese</option>
-                                                <option>Sri Lankan</option>
-                                                <option>Indian</option>
-                                                <option>Malaysian</option>
-                                                <option>Taiwanese</option>
-                                                <option>Thai</option>
-                                                <option>Vietnamese</option>
-                                                <option>Indonesian</option>
-                                                <option>Chinese</option>
-                                                <option>Italian</option>
-                                                <option>French</option>
-                                                <option>American</option>
-                                                <option>African</option>
-                                                <option>Australian</option>
-                                                <option>Russian</option>
-                                                <option>Singapore</option>
-                                                <option>Turkish</option>
+
+                                                @foreach($types as $type)
+                                                    <option value="{{$type->type}}">{{$type->type}}</option>
+                                                    @endforeach
                                             </select>
                                         </div>
 
