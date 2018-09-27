@@ -17,10 +17,10 @@ class MarketController extends Controller
      */
     public function index()
     {
-        $markets=DB::table('markets')->simplePaginate(8 );
-        $types=Type::all();
+        $markets = DB::table('markets')->simplePaginate(8);
+        $types = Type::all();
 
-        return view('market.allMarkets',compact('markets','types'));
+        return view('market.allMarkets', compact('markets', 'types'));
     }
 
     /**
@@ -31,8 +31,8 @@ class MarketController extends Controller
     public function create()
     {
 
-        $types=Type::all();
-        return view('market.addMarket',compact('types'));
+        $types = Type::all();
+        return view('market.addMarket', compact('types'));
 
     }
 
@@ -50,7 +50,7 @@ class MarketController extends Controller
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
             'type' => 'required',
-            'address'=>'required',
+            'address' => 'required',
             'phone_num' => 'string|max:10',
 
         ]);
@@ -67,14 +67,12 @@ class MarketController extends Controller
             $file = $request->file('image');
             $extension = $file->getClientOriginalExtension(); // getting image extension
             $filename = $type . '_' . +time() . '.' . $extension;
-            $destination=public_path('img/uploads/market');
+            $destination = public_path('img/uploads/market');
             $file->move($destination, $filename);
         }
 
 
-
-
-         Market::create([
+        Market::create([
             'name' => $request['name'],
             'type' => $request['type'],
             'description' => $request['description'],
@@ -96,7 +94,6 @@ class MarketController extends Controller
             'sunday' => $request['sunday'],
 
         ]);
-
 
 
         return redirect()->back()->with('status', 'Market created');;

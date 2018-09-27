@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Market;
+use App\Type;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
@@ -13,7 +16,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+
     }
 
     /**
@@ -23,6 +26,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('adminHome');
+        $types=Type::all();
+        $latest_markets=Market::orderBy('id','desc')->take(5)->get();
+        return view('home',compact('latest_markets','types'));
     }
 }

@@ -12,11 +12,13 @@
                 <div class="col-xs-12">
                     @if (session('status'))
                         <div class="alert alert-success alert-dismissible" role="alert">
-                            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
+                                    aria-hidden="true">&times;</span></button>
                             <strong> {{ session('status') }}</strong>, your market is available now.
                         </div>
                     @endif
-                    <form action="{{ route('shop.store') }}" method="post" class="listing__form" enctype="multipart/form-data">
+                    <form action="{{ route('shop.store') }}" method="post" class="listing__form"
+                          enctype="multipart/form-data">
                         <div class="dashboardBoxBg mb30">
                             <div class="profileIntro paraMargin">
                                 <h3>About</h3>
@@ -46,7 +48,7 @@
 
                                                 @foreach($types as $type)
                                                     <option value="{{$type->type}}">{{$type->type}}</option>
-                                                    @endforeach
+                                                @endforeach
                                             </select>
                                         </div>
 
@@ -144,16 +146,16 @@
                                 <h3>Gallery</h3>
                                 <div class="row">
                                     <div class="form-group col-xs-12">
-                                       {{-- <div class="imageUploader text-center">
-                                            <div class="file-upload">
-                                                <div class="upload-area">--}}
-                                                    <input type="file" name="image" class="file">
-                                                    <button class="browse" type="button">Click here to upload your
-                                                        market banner image
-                                                    </button>
-                                                {{--</div>
-                                            </div>
-                                        </div>--}}
+                                        {{-- <div class="imageUploader text-center">
+                                             <div class="file-upload">
+                                                 <div class="upload-area">--}}
+                                        <input type="file" name="image" class="file">
+                                        <button class="browse" type="button">Click here to upload your
+                                            market banner image
+                                        </button>
+                                        {{--</div>
+                                    </div>
+                                </div>--}}
                                     </div>
                                     @if ($errors->has('image'))
                                         <span class="invalid-feedback" role="alert">
