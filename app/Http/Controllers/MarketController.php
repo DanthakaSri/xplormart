@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Market;
 use App\Type;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Validator;
 
 class MarketController extends Controller
@@ -16,7 +17,10 @@ class MarketController extends Controller
      */
     public function index()
     {
-        return view('market.addMarket');
+        $markets=DB::table('markets')->simplePaginate(8 );
+        $types=Type::all();
+
+        return view('market.allMarkets',compact('markets','types'));
     }
 
     /**

@@ -78,10 +78,10 @@
                                         <label for="listingRegion">Country</label>
                                         <div class="contactSelect">
                                             <select name="country" id="guiest_id19" class="select-drop">
-                                                <option value="0">Korea</option>
-                                                <option value="1">Japan</option>
-                                                <option value="2">Thaiwan</option>
-                                                <option value="3">Other</option>
+                                                <option value="Korea">Korea</option>
+                                                <option value="Japan">Japan</option>
+                                                <option value="Thaiwan">Thaiwan</option>
+                                                <option value="Other">Other</option>
                                             </select>
                                         </div>
                                         @if ($errors->has('country'))
