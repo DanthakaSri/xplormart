@@ -65,7 +65,7 @@
                             <h3>Reviews (3)</h3>
                             <div class="media media-comment">
                                 <div class="media-left">
-                                    <img src="img/listing/list-user-1.jpg" class="media-object img-circle" alt="Image User">
+                                    <img src="{{asset('img/listing/list-user-1.jpg')}}" class="media-object img-circle" alt="Image User">
                                 </div>
                                 <div class="media-body">
                                     <h4 class="media-heading">Jessica Brown</h4>
@@ -82,7 +82,7 @@
                             </div>
                             <div class="media media-comment">
                                 <div class="media-left">
-                                    <img src="img/listing/list-user-2.jpg" class="media-object img-circle" alt="Image User">
+                                    <img src="{{asset('img/listing/list-user-2.jpg')}}" class="media-object img-circle" alt="Image User">
                                 </div>
                                 <div class="media-body">
                                     <h4 class="media-heading">Jessica Brown</h4>
@@ -99,7 +99,7 @@
                             </div>
                             <div class="media media-comment">
                                 <div class="media-left">
-                                    <img src="img/listing/list-user-3.jpg" class="media-object img-circle" alt="Image User">
+                                    <img src="{{ asset('img/listing/list-user-3.jpg') }}" class="media-object img-circle" alt="Image User">
                                 </div>
                                 <div class="media-body">
                                     <h4 class="media-heading">Jessica Brown</h4>
