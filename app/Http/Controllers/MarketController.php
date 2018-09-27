@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Market;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 
 class MarketController extends Controller
 {
@@ -28,25 +29,6 @@ class MarketController extends Controller
     }
 
 
-
-
-    /**
-     * Get a validator for an incoming registration request.
-     *
-     * @param  array $data
-     * @return \Illuminate\Contracts\Validation\Validator
-     */
-    protected function validator(array $data)
-    {
-        return Validator::make($data, [
-            'name' => 'required|string|max:255',
-            'email' => 'required|string|email|max:255|unique:users',
-            'password' => 'required|string|min:6|confirmed',
-        ]);
-    }
-
-
-
     /**
      * Store a newly created resource in storage.
      *
@@ -55,7 +37,36 @@ class MarketController extends Controller
      */
     public function store(Request $request)
     {
-        return $request;
+        //request validation rules
+        $validator = Validator::make($request->all(), [
+            'name' => 'required|string|max:255',
+            'email' => 'required|string|email|max:255|unique:users',
+            'type' => 'required',
+            'phone_num'=>'integer|min:10|max:10',
+
+        ]);
+        if ($validator->fails()) {
+            return redirect('shop/create')
+                ->withErrors($validator)
+                ->withInput();
+        }
+
+        //image uploading and save
+        $name=$request['name'];
+        if($request->hasFile('image'))
+        {
+            $file=$request->file('image');
+            $extension = $file->getClientOriginalExtension(); // getting image extension
+            $filename =$name.'_'.+time().'.'.$extension;
+            $file->move('uploads/market/', $filename);
+        }
+
+        $market=Market::create([
+            'name'=>'name',
+            'type'=>'type',
+            
+        ]);
+
     }
 
     /**
