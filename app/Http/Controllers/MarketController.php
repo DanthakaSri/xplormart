@@ -32,7 +32,7 @@ class MarketController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
@@ -42,7 +42,8 @@ class MarketController extends Controller
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
             'type' => 'required',
-            'phone_num'=>'integer|min:10|max:10',
+            'address'=>'required',
+            'phone_num' => 'string|max:10',
 
         ]);
         if ($validator->fails()) {
@@ -52,34 +53,59 @@ class MarketController extends Controller
         }
 
         //image uploading and save
-        $name=$request['name'];
-        if($request->hasFile('image'))
-        {
-            $file=$request->file('image');
+        $name = $request['name'];
+
+        if ($request->hasFile('image')) {
+            $file = $request->file('image');
             $extension = $file->getClientOriginalExtension(); // getting image extension
-            $filename =$name.'_'.+time().'.'.$extension;
-            $file->move('uploads/market/', $filename);
+            $filename = $name . '_' . +time() . '.' . $extension;
+            $destination=public_path('img/uploads/market');
+            $file->move($destination, $filename);
         }
 
-        $market=Market::create([
-            'name'=>'name',
-            'type'=>'type',
-            
+
+
+
+         Market::create([
+            'name' => $request['name'],
+            'type' => $request['type'],
+            'description' => $request['description'],
+            'country' => $request['country'],
+            'phone_num' => $request['phone_num'],
+            'email' => $request['email'],
+            'website' => $request['website'],
+            'address' => $request['address'],
+            'image' => '/img/uploads/market/' . $filename,
+            'fb_url' => $request['fb_url'],
+            'youtube_url' => $request['youtube_url'],
+            'twitter_url' => $request['twitter_url'],
+            'monday' => $request['monday'],
+            'tuesday' => $request['tuesday'],
+            'wednesday' => $request['wednesday'],
+            'thursday' => $request['thursday'],
+            'friday' => $request['friday'],
+            'saturday' => $request['saturday'],
+            'sunday' => $request['sunday'],
+
         ]);
+
+
+
+        return redirect()->back()->with('status', 'Market created');;
 
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Market  $market
+     * @param  \App\Market $market
      * @return \Illuminate\Http\Response
      */
-   /* public function show(Market $market)
-    {
-        return view('market.viewMarket');
-    }*/
- public function show()
+    /* public function show(Market $market)
+     {
+         return view('market.viewMarket');
+     }*/
+    public function show()
     {
         return view('market.viewMarket');
     }
@@ -87,7 +113,7 @@ class MarketController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Market  $market
+     * @param  \App\Market $market
      * @return \Illuminate\Http\Response
      */
     public function edit(Market $market)
@@ -98,8 +124,8 @@ class MarketController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Market  $market
+     * @param  \Illuminate\Http\Request $request
+     * @param  \App\Market $market
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, Market $market)
@@ -110,7 +136,7 @@ class MarketController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Market  $market
+     * @param  \App\Market $market
      * @return \Illuminate\Http\Response
      */
     public function destroy(Market $market)

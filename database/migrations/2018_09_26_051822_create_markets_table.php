@@ -20,7 +20,7 @@ class CreateMarketsTable extends Migration
             $table->mediumText('description')->nullable();
             $table->string('country');
             $table->bigInteger('phone_num')->nullable();
-            $table->string('email')->nullable();
+            $table->string('email')->unique()->nullable();
             $table->string('website')->nullable();
             $table->mediumText('address');
             $table->string('image')->nullable();

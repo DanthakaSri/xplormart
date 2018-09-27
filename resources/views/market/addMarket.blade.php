@@ -10,7 +10,13 @@
         <div class="container">
             <div class="row">
                 <div class="col-xs-12">
-                    <form action="{{ route('shop.store') }}" method="post" class="listing__form">
+                    @if (session('status'))
+                        <div class="alert alert-success alert-dismissible" role="alert">
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <strong> {{ session('status') }}</strong>, your market is available now.
+                        </div>
+                    @endif
+                    <form action="{{ route('shop.store') }}" method="post" class="listing__form" enctype="multipart/form-data">
                         <div class="dashboardBoxBg mb30">
                             <div class="profileIntro paraMargin">
                                 <h3>About</h3>
@@ -112,13 +118,18 @@
 
                                     <div class="form-group col-sm-6 col-xs-12">
                                         <label for="listingPhone">Phone</label>
-                                        <input type="text" name="phone_num" class="form-control" id="listingPhone"
+                                        <input type="number" name="phone_num" class="form-control" id="listingPhone"
                                                placeholder="0450 123 456">
+                                        @if ($errors->has('phone_num'))
+                                            <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('phone_num') }}</strong>
+                                    </span>
+                                        @endif
                                     </div>
 
                                     <div class="form-group col-sm-6 col-xs-12">
                                         <label for="listingEmail">Email</label>
-                                        <input type="text" class="form-control" id="listingEmail"
+                                        <input type="email" name="email" class="form-control" id="listingEmail"
                                                placeholder="market@market.com">
                                         @if ($errors->has('email'))
                                             <span class="invalid-feedback" role="alert">
@@ -147,22 +158,22 @@
                                 <h3>Gallery</h3>
                                 <div class="row">
                                     <div class="form-group col-xs-12">
-                                        <div class="imageUploader text-center">
+                                       {{-- <div class="imageUploader text-center">
                                             <div class="file-upload">
-                                                <div class="upload-area">
+                                                <div class="upload-area">--}}
                                                     <input type="file" name="image" class="file">
                                                     <button class="browse" type="button">Click here to upload your
                                                         market banner image
                                                     </button>
-                                                    @if ($errors->has('image'))
-                                                        <span class="invalid-feedback" role="alert">
+                                                {{--</div>
+                                            </div>
+                                        </div>--}}
+                                    </div>
+                                    @if ($errors->has('image'))
+                                        <span class="invalid-feedback" role="alert">
                                                         <strong>{{ $errors->first('image') }}</strong>
                                                     </span>
-                                                    @endif
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    @endif
                                 </div>
                             </div>
                         </div>
@@ -269,9 +280,9 @@
                                         <label for="saturdayTime">Saturday</label>
                                         <input type="text" name="saturday" class="form-control" id="saturdayTime"
                                                placeholder="10.00am - 5.00pm">
-                                        @if ($errors->has('type'))
+                                        @if ($errors->has('saturday'))
                                             <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('type') }}</strong>
+                                        <strong>{{ $errors->first('saturday') }}</strong>
                                     </span>
                                         @endif
                                     </div>
