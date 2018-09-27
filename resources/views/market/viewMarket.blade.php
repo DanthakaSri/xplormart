@@ -33,7 +33,7 @@
     <!-- LISTINGS DETAILS IMAGE SECTION -->
     <section class="clearfix paddingAdjustTopBottom">
         <ul class="list-inline listingImage">
-            <li><img src="img/banner/marketplace-banner.png" alt="Image Listing" class="img-responsive"></li>
+            <li><img src="{{asset('img/banner/marketplace-banner.png')}}" alt="Image Listing" class="img-responsive"></li>
         </ul>
     </section>
 
