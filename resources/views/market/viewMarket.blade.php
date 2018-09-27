@@ -33,10 +33,7 @@
     <!-- LISTINGS DETAILS IMAGE SECTION -->
     <section class="clearfix paddingAdjustTopBottom">
         <ul class="list-inline listingImage">
-            <li><img src="img/listing/listing-details-1.jpg" alt="Image Listing" class="img-responsive"></li>
-            <li><img src="img/listing/listing-details-2.jpg" alt="Image Listing" class="img-responsive"></li>
-            <li><img src="img/listing/listing-details-3.jpg" alt="Image Listing" class="img-responsive"></li>
-            <li><img src="img/listing/listing-details-4.jpg" alt="Image Listing" class="img-responsive"></li>
+            <li><img src="img/banner/marketplace-banner.png" alt="Image Listing" class="img-responsive"></li>
         </ul>
     </section>
 
