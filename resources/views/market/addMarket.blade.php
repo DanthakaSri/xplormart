@@ -10,7 +10,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-xs-12">
-                    <form action="" method="" class="listing__form">
+                    <form action="{{ url('/shop') }}" method="post" class="listing__form">
                         <div class="dashboardBoxBg mb30">
                             <div class="profileIntro paraMargin">
                                 <h3>About</h3>
@@ -18,12 +18,12 @@
                                 <div class="row">
                                     <div class="form-group col-sm-6 col-xs-12">
                                         <label for="listingTitle">Market Title</label>
-                                        <input type="text" class="form-control" id="listingTitle" placeholder="Market Title">
+                                        <input type="text" class="form-control" name="name" id="listingTitle" placeholder="Market Title">
                                     </div>
                                     <div class="form-group col-sm-6 col-xs-12">
                                         <label for="listingCategory">Type</label>
                                         <div class="contactSelect">
-                                            <select name="guiest_id9" id="guiest_id9" class="select-drop">
+                                            <select name="type" id="guiest_id9" class="select-drop">
                                             <option>Korean</option>
                                             <option>Japaneese</option>
                                             <option>Sri Lankan</option>
@@ -47,7 +47,7 @@
                                     </div>
                                     <div class="form-group col-xs-12">
                                         <label for="discribeTheListing">Description</label>
-                                        <textarea class="form-control" rows="3" placeholder="Description"></textarea>
+                                        <textarea name="description" class="form-control" rows="3" placeholder="Description"></textarea>
                                     </div>
                                 </div>
                             </div>
@@ -59,7 +59,7 @@
                                     <div class="form-group col-sm-6 col-xs-12">
                                         <label for="listingRegion">Country</label>
                                         <div class="contactSelect">
-                                            <select name="guiest_id19" id="guiest_id19" class="select-drop">
+                                            <select name="country" id="guiest_id19" class="select-drop">
                                                 <option value="0">Korea</option>
                                                 <option value="1">Japan</option>
                                                 <option value="2">Thaiwan</option>
@@ -69,12 +69,12 @@
                                     </div>
                                     <div class="form-group col-sm-6 col-xs-12">
                                         <label for="listingAddress">Address</label>
-                                        <input type="text" class="form-control" id="listingAddress" placeholder="Listing Address">
+                                        <input type="text"name="address" class="form-control" id="listingAddress" placeholder="Listing Address">
                                     </div>
 
                                     <div class="form-group col-sm-6 col-xs-12">
                                         <label for="listingPhone">Phone</label>
-                                        <input type="text" class="form-control" id="listingPhone" placeholder="0450 123 456">
+                                        <input type="text" name="phone_num" class="form-control" id="listingPhone" placeholder="0450 123 456">
                                     </div>
 
                                     <div class="form-group col-sm-6 col-xs-12">
@@ -84,7 +84,7 @@
 
                                     <div class="form-group col-sm-6 col-xs-12">
                                         <label for="listingWebsite">Website</label>
-                                        <input type="text" class="form-control" id="listingWebsite" placeholder="http://">
+                                        <input type="text" name="website" class="form-control" id="listingWebsite" placeholder="http://">
                                     </div>
                                 </div>
                             </div>
@@ -97,7 +97,7 @@
                                         <div class="imageUploader text-center">
                                             <div class="file-upload">
                                                 <div class="upload-area">
-                                                    <input type="file" name="img[]" class="file">
+                                                    <input type="file" name="image" class="file">
                                                     <button class="browse" type="button">Click here to upload your market banner image</button>
                                                 </div>
                                             </div>
@@ -112,17 +112,17 @@
                                <div class="row">
                                     <div class="form-group col-sm-6 col-xs-12">
                                         <label for="facebookUrl">Facebook URL</label>
-                                        <input type="text" class="form-control" id="facebookUrl" placeholder="http://facebook.com/listty">
+                                        <input type="text" name="fb_url" class="form-control" id="facebookUrl" placeholder="http://facebook.com/listty">
                                     </div>
 
                                     <div class="form-group col-sm-6 col-xs-12">
                                         <label for="twitterUrl">Twitter URL</label>
-                                        <input type="text" class="form-control" id="twitterUrl" placeholder="http://twitter.com/listty">
+                                        <input type="text" name="teitter_url" class="form-control" id="twitterUrl" placeholder="http://twitter.com/listty">
                                     </div>
 
                                     <div class="form-group col-sm-6 col-xs-12">
                                         <label for="youtubeUrl">You Tube URL</label>
-                                        <input type="text" class="form-control" id="youtubeUrl" placeholder="http://youtube.com/listty">
+                                        <input type="text" name="youtube_url"  class="form-control" id="youtubeUrl" placeholder="http://youtube.com/listty">
                                     </div>
                                 </div>
                             </div>
@@ -134,37 +134,37 @@
                                 <div class="row">
                                     <div class="form-group col-md-4 col-sm-6 col-xs-12">
                                         <label for="mondayTime">Monday</label>
-                                        <input type="text" class="form-control" id="mondayTime" placeholder="10.00am - 5.00pm">
+                                        <input type="text" name="monday" class="form-control" id="mondayTime" placeholder="10.00am - 5.00pm">
                                     </div>
 
                                     <div class="form-group col-md-4 col-sm-6 col-xs-12">
                                         <label for="tuesdayTime">Tuesday</label>
-                                        <input type="text" class="form-control" id="tuesdayTime" placeholder="10.00am - 5.00pm">
+                                        <input type="text" name="tuesday" class="form-control" id="tuesdayTime" placeholder="10.00am - 5.00pm">
                                     </div>
 
                                     <div class="form-group col-md-4 col-sm-6 col-xs-12">
                                         <label for="wednesdayTime">Wednesday</label>
-                                        <input type="text" class="form-control" id="wednesdayTime" placeholder="10.00am - 5.00pm">
+                                        <input type="text" name="wednesday" class="form-control" id="wednesdayTime" placeholder="10.00am - 5.00pm">
                                     </div>
 
                                     <div class="form-group col-md-4 col-sm-6 col-xs-12">
                                         <label for="thrusdayTime">Thrusday</label>
-                                        <input type="text" class="form-control" id="thrusdayTime" placeholder="10.00am - 5.00pm">
+                                        <input type="text" name="thursday" class="form-control" id="thrusdayTime" placeholder="10.00am - 5.00pm">
                                     </div>
 
                                     <div class="form-group col-md-4 col-sm-6 col-xs-12">
                                         <label for="fridayTime">Friday</label>
-                                        <input type="text" class="form-control" id="fridayTime" placeholder="10.00am - 5.00pm">
+                                        <input type="text" name="friday" class="form-control" id="fridayTime" placeholder="10.00am - 5.00pm">
                                     </div>
 
                                     <div class="form-group col-md-4 col-sm-6 col-xs-12">
                                         <label for="saturdayTime">Saturday</label>
-                                        <input type="text" class="form-control" id="saturdayTime" placeholder="10.00am - 5.00pm">
+                                        <input type="text" name="saturday" class="form-control" id="saturdayTime" placeholder="10.00am - 5.00pm">
                                     </div>
 
                                     <div class="form-group col-md-4 col-sm-6 col-xs-12">
                                         <label for="sundayTime">Sunday</label>
-                                        <input type="text" class="form-control" id="sundayTime" placeholder="Closed">
+                                        <input type="text" name="sunday" class="form-control" id="sundayTime" placeholder="Closed">
                                     </div>
                                 </div>
                             </div>

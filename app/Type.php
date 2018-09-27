@@ -4,9 +4,8 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Market extends Model
+class Type extends Model
 {
 
-    protected $guarded = ['id'];
-
+    protected $fillable = ['type'];
 }
