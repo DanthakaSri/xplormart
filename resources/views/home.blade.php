@@ -66,7 +66,7 @@
     <section class="clearfix thingsArea">
         <div class="container">
             <div class="page-header text-center">
-                <h2>Popular Things Near You <small>This are some of most popular listing</small></h2>
+                <h2>Popular Things Near You <small>This are some of most popular markets</small></h2>
             </div>
             <div class="row">
                 <div class="col-xs-12">
@@ -104,7 +104,7 @@
                                         </div>
                                         <div class="thingsCaption ">
                                             <ul class="list-inline captionItem">
-                                                <li><a href="{{ route('shop.show',1) }}">Eat & Drink</a></li>
+                                                <li><a href="{{ route('shop.show',1) }}">Japaneese</a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -130,7 +130,7 @@
                                         </div>
                                         <div class="thingsCaption ">
                                             <ul class="list-inline captionItem">
-                                                <li><a href="{{ route('shop.show',1) }}">Eat & Drink</a></li>
+                                                <li><a href="{{ route('shop.show',1) }}">Korean</a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -156,7 +156,7 @@
                                         </div>
                                         <div class="thingsCaption ">
                                             <ul class="list-inline captionItem">
-                                                <li><a href="{{ route('shop.show',1) }}">Hotels</a></li>
+                                                <li><a href="{{ route('shop.show',1) }}">Sri Lankan</a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -182,7 +182,7 @@
                                         </div>
                                         <div class="thingsCaption ">
                                             <ul class="list-inline captionItem">
-                                                <li><a href="{{ route('shop.show',1) }}"> Taiwan Market</a></li>
+                                                <li><a href="{{ route('shop.show',1) }}">Indian</a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -207,7 +207,7 @@
                                         </div>
                                         <div class="thingsCaption ">
                                             <ul class="list-inline captionItem">
-                                                <li><a href="{{ route('shop.show',1) }}">Others</a></li>
+                                                <li><a href="{{ route('shop.show',1) }}">Italian</a></li>
                                             </ul>
                                         </div>
                                     </div>

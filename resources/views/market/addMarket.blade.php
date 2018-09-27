@@ -101,7 +101,7 @@
                                     <div class="form-group col-sm-6 col-xs-12">
                                         <label for="listingAddress">Address</label>
                                         <input type="text" name="address" class="form-control" id="listingAddress"
-                                               placeholder="Listing Address">
+                                               placeholder="Market Address">
 
                                         @if ($errors->has('address'))
                                             <span class="invalid-feedback" role="alert">
@@ -173,7 +173,7 @@
                                     <div class="form-group col-sm-6 col-xs-12">
                                         <label for="facebookUrl">Facebook URL</label>
                                         <input type="text" name="fb_url" class="form-control" id="facebookUrl"
-                                               placeholder="http://facebook.com/listty">
+                                               placeholder="http://facebook.com/example">
                                         @if ($errors->has('fb_url'))
                                             <span class="invalid-feedback" role="alert">
                                         <strong>{{ $errors->first('fb_url') }}</strong>
@@ -184,7 +184,7 @@
                                     <div class="form-group col-sm-6 col-xs-12">
                                         <label for="twitterUrl">Twitter URL</label>
                                         <input type="text" name="twitter_url" class="form-control" id="twitterUrl"
-                                               placeholder="http://twitter.com/listty">
+                                               placeholder="http://twitter.com/example">
                                         @if ($errors->has('twitter_url'))
                                             <span class="invalid-feedback" role="alert">
                                         <strong>{{ $errors->first('twitter_url') }}</strong>
@@ -195,7 +195,7 @@
                                     <div class="form-group col-sm-6 col-xs-12">
                                         <label for="youtubeUrl">You Tube URL</label>
                                         <input type="text" name="youtube_url" class="form-control" id="youtubeUrl"
-                                               placeholder="http://youtube.com/listty">
+                                               placeholder="http://youtube.com/example">
                                         @if ($errors->has('youtube_url'))
                                             <span class="invalid-feedback" role="alert">
                                         <strong>{{ $errors->first('youtube_url') }}</strong>

@@ -1,5 +1,5 @@
 <!-- FOOTER -->
-<footer style="background-image: url(http://localhost:8000/img/banner/banner1.png);">
+<footer class="footer-bg">
     <!-- FOOTER INFO -->
     <div class="clearfix footerInfo">
         <div class="container">

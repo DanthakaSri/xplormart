@@ -11,8 +11,8 @@
             <div class="row">
                 <div class="col-xs-12">
                     <div class="listingTitleArea">
-                        <h2>Glory Hole Doughnuts</h2>
-                        <p>1150 Queen Street West Toronto <br>Ontario M6J 1J3, Canada</p>
+                        <h2>Sunday Sri Lankan Market</h2>
+                        <p>778 Country Street <br>Palmerston</p>
                         <div class="listingReview">
                             <ul class="list-inline rating">
                                 <li><i class="fa fa-star" aria-hidden="true"></i></li>
@@ -44,7 +44,7 @@
                 <div class="col-sm-8 col-xs-12">
                     <div class="listDetailsInfo">
                         <div class="detailsInfoBox">
-                            <h3>About This Hotel</h3>
+                            <h3>About This Market</h3>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed eiusmod tempor incididunt  labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident. sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam. </p>
                             <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est. </p>
                             <p>Qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui </p>
@@ -52,12 +52,12 @@
                         <div class="detailsInfoBox">
                             <h3>Features</h3>
                             <ul class="list-inline featuresItems">
-                                <li><i class="fa fa-check-circle-o" aria-hidden="true"></i>  Wi-Fi</li>
-                                <li><i class="fa fa-check-circle-o" aria-hidden="true"></i>  Street Parking</li>
-                                <li><i class="fa fa-check-circle-o" aria-hidden="true"></i>  Alcohol</li>
+                                <li><i class="fa fa-check-circle-o" aria-hidden="true"></i>  Ingrediants</li>
+                                <li><i class="fa fa-check-circle-o" aria-hidden="true"></i>  Bulk order</li>
+                                <li><i class="fa fa-check-circle-o" aria-hidden="true"></i>  Beverages</li>
                                 <li><i class="fa fa-check-circle-o" aria-hidden="true"></i>  Vegetarian</li>
-                                <li><i class="fa fa-check-circle-o" aria-hidden="true"></i>  Reservations</li>
-                                <li><i class="fa fa-check-circle-o" aria-hidden="true"></i>  Pets Friendly</li>
+                                <li><i class="fa fa-check-circle-o" aria-hidden="true"></i>  Dry food</li>
+                                <li><i class="fa fa-check-circle-o" aria-hidden="true"></i>  Street Parking</li>
                                 <li><i class="fa fa-check-circle-o" aria-hidden="true"></i>  Accept Credit Card</li>
                             </ul>
                         </div>
@@ -68,7 +68,7 @@
                                     <img src="{{asset('img/listing/list-user-1.jpg')}}" class="media-object img-circle" alt="Image User">
                                 </div>
                                 <div class="media-body">
-                                    <h4 class="media-heading">Jessica Brown</h4>
+                                    <h4 class="media-heading">Theshan</h4>
                                     <ul class="list-inline rating">
                                         <li><i class="fa fa-star" aria-hidden="true"></i></li>
                                         <li><i class="fa fa-star" aria-hidden="true"></i></li>
@@ -85,7 +85,7 @@
                                     <img src="{{asset('img/listing/list-user-2.jpg')}}" class="media-object img-circle" alt="Image User">
                                 </div>
                                 <div class="media-body">
-                                    <h4 class="media-heading">Jessica Brown</h4>
+                                    <h4 class="media-heading">Rock</h4>
                                     <ul class="list-inline rating">
                                         <li><i class="fa fa-star" aria-hidden="true"></i></li>
                                         <li><i class="fa fa-star" aria-hidden="true"></i></li>
@@ -102,7 +102,24 @@
                                     <img src="{{ asset('img/listing/list-user-3.jpg') }}" class="media-object img-circle" alt="Image User">
                                 </div>
                                 <div class="media-body">
-                                    <h4 class="media-heading">Jessica Brown</h4>
+                                    <h4 class="media-heading">Pasindu</h4>
+                                    <ul class="list-inline rating">
+                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                        <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
+                                        <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
+                                    </ul>
+                                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudan
+                                        totam rem ape riam,</p>
+                                </div>
+                            </div>
+                            <div class="media media-comment">
+                                <div class="media-left">
+                                    <img src="{{ asset('img/listing/list-user-3.jpg') }}" class="media-object img-circle" alt="Image User">
+                                </div>
+                                <div class="media-body">
+                                    <h4 class="media-heading">Chrishan</h4>
                                     <ul class="list-inline rating">
                                         <li><i class="fa fa-star" aria-hidden="true"></i></li>
                                         <li><i class="fa fa-star" aria-hidden="true"></i></li>
@@ -141,24 +158,21 @@
                     </div>
                 </div>
                 <div class="col-sm-4 col-xs-12">
-                    <div class="clearfix map-sidebar map-right">
-                        <div id="map" style="position:relative; margin: 0;padding: 0;height: 538px; max-width: none;"></div>
-                    </div>
                     <div class="listSidebar">
                         <h3>Location</h3>
                         <div class="contactInfo">
                             <ul class="list-unstyled list-address">
                                 <li>
                                     <i class="fa fa-map-marker" aria-hidden="true"></i>
-                                    16/14 Babor Road, Mohammad pur <br> Dhaka, Bangladesh
+                                    778 Country Street <br>Palmerston
                                 </li>
                                 <li>
                                     <i class="fa fa-phone" aria-hidden="true"></i>
-                                    +55 654 545 122 <br> +55 654 545 123
+                                    +0450 145242 <br> +0450 145241
                                 </li>
                                 <li>
                                     <i class="fa fa-envelope" aria-hidden="true"></i>
-                                    <a href="#">info @example.com</a> <a href="#">info@startravelbangladesh.com</a>
+                                    <a href="#">info @example.com</a>
                                 </li>
                             </ul>
                         </div>
