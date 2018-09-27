@@ -3844,7 +3844,7 @@ footer {
 
 @media (min-width: 768px) {
   .banerInfo .form-group {
-    width: 35%;
+    width: 220px;
     margin: 0 10px 0 0;
   }
 }
@@ -3865,6 +3865,12 @@ footer {
 .btnWrapper {
   padding: 20px;
 }
+@media (max-width: 768px) {
+  .btnWrapper {
+    padding: 0px;
+  }
+}
+
 
 .banerInfo .input-group {
   width: 100%;

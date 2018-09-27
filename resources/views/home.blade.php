@@ -16,7 +16,7 @@
                             <div class="form-group inputGroup">
                                 <div class="input-group">
                                     <div class="input-group-addon">Find</div>
-                                    <input type="text" class="form-control" id="findItem" placeholder="What are you looking?">
+                                    <input type="text" class="form-control" id="findItem" placeholder="Keywords">
                                     <div class="input-group-addon addon-right"></div>
                                 </div>
                             </div>
@@ -25,9 +25,23 @@
                                     <div class="input-group-addon">Type</div>
                                     <select class="form-control" id="type" placeholder="">
                                         <option>Korean</option>
-                                        <option>Sri Lanakan</option>
+                                        <option>Japaneese</option>
+                                        <option>Sri Lankan</option>
                                         <option>Indian</option>
-                                        <option>Japanese</option>
+                                        <option>Malaysian</option>
+                                        <option>Taiwanese</option>
+                                        <option>Thai</option>
+                                        <option>Vietnamese</option>
+                                        <option>Indonesian</option>
+                                        <option>Chinese</option>
+                                        <option>Italian</option>
+                                        <option>French</option>
+                                        <option>American</option>
+                                        <option>African</option>
+                                        <option>Australian</option>
+                                        <option>Russian</option>
+                                        <option>Singapore</option>
+                                        <option>Turkish</option>
                                     </select>
                                 </div>
                             </div>
