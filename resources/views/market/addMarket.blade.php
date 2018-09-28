@@ -217,12 +217,15 @@
                         <div class="dashboardBoxBg mb30">
                             <div class="profileIntro paraMargin">
                                 <h3>Opening Hours</h3>
-                                <p>Example: 10.00am - 5.00pm or 10.00 - 17.00</p>
                                 <div class="row">
                                     <div class="form-group col-md-4 col-sm-6 col-xs-12">
                                         <label for="mondayTime">Monday</label>
-                                        <input type="text" name="monday" class="form-control" id="mondayTime"
-                                               placeholder="10.00am - 5.00pm">
+
+                                        <input type="text" name="mondayFrom" class="form-control timePick" id="mondayTime"
+                                               placeholder="From">
+                                        <input type="text" name="mondayTo" class="form-control hours timePick" id="mondayTime"
+                                               placeholder="To">
+
                                         @if ($errors->has('monday'))
                                             <span class="invalid-feedback" role="alert">
                                         <strong>{{ $errors->first('monday') }}</strong>
@@ -232,8 +235,10 @@
 
                                     <div class="form-group col-md-4 col-sm-6 col-xs-12">
                                         <label for="tuesdayTime">Tuesday</label>
-                                        <input type="text" name="tuesday" class="form-control" id="tuesdayTime"
-                                               placeholder="10.00am - 5.00pm">
+                                        <input type="text" name="tuesdayFrom" class="form-control timePick" id="tuesdayTime"
+                                               placeholder="From">
+                                        <input type="text" name="tuesdayTo" class="form-control timePick hours" id="tuesdayTime"
+                                               placeholder="To">
                                         @if ($errors->has('tuesday'))
                                             <span class="invalid-feedback" role="alert">
                                         <strong>{{ $errors->first('tuesday') }}</strong>
@@ -243,8 +248,10 @@
 
                                     <div class="form-group col-md-4 col-sm-6 col-xs-12">
                                         <label for="wednesdayTime">Wednesday</label>
-                                        <input type="time" name="wednesday" class="form-control" id="wednesdayTime"
-                                               placeholder="10.00am - 5.00pm">
+                                        <input type="text" name="wednesdayFrom" class="form-control timePick" id="wednesdayTime"
+                                               placeholder="From">
+                                        <input type="text" name="wednesdayTo" class="form-control timePick hours" id="wednesdayTime"
+                                               placeholder="To">
                                         @if ($errors->has('wednesday'))
                                             <span class="invalid-feedback" role="alert">
                                         <strong>{{ $errors->first('wednesday') }}</strong>
@@ -254,8 +261,10 @@
 
                                     <div class="form-group col-md-4 col-sm-6 col-xs-12">
                                         <label for="thrusdayTime">Thrusday</label>
-                                        <input type="text" name="thursday" class="form-control" id="thrusdayTime"
-                                               placeholder="10.00am - 5.00pm">
+                                        <input type="text" name="thursdayFrom" class="form-control timePick" id="thrusdayTime"
+                                               placeholder="From">
+                                        <input type="text" name="thursdayTo" class="form-control timePick hours" id="thrusdayTime"
+                                               placeholder="To">
                                         @if ($errors->has('thursday'))
                                             <span class="invalid-feedback" role="alert">
                                         <strong>{{ $errors->first('thursday') }}</strong>
@@ -265,8 +274,10 @@
 
                                     <div class="form-group col-md-4 col-sm-6 col-xs-12">
                                         <label for="fridayTime">Friday</label>
-                                        <input type="text" name="friday" class="form-control" id="fridayTime"
-                                               placeholder="10.00am - 5.00pm">
+                                        <input type="text" name="fridayFrom" class="form-control timePick" id="fridayTime"
+                                               placeholder="From">
+                                        <input type="text" name="fridayTo" class="form-control timePick hours" id="fridayTime"
+                                               placeholder="To">
                                         @if ($errors->has('friday'))
                                             <span class="invalid-feedback" role="alert">
                                         <strong>{{ $errors->first('friday') }}</strong>
@@ -276,8 +287,10 @@
 
                                     <div class="form-group col-md-4 col-sm-6 col-xs-12">
                                         <label for="saturdayTime">Saturday</label>
-                                        <input type="text" name="saturday" class="form-control" id="saturdayTime"
-                                               placeholder="10.00am - 5.00pm">
+                                        <input type="text" name="saturdayFrom" class="form-control timePick" id="saturdayTime"
+                                               placeholder="From">
+                                        <input type="text" name="saturdayTo" class="form-control timePick hours" id="saturdayTime"
+                                               placeholder="To">
                                         @if ($errors->has('saturday'))
                                             <span class="invalid-feedback" role="alert">
                                         <strong>{{ $errors->first('saturday') }}</strong>
@@ -287,8 +300,10 @@
 
                                     <div class="form-group col-md-4 col-sm-6 col-xs-12">
                                         <label for="sundayTime">Sunday</label>
-                                        <input type="text" name="sunday" class="form-control" id="sundayTime"
-                                               placeholder="Closed">
+                                        <input type="text" name="sundayFrom" class="form-control timePick" id="sundayTime"
+                                               placeholder="From">
+                                        <input type="text" name="sundayTo" class="form-control timePick hours" id="sundayTime"
+                                               placeholder="To">
                                         @if ($errors->has('sunday'))
                                             <span class="invalid-feedback" role="alert">
                                         <strong>{{ $errors->first('sunday') }}</strong>

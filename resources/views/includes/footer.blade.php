@@ -20,4 +20,5 @@
 <script src="{{ asset('plugins/map/js/infobox_packed.js') }}" defer></script>
 <script src="{{ asset('js/single-map.js') }}" defer></script>
 <script src="{{ asset('js/map.js') }}" defer></script>
+<script src="{{ asset('js/jquery.timepicker.js') }}" defer></script>
 <script src="{{ asset('js/custom.js') }}" defer></script>

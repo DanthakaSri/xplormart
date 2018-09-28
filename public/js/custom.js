@@ -411,4 +411,18 @@ jQuery(document).ready(function(){
     itemSelector: '.grid-item',
     layoutMode: 'fitRows'
   });
+
+
+  // custom scripts by chrishan
+
+  $('.timePick').timepicker({
+    'noneOption': [
+      {
+          'label': 'Closed',
+          'className': 'closed',
+          'value': 'Closed'
+      }
+  ]
+});
+
 });

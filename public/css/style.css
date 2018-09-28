@@ -9939,3 +9939,10 @@ body.pattern-04 {
   background-attachment: fixed;
   background-position: center;
 }
+
+
+/*custom styles*/
+
+.hours {
+  margin: 10px 0 0 0;
+}
