@@ -77,7 +77,7 @@
                                     <div class="col-md-4 col-sm-6 col-xs-12">
                                         <div class="thingsBox">
                                             <div class="thingsImage">
-                                                <img src="{{asset($market->image)}}" height="237px" width="368px"
+                                                <img src="{{$market->image}}" height="237px" width="368px"
                                                      alt="{{$market->name}}">
                                                 <div class="thingsMask">
                                                     <ul class="list-inline rating">
