@@ -92,17 +92,37 @@
                                     </span>
                                         @endif
                                     </div>
+
+
                                     <div class="form-group col-sm-6 col-xs-12">
-                                        <label for="listingAddress">Address</label>
+                                        <label for="listingAddress">Street Address</label>
                                         <input type="text" name="address" class="form-control" id="listingAddress"
                                                placeholder="Market Address">
-
+ 
                                         @if ($errors->has('address'))
                                             <span class="invalid-feedback" role="alert">
                                         <strong>{{ $errors->first('address') }}</strong>
                                     </span>
                                         @endif
                                     </div>
+
+                                     <div class="form-group col-sm-6 col-xs-12">
+                                     <label for="listingPostcode">Postcode</label>
+                                        <input type="text" name="address" class="form-control" id="listingPostcode"
+                                               placeholder="Postcode">
+                                    </div>
+
+                                    <div class="form-group col-sm-6 col-xs-12">
+                                    <label for="listingSuburb">Suburb</label>
+                                        <input type="text" name="address" class="form-control" id="listingSuburb"
+                                               placeholder="Suburb">
+                                        </div>
+
+                                    <div class="form-group col-sm-6 col-xs-12">
+                                    <label for="listingCity">City</label>
+                                        <input type="text" name="address" class="form-control" id="listingCity"
+                                               placeholder="City">
+                                        </div>
 
                                     <div class="form-group col-sm-6 col-xs-12">
                                         <label for="listingPhone">Phone</label>
