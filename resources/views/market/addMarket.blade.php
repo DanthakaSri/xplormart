@@ -162,10 +162,7 @@
                                         {{-- <div class="imageUploader text-center">
                                              <div class="file-upload">
                                                  <div class="upload-area">--}}
-                                        <input type="file" name="image" class="file">
-                                        <button class="browse" type="button">Click here to upload your
-                                            market banner image
-                                        </button>
+                                                 <input type="file" name="pic" class="form-control" accept="image/*">
                                         {{--</div>
                                     </div>
                                 </div>--}}
