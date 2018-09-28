@@ -14,7 +14,7 @@
                           enctype="multipart/form-data">
                         <div class="dashboardBoxBg mb30">
                             <div class="profileIntro paraMargin">
-                                <h3>About</h3>
+                                <h3>About Marketplace</h3>
                                 <p>Please provide accurate marketplace information and we are not responsible for adding
                                     inacurate information and it will cause removing your marketplace automatically
                                     based on public verification.</p>
@@ -156,7 +156,7 @@
                         </div>
                         <div class="dashboardBoxBg mb30">
                             <div class="profileIntro paraMargin">
-                                <h3>Gallery</h3>
+                                <h3>Market Banner</h3>
                                 <div class="row">
                                     <div class="form-group col-xs-12">
                                         {{-- <div class="imageUploader text-center">
@@ -177,7 +177,7 @@
                         </div>
                         <div class="dashboardBoxBg mb30">
                             <div class="profileIntro paraMargin">
-                                <h3>Social</h3>
+                                <h3>Social Media</h3>
                                 <div class="row">
                                     <div class="form-group col-sm-6 col-xs-12">
                                         <label for="facebookUrl">Facebook URL</label>
