@@ -76,7 +76,7 @@
                                                 <li><i class="fa fa-star" aria-hidden="true"></i></li>
                                                 <li><i class="fa fa-star" aria-hidden="true"></i></li>
                                             </ul>
-                                            <a href="{{ route('shop.show',1) }}"><h2>{{$market->name}} <i
+                                            <a href="{{ route('shop.show',$market->id) }}"><h2>{{$market->name}} <i
                                                         class="fa fa-check-circle" aria-hidden="true"></i></h2></a>
                                             <p>{{$market->address}}</p>
                                             <p>{{$market->country}}</p>

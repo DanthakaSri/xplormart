@@ -74,7 +74,7 @@
                         </div>
                         <div class="dashboardBoxBg mb30">
                             <div class="profileIntro paraMargin">
-                                <h3>Contact</h3>
+                                <h3>Shop Details</h3>
                                 <div class="row">
                                     <div class="form-group col-sm-6 col-xs-12">
                                         <label for="listingRegion">Country</label>
@@ -233,7 +233,7 @@
 
                                     <div class="form-group col-md-4 col-sm-6 col-xs-12">
                                         <label for="wednesdayTime">Wednesday</label>
-                                        <input type="text" name="wednesday" class="form-control" id="wednesdayTime"
+                                        <input type="time" name="wednesday" class="form-control" id="wednesdayTime"
                                                placeholder="10.00am - 5.00pm">
                                         @if ($errors->has('wednesday'))
                                             <span class="invalid-feedback" role="alert">

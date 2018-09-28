@@ -11,8 +11,8 @@
             <div class="row">
                 <div class="col-xs-12">
                     <div class="listingTitleArea">
-                        <h2>Sunday Sri Lankan Market</h2>
-                        <p>778 Country Street <br>Palmerston</p>
+                        <h2>{{ $market_details->name }}</h2>
+                        <p>{{$market_details->address}} <br></p>
                         <div class="listingReview">
                             <ul class="list-inline rating">
                                 <li><i class="fa fa-star" aria-hidden="true"></i></li>
@@ -33,7 +33,7 @@
     <!-- LISTINGS DETAILS IMAGE SECTION -->
     <section class="clearfix paddingAdjustTopBottom">
         <ul class="list-inline listingImage">
-            <li><img src="{{asset('img/banner/marketplace-banner.png')}}" alt="Image Listing" class="img-responsive"></li>
+            <li><img src="{{asset($market_details->image)}}" alt="Image Listing" class="img-responsive"></li>
         </ul>
     </section>
 
@@ -44,10 +44,8 @@
                 <div class="col-sm-8 col-xs-12">
                     <div class="listDetailsInfo">
                         <div class="detailsInfoBox">
-                            <h3>About This Market</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed eiusmod tempor incididunt  labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident. sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam. </p>
-                            <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est. </p>
-                            <p>Qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui </p>
+                            <h3>About {{$market_details->name}}</h3>
+                           <p>{{$market_details->description}}</p>
                         </div>
                         <div class="detailsInfoBox">
                             <h3>Features</h3>
@@ -164,15 +162,15 @@
                             <ul class="list-unstyled list-address">
                                 <li>
                                     <i class="fa fa-map-marker" aria-hidden="true"></i>
-                                    778 Country Street <br>Palmerston
+                                    {{ $market_details->address }}
                                 </li>
                                 <li>
                                     <i class="fa fa-phone" aria-hidden="true"></i>
-                                    +0450 145242 <br> +0450 145241
+                                    {{$market_details->phone_num}}
                                 </li>
                                 <li>
                                     <i class="fa fa-envelope" aria-hidden="true"></i>
-                                    <a href="#">info @example.com</a>
+                                    <a href="mailto:{{ $market_details->email }}">{{$market_details->email}}</a>
                                 </li>
                             </ul>
                         </div>
@@ -182,31 +180,31 @@
                         <ul class="list-unstyled sidebarList">
                             <li>
                                 <span class="pull-left">Monday</span>
-                                <span class="pull-right">08.00am - 05.00pm</span>
+                                <span class="pull-right">{{ $market_details->monday }}</span>
                             </li>
                             <li>
                                 <span class="pull-left">Tuesday</span>
-                                <span class="pull-right">08.00am - 05.00pm</span>
+                                <span class="pull-right">{{ $market_details->tuesday }}</span>
                             </li>
                             <li>
                                 <span class="pull-left">Wednesday</span>
-                                <span class="pull-right">08.00am - 05.00pm</span>
+                                <span class="pull-right">{{$market_details->wednesday}}</span>
                             </li>
                             <li>
                                 <span class="pull-left">Thrusday</span>
-                                <span class="pull-right">08.00am - 05.00pm</span>
+                                <span class="pull-right">{{$market_details->thursday}}</span>
                             </li>
                             <li>
                                 <span class="pull-left">Friday</span>
-                                <span class="pull-right">08.00am - 05.00pm</span>
+                                <span class="pull-right">{{$market_details->friday}}</span>
                             </li>
                             <li>
                                 <span class="pull-left">Saturday</span>
-                                <span class="pull-right"><a href="#">Closed</a></span>
+                                <span class="pull-right">{{$market_details->saturday}}</span>
                             </li>
                             <li>
                                 <span class="pull-left">Sunday</span>
-                                <span class="pull-right"><a href="#">Closed</a></span>
+                                <span class="pull-right">{{$market_details->sunday}}</span>
                             </li>
                         </ul>
                     </div>

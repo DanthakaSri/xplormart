@@ -106,14 +106,13 @@ class MarketController extends Controller
      * @param  \App\Market $market
      * @return \Illuminate\Http\Response
      */
-    /* public function show(Market $market)
+     public function show($id)
      {
-         return view('market.viewMarket');
-     }*/
-    public function show()
-    {
-        return view('market.viewMarket');
-    }
+         $market_details=Market::where('id','=' ,$id)->first();
+//        return $market_details;
+         return view('market.viewMarket',compact('market_details'));
+     }
+
 
     /**
      * Show the form for editing the specified resource.
@@ -121,9 +120,9 @@ class MarketController extends Controller
      * @param  \App\Market $market
      * @return \Illuminate\Http\Response
      */
-    public function edit(Market $market)
+    public function edit( $id)
     {
-        //
+
     }
 
     /**
