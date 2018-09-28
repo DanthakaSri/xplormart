@@ -96,14 +96,13 @@ class MarketController extends Controller
         ]);
 
 
-        return redirect()->back()->with('status', 'Market created');;
+        return redirect()->route('shop.index')->with('status', 'Market created');;
 
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Market $market
      * @return \Illuminate\Http\Response
      */
      public function show($id)
@@ -117,7 +116,6 @@ class MarketController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Market $market
      * @return \Illuminate\Http\Response
      */
     public function edit( $id)

@@ -54,6 +54,13 @@
                 </div>
                 <div class="col-sm-8 col-xs-12">
                     <div class="resultBar">
+                        @if (session('status'))
+                            <div class="alert alert-success alert-dismissible" role="alert">
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
+                                        aria-hidden="true">&times;</span></button>
+                                <strong> {{ session('status') }}</strong>, your market is available now.
+                            </div>
+                        @endif
                         <h2>We found <span>{{ $markets->count() }}</span> Results for you</h2>
                         <ul class="list-inline">
                             <li><a href="{{route('shop.index')}}"><i class="fa fa-shopping-basket fa-2x"

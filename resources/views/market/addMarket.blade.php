@@ -10,13 +10,6 @@
         <div class="container">
             <div class="row">
                 <div class="col-xs-12">
-                    @if (session('status'))
-                        <div class="alert alert-success alert-dismissible" role="alert">
-                            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
-                                    aria-hidden="true">&times;</span></button>
-                            <strong> {{ session('status') }}</strong>, your market is available now.
-                        </div>
-                    @endif
                     <form action="{{ route('shop.store') }}" method="post" class="listing__form"
                           enctype="multipart/form-data">
                         <div class="dashboardBoxBg mb30">
@@ -98,7 +91,7 @@
                                         <label for="listingAddress">Street Address</label>
                                         <input type="text" name="address" class="form-control" id="listingAddress"
                                                placeholder="Market Address">
- 
+
                                         @if ($errors->has('address'))
                                             <span class="invalid-feedback" role="alert">
                                         <strong>{{ $errors->first('address') }}</strong>
