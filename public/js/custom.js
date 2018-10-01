@@ -7,7 +7,7 @@ jQuery(document).ready(function(){
 
 
   //============================== SELECT BOX =========================
-  $('.select-drop').selectbox();
+  //$('.select-drop').selectbox();
 
   //============================== FIXED HEADER =========================
   $(window).on('load', function(){
@@ -424,5 +424,251 @@ jQuery(document).ready(function(){
       }
   ]
 });
+
+
+// form validation
+
+$('#market_title_errorMsg').hide();
+$('#type_errorMsg').hide();
+$(".otherTypeWrapper").hide();
+$('#country_errorMsg').hide();
+$('#street_errorMsg').hide();
+$('#postcode_errorMsg').hide();
+$('#suburb_errorMsg').hide();
+$('#city_errorMsg').hide();
+$('#phone_errorMsg').hide();
+$('#email_errorMsg').hide();
+$('#monday_errorMsg, #tuesday_errorMsg, #wednesday_errorMsg, #thursday_errorMsg, #friday_errorMsg, #saturday_errorMsg, #sunday_errorMsg').hide();
+
+
+
+
+
+var error_marketTitle = false;
+var error_type = false;
+var error_country = false;
+var error_street = false;
+var error_postcode = false;
+var error_suburb = false;
+var error_city = false;
+var error_phone = false;
+var error_email = false;
+
+
+//focus functions
+
+$('#listingTitle').focusout(function (){
+  check_marketTitle();
+});
+
+$('#marketType').focusout(function (){
+  check_marketType();
+});
+
+$("#marketType").change(function(){
+  if($(this).val()=="Other")
+  {    
+      $(".otherTypeWrapper").show();
+  }
+   else
+   {
+       $(".otherTypeWrapper").hide();
+   }
+});
+
+$('#listingCountry').focusout(function (){
+  check_country();
+});
+
+$('#listingAddress').focusout(function (){
+  check_street();
+});
+
+$('#listingPostcode').focusout(function (){
+  check_postcode();
+});
+
+$('#listingSuburb').focusout(function (){
+  check_suburb();
+});
+
+$('#listingCity').focusout(function (){
+  check_city();
+});
+
+$('#listingPhone').focusout(function (){
+  check_phone();
+});
+
+$('#listingEmail').focusout(function (){
+  check_email();
+});
+
+
+//check market title function
+function check_marketTitle (){
+  var marketTitle_length = $('#listingTitle').val().length;
+
+  if (marketTitle_length <= 0) {
+    $('#market_title_errorMsg').html('Market title cannot be empty');
+    $('#market_title_errorMsg').show();
+    error_marketTitle = true;
+  }
+
+  else if (marketTitle_length > 50) {
+    $('#market_title_errorMsg').html('Market title cannot be more than 50 characters');
+    $('#market_title_errorMsg').show();
+    error_marketTitle = true;
+  }
+
+  else {
+    $('#market_title_errorMsg').hide();
+  }
+}
+
+
+// check market type function 
+
+function check_marketType (){
+  var marketType_value = $('#marketType').val();
+
+  if (marketType_value == null) {
+    $('#type_errorMsg').html('Market type must be selected');
+    $('#type_errorMsg').show();
+    error_type = true;
+  }
+
+  else {
+    $('#type_errorMsg').hide();
+  }
+}
+
+// check country function 
+
+function check_country (){
+  var country_value = $('#listingCountry').val();
+
+  if (country_value == null) {
+    $('#country_errorMsg').html('Country must be selected');
+    $('#country_errorMsg').show();
+    error_country = true;
+  }
+
+  else {
+    $('#country_errorMsg').hide();
+  }
+}
+
+
+//check street function
+function check_street (){
+  var street_length = $('#listingAddress').val().length;
+
+  if (street_length <= 0) {
+    $('#street_errorMsg').html('Street address cannot be empty');
+    $('#street_errorMsg').show();
+    error_street = true;
+  }
+
+  else {
+    $('#street_errorMsg').hide();
+  }
+}
+
+
+//check postcode
+function check_postcode (){
+  var postcode_length = $('#listingPostcode').val().length;
+
+  if (postcode_length <= 0) {
+    $('#postcode_errorMsg').html('Postcode cannot be empty');
+    $('#postcode_errorMsg').show();
+    error_postcode = true;
+  }
+
+  else {
+    $('#postcode_errorMsg').hide();
+  }
+}
+
+//check suburb
+function check_suburb (){
+  var suburb_length = $('#listingSuburb').val().length;
+
+  if (suburb_length <= 0) {
+    $('#suburb_errorMsg').html('Postcode cannot be empty');
+    $('#suburb_errorMsg').show();
+    error_suburb = true;
+  }
+
+  else {
+    $('#suburb_errorMsg').hide();
+  }
+}
+
+//check city
+function check_city (){
+  var city_length = $('#listingCity').val().length;
+
+  if (city_length <= 0) {
+    $('#city_errorMsg').html('Postcode cannot be empty');
+    $('#city_errorMsg').show();
+    error_city = true;
+  }
+
+  else {
+    $('#city_errorMsg').hide();
+  }
+}
+
+//check mobile
+function check_phone (){
+  var phone_value = $('#listingPhone').val();
+  var mobileRegex = new RegExp(/^((\+\d{1,3}(-| )?\(?\d\)?(-| )?\d{1,3})|(\(?\d{2,3}\)?))(-| )?(\d{3,4})(-| )?(\d{4})(( x| ext)\d{1,5}){0,1}$/);
+
+  if (mobileRegex.test(phone_value)) {
+    $('#phone_errorMsg').hide();
+  }
+
+  else {
+    $('#phone_errorMsg').html('Invalid mobile number or field cannot be empty');
+    $('#phone_errorMsg').show();
+    error_city = true;
+  }
+}
+
+//check email
+function check_email (){
+  var email_value = $('#listingEmail').val();
+  var emailRegex = new RegExp(/^\b[A-Z0-9._%-]+@[A-Z0-9.-]+\.[A-Z]{2,4}\b$/i);
+
+  if (emailRegex.test(email_value)) {
+    $('#email_errorMsg').hide();
+  }
+
+  else {
+    $('#email_errorMsg').html('Invalid email address or field cannot be empty');
+    $('#email_errorMsg').show();
+    error_city = true;
+  }
+}
+
+/*$('#addMarketForm').submit(function (){
+  error_marketTitle = false;
+  
+  
+  check_marketTitle();
+
+  if(error_marketTitle == false) {
+    return true;
+  }
+  else {
+    return false;
+  }
+
+});*/
+
+
+// end form validation
 
 });

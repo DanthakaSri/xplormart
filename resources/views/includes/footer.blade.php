@@ -8,7 +8,7 @@
 <script src="{{ asset('plugins/waypoints/waypoints.min.js') }}" defer></script>
 <script src="{{ asset('plugins/counter-up/jquery.counterup.min.js') }}" defer></script>
 <script src="{{ asset('plugins/datepicker/bootstrap-datepicker.min.js') }}" defer></script>
-<script src="{{ asset('plugins/selectbox/jquery.selectbox-0.1.3.min.js') }}" defer></script>
+<!--script src="{{ asset('plugins/selectbox/jquery.selectbox-0.1.3.min.js') }}" defer></script-->
 <script src="{{ asset('plugins/owl-carousel/owl.carousel.min.js') }}" defer></script>
 <script src="{{ asset('plugins/slick/slick.min.js') }}" defer></script>
 <script src="{{ asset('plugins/isotope/isotope.min.js') }}" defer></script>

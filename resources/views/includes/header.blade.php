@@ -5,7 +5,7 @@
 <link href="{{ asset('plugins/listtyicons/style.css') }}" rel="stylesheet">
 <link href="{{ asset('plugins/bootstrapthumbnail/bootstrap-thumbnail.css') }}" rel="stylesheet">
 <link href="{{ asset('plugins/datepicker/datepicker.min.css') }}" rel="stylesheet">
-<link href="{{ asset('plugins/selectbox/select_option1.css') }}" rel="stylesheet">
+<!--link href="{{ asset('plugins/selectbox/select_option1.css') }}" rel="stylesheet"-->
 <link href="{{ asset('plugins/owl-carousel/owl.carousel.min.css') }}" rel="stylesheet">
 <link href="{{ asset('plugins/slick/slick.css') }}" rel="stylesheet">
 <link href="{{ asset('plugins/slick/slick-theme.css') }}" rel="stylesheet">

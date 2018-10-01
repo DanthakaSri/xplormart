@@ -9946,3 +9946,36 @@ body.pattern-04 {
 .hours {
   margin: 10px 0 0 0;
 }
+
+.error_form {
+  display: block;
+  color:red;
+}
+
+.mandatory_field {
+  color:red;
+}
+
+
+input#otherType {
+  margin: 5px 0 0px 0px;
+}
+
+.otherTypelbl {
+margin: 10px 0 0 0;
+}
+
+/*
+input[type=text], textarea {
+  -webkit-transition: all 0.30s ease-in-out;
+  -moz-transition: all 0.30s ease-in-out;
+  -ms-transition: all 0.30s ease-in-out;
+  -o-transition: all 0.30s ease-in-out;
+  outline: none;
+  border: 1px solid #DDDDDD;
+}
+ 
+input[type=text]:focus, textarea:focus {
+  box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+  border: 1px solid rgba(81, 203, 238, 1);
+}*/
