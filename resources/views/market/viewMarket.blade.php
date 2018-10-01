@@ -12,7 +12,7 @@
                 <div class="col-xs-12">
                     <div class="listingTitleArea">
                         <h2>{{ $market_details->name }}</h2>
-                        <p>{{$market_details->address}} <br></p>
+                        <p>{{$market_details->street_address}}, {{$market_details->suburb}} <br></p>
                         <div class="listingReview">
                             <ul class="list-inline rating">
                                 <li><i class="fa fa-star" aria-hidden="true"></i></li>
@@ -45,25 +45,26 @@
                     <div class="listDetailsInfo">
                         <div class="detailsInfoBox">
                             <h3>About {{$market_details->name}}</h3>
-                           <p>{{$market_details->description}}</p>
+                            <p>{{$market_details->description}}</p>
                         </div>
                         <div class="detailsInfoBox">
                             <h3>Features</h3>
                             <ul class="list-inline featuresItems">
-                                <li><i class="fa fa-check-circle-o" aria-hidden="true"></i>  Ingrediants</li>
-                                <li><i class="fa fa-check-circle-o" aria-hidden="true"></i>  Bulk order</li>
-                                <li><i class="fa fa-check-circle-o" aria-hidden="true"></i>  Beverages</li>
-                                <li><i class="fa fa-check-circle-o" aria-hidden="true"></i>  Vegetarian</li>
-                                <li><i class="fa fa-check-circle-o" aria-hidden="true"></i>  Dry food</li>
-                                <li><i class="fa fa-check-circle-o" aria-hidden="true"></i>  Street Parking</li>
-                                <li><i class="fa fa-check-circle-o" aria-hidden="true"></i>  Accept Credit Card</li>
+                                <li><i class="fa fa-check-circle-o" aria-hidden="true"></i> Ingrediants</li>
+                                <li><i class="fa fa-check-circle-o" aria-hidden="true"></i> Bulk order</li>
+                                <li><i class="fa fa-check-circle-o" aria-hidden="true"></i> Beverages</li>
+                                <li><i class="fa fa-check-circle-o" aria-hidden="true"></i> Vegetarian</li>
+                                <li><i class="fa fa-check-circle-o" aria-hidden="true"></i> Dry food</li>
+                                <li><i class="fa fa-check-circle-o" aria-hidden="true"></i> Street Parking</li>
+                                <li><i class="fa fa-check-circle-o" aria-hidden="true"></i> Accept Credit Card</li>
                             </ul>
                         </div>
                         <div class="detailsInfoBox">
                             <h3>Reviews (3)</h3>
                             <div class="media media-comment">
                                 <div class="media-left">
-                                    <img src="{{asset('img/listing/list-user-1.jpg')}}" class="media-object img-circle" alt="Image User">
+                                    <img src="{{asset('img/listing/list-user-1.jpg')}}" class="media-object img-circle"
+                                         alt="Image User">
                                 </div>
                                 <div class="media-body">
                                     <h4 class="media-heading">Theshan</h4>
@@ -74,13 +75,15 @@
                                         <li><i class="fa fa-star" aria-hidden="true"></i></li>
                                         <li><i class="fa fa-star" aria-hidden="true"></i></li>
                                     </ul>
-                                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudan
+                                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                                        doloremque laudan
                                         totam rem ape riam,</p>
                                 </div>
                             </div>
                             <div class="media media-comment">
                                 <div class="media-left">
-                                    <img src="{{asset('img/listing/list-user-2.jpg')}}" class="media-object img-circle" alt="Image User">
+                                    <img src="{{asset('img/listing/list-user-2.jpg')}}" class="media-object img-circle"
+                                         alt="Image User">
                                 </div>
                                 <div class="media-body">
                                     <h4 class="media-heading">Rock</h4>
@@ -91,13 +94,15 @@
                                         <li><i class="fa fa-star" aria-hidden="true"></i></li>
                                         <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
                                     </ul>
-                                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudan
+                                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                                        doloremque laudan
                                         totam rem ape riam,</p>
                                 </div>
                             </div>
                             <div class="media media-comment">
                                 <div class="media-left">
-                                    <img src="{{ asset('img/listing/list-user-3.jpg') }}" class="media-object img-circle" alt="Image User">
+                                    <img src="{{ asset('img/listing/list-user-3.jpg') }}"
+                                         class="media-object img-circle" alt="Image User">
                                 </div>
                                 <div class="media-body">
                                     <h4 class="media-heading">Pasindu</h4>
@@ -108,13 +113,15 @@
                                         <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
                                         <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
                                     </ul>
-                                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudan
+                                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                                        doloremque laudan
                                         totam rem ape riam,</p>
                                 </div>
                             </div>
                             <div class="media media-comment">
                                 <div class="media-left">
-                                    <img src="{{ asset('img/listing/list-user-3.jpg') }}" class="media-object img-circle" alt="Image User">
+                                    <img src="{{ asset('img/listing/list-user-3.jpg') }}"
+                                         class="media-object img-circle" alt="Image User">
                                 </div>
                                 <div class="media-body">
                                     <h4 class="media-heading">Chrishan</h4>
@@ -125,7 +132,8 @@
                                         <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
                                         <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
                                     </ul>
-                                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudan
+                                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                                        doloremque laudan
                                         totam rem ape riam,</p>
                                 </div>
                             </div>
@@ -162,7 +170,8 @@
                             <ul class="list-unstyled list-address">
                                 <li>
                                     <i class="fa fa-map-marker" aria-hidden="true"></i>
-                                    {{ $market_details->street_address }}, {{$market_details->suburb}},{{$market_details->city}}. {{$market_details->postcode}}
+                                    {{ $market_details->street_address }}, {{$market_details->suburb}}
+                                    ,{{$market_details->city}}. {{$market_details->postcode}}
                                 </li>
                                 <li>
                                     <i class="fa fa-phone" aria-hidden="true"></i>
@@ -172,10 +181,29 @@
                                     <i class="fa fa-envelope" aria-hidden="true"></i>
                                     <a href="mailto:{{ $market_details->email }}">{{$market_details->email}}</a>
                                 </li>
+                                @if($market_details->fb_url != null)
+                                    <li>
+                                        <i class="fa fa-facebook" aria-hidden="true"></i>
+                                        <a href="{{ $market_details->fb_url }}">{{ $market_details->fb_url }}</a>
+                                    </li>
+                                @endif
+                                @if($market_details->youtube_url != null)
+                                    <li>
+                                        <i class="fa fa-youtube" aria-hidden="true"></i>
+                                        <a href="{{ $market_details->youtube_url }}">{{ $market_details->youtube_url }}</a>
+                                    </li>
+                                @endif
+
+                                @if($market_details->twitter != null)
+                                    <li>
+                                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                                        <a href="{{ $market_details->twitter_url }}">{{ $market_details->twitter_url }}</a>
+                                    </li>
+                                @endif
                             </ul>
                         </div>
                     </div>
-                    <div class="listSidebar"  >
+                    <div class="listSidebar">
                         <h3>Opening Hours</h3>
                         <ul class="list-unstyled sidebarList">
                             <li>
