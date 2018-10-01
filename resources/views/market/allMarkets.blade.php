@@ -85,7 +85,7 @@
                                             </ul>
                                             <a href="{{ route('shop.show',$market->id) }}"><h2>{{$market->name}} <i
                                                         class="fa fa-check-circle" aria-hidden="true"></i></h2></a>
-                                            <p>{{$market->address}}</p>
+                                            <p>{{$market->street_address}}, {{$market->suburb}}</p>
                                             <p>{{$market->country}}</p>
                                         </div>
                                     </div>

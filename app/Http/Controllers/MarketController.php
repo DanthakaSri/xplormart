@@ -65,14 +65,14 @@ class MarketController extends Controller
 
         //image uploading and save
         $type = $request['type'];
-        $monday= $request['mondayFrom'].'-'. $request['mondayTo'];
-        $tuesday= $request['tuesdayFrom'].'-'. $request['tuesdayTo'];
-        $wednesday= $request['wednesdayFrom'].'-'. $request['wednesdayTo'];
-        $thursday= $request['thursdayFrom'].'-'. $request['thursdayTo'];
-        $friday= $request['fridayFrom'].'-'. $request['fridayTo'];
-        $saturday= $request['saturdayFrom'].'-'. $request['saturdayTo'];
-        $sunday= $request['sundayFrom'].'-'. $request['sundayTo'];
-
+        $monday = $request['mondayFrom'] . '-' . $request['mondayTo'];
+        $tuesday = $request['tuesdayFrom'] . '-' . $request['tuesdayTo'];
+        $wednesday = $request['wednesdayFrom'] . '-' . $request['wednesdayTo'];
+        $thursday = $request['thursdayFrom'] . '-' . $request['thursdayTo'];
+        $friday = $request['fridayFrom'] . '-' . $request['fridayTo'];
+        $saturday = $request['saturdayFrom'] . '-' . $request['saturdayTo'];
+        $sunday = $request['sundayFrom'] . '-' . $request['sundayTo'];
+        $filename = "";
         if ($request->hasFile('image')) {
             $file = $request->file('image');
             $extension = $file->getClientOriginalExtension(); // getting image extension
@@ -103,8 +103,8 @@ class MarketController extends Controller
             'wednesday' => (string)$wednesday,
             'thursday' => (string)$thursday,
             'friday' => (string)$friday,
-            'saturday' =>(string) $saturday,
-            'sunday' =>(string) $sunday,
+            'saturday' => (string)$saturday,
+            'sunday' => (string)$sunday,
 
         ]);
 
@@ -118,12 +118,12 @@ class MarketController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-     public function show($id)
-     {
-         $market_details=Market::where('id','=' ,$id)->first();
+    public function show($id)
+    {
+        $market_details = Market::where('id', '=', $id)->first();
 //        return $market_details;
-         return view('market.viewMarket',compact('market_details'));
-     }
+        return view('market.viewMarket', compact('market_details'));
+    }
 
 
     /**
@@ -131,7 +131,7 @@ class MarketController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function edit( $id)
+    public function edit($id)
     {
 
     }

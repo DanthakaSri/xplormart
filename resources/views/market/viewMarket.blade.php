@@ -162,7 +162,7 @@
                             <ul class="list-unstyled list-address">
                                 <li>
                                     <i class="fa fa-map-marker" aria-hidden="true"></i>
-                                    {{ $market_details->address }}
+                                    {{ $market_details->street_address }}, {{$market_details->suburb}},{{$market_details->city}}. {{$market_details->postcode}}
                                 </li>
                                 <li>
                                     <i class="fa fa-phone" aria-hidden="true"></i>
