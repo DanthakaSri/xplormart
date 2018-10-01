@@ -53,8 +53,8 @@
                                     </div>
                                     <div class="form-group col-xs-12">
                                         <label for="discribeTheListing">Description</label>
-                                        <textarea name="description" value="{{ old('description') }}" class="form-control" rows="3"
-                                                  placeholder="Description"></textarea>
+                                        <textarea name="description" class="form-control" rows="3"
+                                                  placeholder="Description">{{ old('description') }}</textarea>
                                         @if ($errors->has('description'))
                                             <span class="invalid-feedback" role="alert">
                                         <strong>{{ $errors->first('description') }}</strong>
@@ -177,7 +177,7 @@
                                         {{-- <div class="imageUploader text-center">
                                              <div class="file-upload">
                                                  <div class="upload-area">--}}
-                                                 <input type="file" name="pic" class="form-control" accept="image/*">
+                                                 <input type="file" name="image" class="form-control" accept="image/*">
                                         {{--</div>
                                     </div>
                                 </div>--}}

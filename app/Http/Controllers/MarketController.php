@@ -63,8 +63,21 @@ class MarketController extends Controller
                 ->withInput();
         }
 
-        //image uploading and save
+//image uploading and save
         $type = $request['type'];
+        $filename = '';
+
+        if ($request->hasFile('image')) {
+            $file = $request->file('image');
+            $extension = $file->getClientOriginalExtension(); // getting image extension
+            $filename = $type . '_' . +time() . '.' . $extension;
+            $destination = public_path('img/uploads/market');
+            $file->move($destination, $filename);
+        }else
+        {
+            $filename='default.jpg';
+        }
+
         $monday = $request['mondayFrom'] . '-' . $request['mondayTo'];
         $tuesday = $request['tuesdayFrom'] . '-' . $request['tuesdayTo'];
         $wednesday = $request['wednesdayFrom'] . '-' . $request['wednesdayTo'];
@@ -72,15 +85,6 @@ class MarketController extends Controller
         $friday = $request['fridayFrom'] . '-' . $request['fridayTo'];
         $saturday = $request['saturdayFrom'] . '-' . $request['saturdayTo'];
         $sunday = $request['sundayFrom'] . '-' . $request['sundayTo'];
-        $filename = "";
-        if ($request->hasFile('image')) {
-            $file = $request->file('image');
-            $extension = $file->getClientOriginalExtension(); // getting image extension
-            $filename = $type . '_' . +time() . '.' . $extension;
-            $destination = public_path('img/uploads/market');
-            $file->move($destination, $filename);
-        }
-
 
         Market::create([
             'name' => $request['name'],
@@ -94,7 +98,7 @@ class MarketController extends Controller
             'postcode' => $request['postcode'],
             'suburb' => $request['suburb'],
             'city' => $request['city'],
-            'image' => '/img/uploads/market/' . $filename,
+            'image' => '/img/uploads/market/' . (string)$filename,
             'fb_url' => $request['fb_url'],
             'youtube_url' => $request['youtube_url'],
             'twitter_url' => $request['twitter_url'],
