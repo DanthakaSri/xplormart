@@ -175,7 +175,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="listSidebar">
+                    <div class="listSidebar"  >
                         <h3>Opening Hours</h3>
                         <ul class="list-unstyled sidebarList">
                             <li>

@@ -50,8 +50,11 @@ class MarketController extends Controller
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
             'type' => 'required',
-            'address' => 'required',
+            'street_address' => 'required',
             'phone_num' => 'string|max:10',
+            'suburb' => 'required',
+            'postcode' => 'required',
+            'city' => 'required',
 
         ]);
         if ($validator->fails()) {
@@ -62,6 +65,13 @@ class MarketController extends Controller
 
         //image uploading and save
         $type = $request['type'];
+        $monday= $request['mondayFrom'].'-'. $request['mondayTo'];
+        $tuesday= $request['tuesdayFrom'].'-'. $request['tuesdayTo'];
+        $wednesday= $request['wednesdayFrom'].'-'. $request['wednesdayTo'];
+        $thursday= $request['thursdayFrom'].'-'. $request['thursdayTo'];
+        $friday= $request['fridayFrom'].'-'. $request['fridayTo'];
+        $saturday= $request['saturdayFrom'].'-'. $request['saturdayTo'];
+        $sunday= $request['sundayFrom'].'-'. $request['sundayTo'];
 
         if ($request->hasFile('image')) {
             $file = $request->file('image');
@@ -80,23 +90,26 @@ class MarketController extends Controller
             'phone_num' => $request['phone_num'],
             'email' => $request['email'],
             'website' => $request['website'],
-            'address' => $request['address'],
+            'street_address' => $request['street_address'],
+            'postcode' => $request['postcode'],
+            'suburb' => $request['suburb'],
+            'city' => $request['city'],
             'image' => '/img/uploads/market/' . $filename,
             'fb_url' => $request['fb_url'],
             'youtube_url' => $request['youtube_url'],
             'twitter_url' => $request['twitter_url'],
-            'monday' => $request['monday'],
-            'tuesday' => $request['tuesday'],
-            'wednesday' => $request['wednesday'],
-            'thursday' => $request['thursday'],
-            'friday' => $request['friday'],
-            'saturday' => $request['saturday'],
-            'sunday' => $request['sunday'],
+            'monday' => (string)$monday,
+            'tuesday' => (string)$tuesday,
+            'wednesday' => (string)$wednesday,
+            'thursday' => (string)$thursday,
+            'friday' => (string)$friday,
+            'saturday' =>(string) $saturday,
+            'sunday' =>(string) $sunday,
 
         ]);
 
 
-        return redirect()->route('shop.index')->with('status', 'Market created');;
+        return redirect()->route('shop.index')->with('status', 'Market created');
 
     }
 

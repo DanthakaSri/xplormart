@@ -22,7 +22,10 @@ class CreateMarketsTable extends Migration
             $table->bigInteger('phone_num')->nullable();
             $table->string('email')->unique()->nullable();
             $table->string('website')->nullable();
-            $table->mediumText('address');
+            $table->mediumText('street_address');
+            $table->mediumText('suburb');
+            $table->mediumText('postcode')->nullable();
+            $table->mediumText('city');
             $table->string('image')->nullable();
             $table->string('fb_url')->nullable();
             $table->string('twitter_url')->nullable();

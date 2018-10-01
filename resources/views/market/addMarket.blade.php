@@ -25,7 +25,7 @@
 
                                     <div class="form-group col-sm-6 col-xs-12">
                                         <label for="listingTitle">Market Title</label>
-                                        <input type="text" class="form-control" name="name" id="listingTitle"
+                                        <input type="text" class="form-control" name="name" value="{{ old('name') }}" id="listingTitle"
                                                placeholder="Market Title">
 
                                         @if ($errors->has('name'))
@@ -37,7 +37,7 @@
                                     <div class="form-group col-sm-6 col-xs-12">
                                         <label for="listingCategory">Type</label>
                                         <div class="contactSelect">
-                                            <select name="type" id="guiest_id9" class="select-drop">
+                                            <select name="type" id="guiest_id9"  class="select-drop">
 
                                                 @foreach($types as $type)
                                                     <option value="{{$type->type}}">{{$type->type}}</option>
@@ -53,7 +53,7 @@
                                     </div>
                                     <div class="form-group col-xs-12">
                                         <label for="discribeTheListing">Description</label>
-                                        <textarea name="description" class="form-control" rows="3"
+                                        <textarea name="description" value="{{ old('description') }}" class="form-control" rows="3"
                                                   placeholder="Description"></textarea>
                                         @if ($errors->has('description'))
                                             <span class="invalid-feedback" role="alert">
@@ -89,37 +89,52 @@
 
                                     <div class="form-group col-sm-6 col-xs-12">
                                         <label for="listingAddress">Street Address</label>
-                                        <input type="text" name="address" class="form-control" id="listingAddress"
-                                               placeholder="Market Address">
+                                        <input type="text" name="street_address" value="{{ old('street_address') }}" class="form-control" id="listingAddress"
+                                               placeholder="Street Address">
 
-                                        @if ($errors->has('address'))
+                                        @if ($errors->has('street_address'))
                                             <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('address') }}</strong>
+                                        <strong>{{ $errors->first('street_address') }}</strong>
                                     </span>
                                         @endif
                                     </div>
 
                                      <div class="form-group col-sm-6 col-xs-12">
                                      <label for="listingPostcode">Postcode</label>
-                                        <input type="text" name="address" class="form-control" id="listingPostcode"
+                                        <input type="text" name="postcode" value="{{old('postcode')}}" class="form-control" id="listingPostcode"
                                                placeholder="Postcode">
+                                         @if ($errors->has('postcode'))
+                                             <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('postcode') }}</strong>
+                                    </span>
+                                         @endif
                                     </div>
 
                                     <div class="form-group col-sm-6 col-xs-12">
                                     <label for="listingSuburb">Suburb</label>
-                                        <input type="text" name="address" class="form-control" id="listingSuburb"
+                                        <input type="text" name="suburb" value="{{old('suburb')}}" class="form-control" id="listingSuburb"
                                                placeholder="Suburb">
+                                        @if ($errors->has('suburb'))
+                                            <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('suburb') }}</strong>
+                                    </span>
+                                        @endif
                                         </div>
 
                                     <div class="form-group col-sm-6 col-xs-12">
                                     <label for="listingCity">City</label>
-                                        <input type="text" name="address" class="form-control" id="listingCity"
+                                        <input type="text" name="city" value="{{old('city')}}" class="form-control" id="listingCity"
                                                placeholder="City">
+                                        @if ($errors->has('city'))
+                                            <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('city') }}</strong>
+                                    </span>
+                                        @endif
                                         </div>
 
                                     <div class="form-group col-sm-6 col-xs-12">
                                         <label for="listingPhone">Phone</label>
-                                        <input type="number" name="phone_num" class="form-control" id="listingPhone"
+                                        <input type="number" name="phone_num" value="{{old('phone_num')}}" class="form-control" id="listingPhone"
                                                placeholder="0450 123 456">
                                         @if ($errors->has('phone_num'))
                                             <span class="invalid-feedback" role="alert">
@@ -130,7 +145,7 @@
 
                                     <div class="form-group col-sm-6 col-xs-12">
                                         <label for="listingEmail">Email</label>
-                                        <input type="email" name="email" class="form-control" id="listingEmail"
+                                        <input type="email" name="email" value="{{old('email')}}" class="form-control" id="listingEmail"
                                                placeholder="market@market.com">
                                         @if ($errors->has('email'))
                                             <span class="invalid-feedback" role="alert">
@@ -142,7 +157,7 @@
 
                                     <div class="form-group col-sm-6 col-xs-12">
                                         <label for="listingWebsite">Website</label>
-                                        <input type="text" name="website" class="form-control" id="listingWebsite"
+                                        <input type="text" name="website" value="{{old('website')}}" class="form-control" id="listingWebsite"
                                                placeholder="http://">
 
                                         @if ($errors->has('website'))
@@ -181,7 +196,7 @@
                                 <div class="row">
                                     <div class="form-group col-sm-6 col-xs-12">
                                         <label for="facebookUrl">Facebook URL</label>
-                                        <input type="text" name="fb_url" class="form-control" id="facebookUrl"
+                                        <input type="text" name="fb_url"  value="{{old('fb_url')}}" class="form-control" id="facebookUrl"
                                                placeholder="http://facebook.com/example">
                                         @if ($errors->has('fb_url'))
                                             <span class="invalid-feedback" role="alert">
@@ -192,7 +207,7 @@
 
                                     <div class="form-group col-sm-6 col-xs-12">
                                         <label for="twitterUrl">Twitter URL</label>
-                                        <input type="text" name="twitter_url" class="form-control" id="twitterUrl"
+                                        <input type="text" name="twitter_url"  value="{{old('twitter_url')}}" class="form-control" id="twitterUrl"
                                                placeholder="http://twitter.com/example">
                                         @if ($errors->has('twitter_url'))
                                             <span class="invalid-feedback" role="alert">
@@ -203,7 +218,7 @@
 
                                     <div class="form-group col-sm-6 col-xs-12">
                                         <label for="youtubeUrl">You Tube URL</label>
-                                        <input type="text" name="youtube_url" class="form-control" id="youtubeUrl"
+                                        <input type="text" name="youtube_url" value="{{old('youtube_url')}}" class="form-control" id="youtubeUrl"
                                                placeholder="http://youtube.com/example">
                                         @if ($errors->has('youtube_url'))
                                             <span class="invalid-feedback" role="alert">
