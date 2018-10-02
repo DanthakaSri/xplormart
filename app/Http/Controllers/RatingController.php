@@ -35,7 +35,23 @@ class RatingController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //request validation rules
+        $validator = Validator::make($request->all(), [
+            'name' => 'required|string|max:255',
+            'email' => 'required|string|email|max:255|unique:users',
+            'type' => 'required',
+            'street_address' => 'required',
+            'phone_num' => 'string|max:10',
+            'suburb' => 'required',
+            'postcode' => 'required',
+            'city' => 'required',
+
+        ]);
+        if ($validator->fails()) {
+            return redirect('shop/create')
+                ->withErrors($validator)
+                ->withInput();
+        }
     }
 
     /**

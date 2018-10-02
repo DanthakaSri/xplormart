@@ -467,7 +467,7 @@ $('#marketType').focusout(function (){
 
 $("#marketType").change(function(){
   if($(this).val()=="Other")
-  {    
+  {
       $(".otherTypeWrapper").show();
   }
    else
@@ -527,7 +527,7 @@ function check_marketTitle (){
 }
 
 
-// check market type function 
+// check market type function
 
 function check_marketType (){
   var marketType_value = $('#marketType').val();
@@ -543,7 +543,7 @@ function check_marketType (){
   }
 }
 
-// check country function 
+// check country function
 
 function check_country (){
   var country_value = $('#listingCountry').val();
@@ -653,10 +653,19 @@ function check_email (){
   }
 }
 
+
+// Rating script
+    $('.rating input').change(function () {
+        var $radio = $(this);
+        $('.rating .selected').removeClass('selected');
+        $radio.closest('label').addClass('selected');
+    });
+
+
 /*$('#addMarketForm').submit(function (){
   error_marketTitle = false;
-  
-  
+
+
   check_marketTitle();
 
   if(error_marketTitle == false) {

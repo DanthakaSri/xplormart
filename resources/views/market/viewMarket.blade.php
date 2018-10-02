@@ -10,7 +10,7 @@
         .rating {
             unicode-bidi: bidi-override;
             direction: rtl;
-            width: 8em;
+            width: 10em;
         }
 
         .rating input {
@@ -207,57 +207,67 @@
 
                                         <div class="modal-body">
                                             <div class="panel-body">
-                                                <form class="loginForm">
+                                                <form class="loginForm" action="{{route('rating.store')}}" method="post" enctype="multipart/form-data">
                                                     <div class="form-group">
                                                         <label for="userName">Username *</label>
-                                                        <input type="text" name="username" placeholder="Username" class="form-control" >
+                                                        <input type="text" name="username" placeholder="Username"
+                                                               class="form-control">
                                                     </div>
                                                     <div class="form-group">
                                                         <label for="userName">Email *</label>
-                                                        <input type="email" name="email"  placeholder="Email" class="form-control">
+                                                        <input type="email" name="email" placeholder="Email"
+                                                               class="form-control">
                                                     </div>
                                                     <div class="form-group">
                                                         <label for="userName">User photo</label>
                                                         <input type="file" name="image" class="form-control">
                                                     </div>
                                                     <div class="form-group">
-                                                        <label for="userName">Verify {{ $market_details->name }} market place</label>
-                                                        <input type="checkbox" name="verify" >
+                                                        <input type="hidden" name="market_id" class="form-control" value="{{$market_details->id}}">
                                                     </div>
                                                     <div class="form-group">
-                                                        <label for="userName">User photo</label>
-                                                        <input type="file" name="image" class="form-control">
+                                                        <label for="userName">Verify {{ $market_details->name }} market
+                                                            place</label>
+                                                        <input type="checkbox" name="verify">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="userName">Rate {{ $market_details->name }} market
+                                                            place</label>
+                                                        <div class="rating">
+                                                            <label>
+                                                                <input type="radio" name="rating" value="5" title="5 stars">
+                                                                5
+                                                            </label>
+                                                            <label>
+                                                                <input type="radio" name="rating" value="4" title="4 stars">
+                                                                4
+                                                            </label>
+                                                            <label>
+                                                                <input type="radio" name="rating" value="3" title="3 stars">
+                                                                3
+                                                            </label>
+                                                            <label>
+                                                                <input type="radio" name="rating" value="2" title="2 stars">
+                                                                2
+                                                            </label>
+                                                            <label>
+                                                                <input type="radio" name="rating" value="1" title="1 stars">
+                                                                1
+                                                            </label>
+                                                        </div>
                                                     </div>
 
-                                                   {{-- <label for="input-1" class="control-label">Rate This</label>
-                                                    <input id="input-1" name="input-1" class="rating rating-loading" data-min="0" data-max="5" data-step="1">
---}}
 
-                                                    <div class="rating">
-                                                        <label>
-                                                            <input type="radio" name="rating" value="5" title="5 stars"> 5
-                                                        </label>
-                                                        <label>
-                                                            <input type="radio" name="rating" value="4" title="4 stars"> 4
-                                                        </label>
-                                                        <label>
-                                                            <input type="radio" name="rating" value="3" title="3 stars"> 3
-                                                        </label>
-                                                        <label>
-                                                            <input type="radio" name="rating" value="2" title="2 stars"> 2
-                                                        </label>
-                                                        <label>
-                                                            <input type="radio" name="rating" value="1" title="1 stars"> 1
-                                                        </label>
-                                                    </div>
 
                                                     <div class="form-group">
                                                         <label for="userName">Comment </label>
-                                                        <textarea name="comment" class="form-control" rows="3"></textarea>
+                                                        <textarea name="comment" class="form-control"rows
+                                                                  rows="3"></textarea>
                                                     </div>
 
                                                     <div class="form-group">
-                                                        <button type="submit" class="btn btn-primary pull-left">Send Review
+                                                        <button type="submit" class="btn btn-primary pull-left">Send
+                                                            Review
                                                         </button>
                                                     </div>
                                                 </form>
@@ -266,28 +276,6 @@
                                     </div>
                                 </div>
                             </div>
-
-
-                            {{--<div class="listingReview">
-                                <span>( 5 Reviews )</span>
-                                <ul class="list-inline rating rating-review">
-                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                </ul>
-                            </div>
-                            <form action="#">
-                                <div class="formSection formSpace">
-                                    <div class="form-group">
-                                        <textarea class="form-control" rows="3" placeholder="Comment"></textarea>
-                                    </div>
-                                    <div class="form-group mb0">
-                                        <button type="submit" class="btn btn-primary">Send Review</button>
-                                    </div>
-                                </div>
-                            </form>--}}
                         </div>
                     </div>
                 </div>
@@ -369,11 +357,4 @@
         </div>
     </section>
 
-    <script>
-        $('.rating input').change(function () {
-            var $radio = $(this);
-            $('.rating .selected').removeClass('selected');
-            $radio.closest('label').addClass('selected');
-        });
-    </script>
 @endsection
