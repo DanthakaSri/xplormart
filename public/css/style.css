@@ -8237,6 +8237,13 @@ table.dataTable thead .sorting_desc_disabled:after {
   }
 }
 
+
+@media (max-width:1199px) and (min-width:768px) {
+  .ui-timepicker-wrapper {
+    width: 18.5em;
+  }
+}​
+
 .detailsInfoBox {
   padding: 47px 0 42px 0;
   border-top: 1px solid #e5e5e5;
