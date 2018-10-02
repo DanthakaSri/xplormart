@@ -3,7 +3,7 @@ jQuery(document).ready(function(){
   //============================== PRE LOADER =============================================
   setTimeout(function(){
     $('body').addClass('loaded');
-  }, 3000);
+  }, 500);
 
 
   //============================== SELECT BOX =========================
