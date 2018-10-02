@@ -431,6 +431,7 @@
                             <div class="profileIntro paraMargin">
                                 <h3>Market Banner</h3>
                                 <div class="row">
+                                    <!-- banner default image credits - <a href="https://www.freepik.com/free-photo/laptop-and-shopping-bags-online-shopping-concept_1203166.htm">Designed by Snowing</a> -->
                                     <div class="form-group col-xs-12">
                                         {{-- <div class="imageUploader text-center">
                                              <div class="file-upload">
@@ -493,7 +494,7 @@
                                 <div class="row">
                                     <div class="col-xs-12 col-sm-12">
                                     <div class="form-group col-md-4 col-sm-6 col-xs-12">
-                                        <label for="mondayTime"><span class="mandatory_field">*</span>Monday</label>
+                                        <label for="mondayTime">Monday</label>
 
                                         <input type="text" name="mondayFrom" class="form-control timePick" id="mondayTime"
                                                placeholder="From">
@@ -509,7 +510,7 @@
                                     </div>
 
                                     <div class="form-group col-md-4 col-sm-6 col-xs-12">
-                                        <label for="tuesdayTime"><span class="mandatory_field">*</span>Tuesday</label>
+                                        <label for="tuesdayTime">Tuesday</label>
                                         <input type="text" name="tuesdayFrom" class="form-control timePick" id="tuesdayTime"
                                                placeholder="From">
                                         <input type="text" name="tuesdayTo" class="form-control timePick hours" id="tuesdayTime"
@@ -523,7 +524,7 @@
                                     </div>
 
                                     <div class="form-group col-md-4 col-sm-6 col-xs-12">
-                                        <label for="wednesdayTime"><span class="mandatory_field">*</span>Wednesday</label>
+                                        <label for="wednesdayTime">Wednesday</label>
                                         <input type="text" name="wednesdayFrom" class="form-control timePick" id="wednesdayTime"
                                                placeholder="From">
                                         <input type="text" name="wednesdayTo" class="form-control timePick hours" id="wednesdayTime"
@@ -540,7 +541,7 @@
                                      <div class="col-xs-12 col-sm-12">                                       
 
                                     <div class="form-group col-md-4 col-sm-6 col-xs-12">
-                                        <label for="thrusdayTime"><span class="mandatory_field">*</span>Thrusday</label>
+                                        <label for="thrusdayTime">Thrusday</label>
                                         <input type="text" name="thursdayFrom" class="form-control timePick" id="thrusdayTime"
                                                placeholder="From">
                                         <input type="text" name="thursdayTo" class="form-control timePick hours" id="thrusdayTime"
@@ -554,7 +555,7 @@
                                     </div>
 
                                     <div class="form-group col-md-4 col-sm-6 col-xs-12">
-                                        <label for="fridayTime"><span class="mandatory_field">*</span>Friday</label>
+                                        <label for="fridayTime">Friday</label>
                                         <input type="text" name="fridayFrom" class="form-control timePick" id="fridayTime"
                                                placeholder="From">
                                         <input type="text" name="fridayTo" class="form-control timePick hours" id="fridayTime"
@@ -568,7 +569,7 @@
                                     </div>
 
                                     <div class="form-group col-md-4 col-sm-6 col-xs-12">
-                                        <label for="saturdayTime"><span class="mandatory_field">*</span>Saturday</label>
+                                        <label for="saturdayTime">Saturday</label>
                                         <input type="text" name="saturdayFrom" class="form-control timePick" id="saturdayTime"
                                                placeholder="From">
                                         <input type="text" name="saturdayTo" class="form-control timePick hours" id="saturdayTime"
@@ -585,7 +586,7 @@
                                     <div class="col-xs-12 col-sm-12">                                      
 
                                     <div class="form-group col-md-4 col-sm-6 col-xs-12">
-                                        <label for="sundayTime"><span class="mandatory_field">*</span>Sunday</label>
+                                        <label for="sundayTime">Sunday</label>
                                         <input type="text" name="sundayFrom" class="form-control timePick" id="sundayTime"
                                                placeholder="From">
                                         <input type="text" name="sundayTo" class="form-control timePick hours" id="sundayTime"

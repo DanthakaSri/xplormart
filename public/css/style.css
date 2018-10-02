@@ -8222,7 +8222,8 @@ table.dataTable thead .sorting_desc_disabled:after {
 @media (min-width: 768px) {
   .listingImage li {
     /*width: 25%;*/
-    height: 247px;
+    height: 350px;
+    overflow: hidden;
   }
 }
 
@@ -8235,6 +8236,13 @@ table.dataTable thead .sorting_desc_disabled:after {
     top: 20%;
   }
 }
+
+
+@media (max-width:1199px) and (min-width:768px) {
+  .ui-timepicker-wrapper {
+    width: 18.5em;
+  }
+}​
 
 .detailsInfoBox {
   padding: 47px 0 42px 0;
