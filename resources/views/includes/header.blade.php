@@ -15,7 +15,8 @@
 <link href="{{ asset('plugins/rateyo/jquery.rateyo.min.css') }}" rel="stylesheet">
 <link href="{{ asset('plugins/animate/animate.css') }}" rel="stylesheet">
 
-
+<link href="{{ asset('css/star-rating.css') }}" media="all" rel="stylesheet" type="text/css" />
+<link href="{{asset('plugins/star-rating/themes/krajee-svg/theme.css')}}" media="all" rel="stylesheet" type="text/css" />
 
 <link href="{{ asset('css/jquery.timepicker.css') }}" rel="stylesheet">
 <link href="{{ asset('css/style.css') }}" rel="stylesheet">

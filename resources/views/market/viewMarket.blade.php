@@ -5,6 +5,48 @@
 @section('nvClass2','lightHeader')
 
 @section('content')
+
+    <style>
+        .rating {
+            unicode-bidi: bidi-override;
+            direction: rtl;
+            width: 8em;
+        }
+
+        .rating input {
+            position: absolute;
+            left: -999999px;
+        }
+
+        .rating label {
+            display: inline-block;
+            font-size: 0;
+        }
+
+        .rating > label:before {
+            position: relative;
+            font: 24px/1 FontAwesome;
+            display: block;
+            content: "\f005";
+            color: #ccc;
+            background: -webkit-linear-gradient(-45deg, #d9d9d9 0%, #b3b3b3 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .rating > label:hover:before,
+        .rating > label:hover ~ label:before,
+        .rating > label.selected:before,
+        .rating > label.selected ~ label:before {
+            color: #f0ad4e;
+            background: -webkit-linear-gradient(-45deg, #fcb551 0%, #d69a45 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+
+    </style>
+
     <!-- LISTINGS DETAILS TITLE SECTION -->
     <section class="clearfix paddingAdjustBottom">
         <div class="container">
@@ -180,15 +222,34 @@
                                                     </div>
                                                     <div class="form-group">
                                                         <label for="userName">Verify {{ $market_details->name }} market place</label>
-                                                        <input type="checkbox" name="verify" class="form-control">
+                                                        <input type="checkbox" name="verify" >
                                                     </div>
                                                     <div class="form-group">
                                                         <label for="userName">User photo</label>
                                                         <input type="file" name="image" class="form-control">
                                                     </div>
 
-                                                    <label for="input-1" class="control-label">Give a rating for Skill:</label>
-                                                    <input id="input-1" name="input-1" class="rating rating-loading" data-min="0" data-max="5" data-step="0.1" value="2">
+                                                   {{-- <label for="input-1" class="control-label">Rate This</label>
+                                                    <input id="input-1" name="input-1" class="rating rating-loading" data-min="0" data-max="5" data-step="1">
+--}}
+
+                                                    <div class="rating">
+                                                        <label>
+                                                            <input type="radio" name="rating" value="5" title="5 stars"> 5
+                                                        </label>
+                                                        <label>
+                                                            <input type="radio" name="rating" value="4" title="4 stars"> 4
+                                                        </label>
+                                                        <label>
+                                                            <input type="radio" name="rating" value="3" title="3 stars"> 3
+                                                        </label>
+                                                        <label>
+                                                            <input type="radio" name="rating" value="2" title="2 stars"> 2
+                                                        </label>
+                                                        <label>
+                                                            <input type="radio" name="rating" value="1" title="1 stars"> 1
+                                                        </label>
+                                                    </div>
 
                                                     <div class="form-group">
                                                         <label for="userName">Comment </label>
@@ -308,4 +369,11 @@
         </div>
     </section>
 
+    <script>
+        $('.rating input').change(function () {
+            var $radio = $(this);
+            $('.rating .selected').removeClass('selected');
+            $radio.closest('label').addClass('selected');
+        });
+    </script>
 @endsection
