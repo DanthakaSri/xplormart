@@ -22,7 +22,12 @@
                                 <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
                             </ul>
                             <span>( 5 Reviews )</span>
-                            <a href="#" class="btn btn-primary">Write a review</a>
+
+                            <!-- Button trigger for review modal  -->
+                            <button type="button" class="btn btn-primary" data-toggle="modal"
+                                    data-target="#exampleModal">
+                                Write a review
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -139,8 +144,66 @@
                             </div>
                         </div>
                         <div class="detailsInfoBox">
-                            <h3>Write A Review </h3>
-                            <div class="listingReview">
+                            <!-- Button trigger for review modal  -->
+                            <button type="button" class="btn btn-primary" data-toggle="modal"
+                                    data-target="#exampleModal">
+                                Write a review
+                            </button>
+
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+                                 aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">Write a Review</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form action="#">
+                                                <div class="form-group col-sm-6 col-xs-12">
+                                                    <label for="listingTitle"><span class="mandatory_field">*</span>Market
+                                                        Title</label>
+                                                    <input type="text" class="form-control" name="name"
+                                                           value="{{ old('name') }}" id="listingTitle"
+                                                           placeholder="Market Title">
+
+                                                    @if ($errors->has('name'))
+                                                        <span class="invalid-feedback" role="alert">
+                                                        <strong>{{ $errors->first('name') }}</strong>
+                                                    </span>
+                                                    @endif
+                                                    <span class="error_form" id="market_title_errorMsg"></span>
+                                                </div>
+
+                                                <div class="formSection formSpace">
+                                                    <div class="form-group">
+                                                        <textarea class="form-control" rows="3"
+                                                                  placeholder="Comment"></textarea>
+                                                    </div>
+
+
+                                                    {{--<div class="form-group mb0">
+                                                        <button type="submit" class="btn btn-primary">Send Review</button>
+                                                    </div>--}}
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div class="modal-footer form-group mb0">
+                                            <button type="button" class="btn btn-secondary mb0" data-dismiss="modal">
+                                                Close
+                                            </button>
+                                            <button type="submit" class="btn btn-primary mb0">Send Review</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            {{--<div class="listingReview">
                                 <span>( 5 Reviews )</span>
                                 <ul class="list-inline rating rating-review">
                                     <li><i class="fa fa-star" aria-hidden="true"></i></li>
@@ -159,7 +222,7 @@
                                         <button type="submit" class="btn btn-primary">Send Review</button>
                                     </div>
                                 </div>
-                            </form>
+                            </form>--}}
                         </div>
                     </div>
                 </div>
