@@ -422,7 +422,9 @@ jQuery(document).ready(function(){
           'className': 'closed',
           'value': 'Closed'
       }
-  ]
+  ] ,
+  'minTime': '5:00am',
+  'maxTime': '12:00am'
 });
 
 
