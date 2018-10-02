@@ -7,23 +7,23 @@
 @section('content')
 
     <style>
-        .rating {
+        .rating2 {
             unicode-bidi: bidi-override;
             direction: rtl;
             width: 10em;
         }
 
-        .rating input {
+        .rating2 input {
             position: absolute;
             left: -999999px;
         }
 
-        .rating label {
+        .rating2 label {
             display: inline-block;
             font-size: 0;
         }
 
-        .rating > label:before {
+        .rating2 > label:before {
             position: relative;
             font: 24px/1 FontAwesome;
             display: block;
@@ -34,10 +34,10 @@
             -webkit-text-fill-color: transparent;
         }
 
-        .rating > label:hover:before,
-        .rating > label:hover ~ label:before,
-        .rating > label.selected:before,
-        .rating > label.selected ~ label:before {
+        .rating2 > label:hover:before,
+        .rating2 > label:hover ~ label:before,
+        .rating2 > label.selected:before,
+        .rating2 > label.selected ~ label:before {
             color: #f0ad4e;
             background: -webkit-linear-gradient(-45deg, #fcb551 0%, #d69a45 100%);
             -webkit-background-clip: text;
@@ -51,19 +51,31 @@
     <section class="clearfix paddingAdjustBottom">
         <div class="container">
             <div class="row">
-                <div class="col-xs-12">
+                <div class=" col-xs-12">
                     <div class="listingTitleArea">
                         <h2>{{ $market_details->name }}</h2>
-                        <p>{{$market_details->street_address}}, {{$market_details->suburb}} <br></p>
+                        <p>{{$market_details->street_address}}, {{$market_details->suburb}}</p>
                         <div class="listingReview">
                             <ul class="list-inline rating">
-                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
+                                @foreach(range(1,5) as $i)
+                                    <span class="fa-stack" style="width: 3px;">
+                                         <li><i class="fa fa-star-o fa-stack-2x fa-2x" aria-hidden="true"></i></li>
+
+                                        @if($rating >0)
+                                            @if($rating >0.5)
+                                                <li><i class="fa fa-star fa-stack-2x fa-2x" aria-hidden="true"></i></li>
+                                            @else
+                                                <li><i class="fa fa-star-half fa-stack-2x fa-2x" aria-hidden="true"></i></li>
+                                            @endif
+                                        @endif
+                                        @php $rating--; @endphp
+                                     </span>
+                                @endforeach
+
+
                             </ul>
-                            <span>( 5 Reviews )</span>
+                            <span>( {{(integer)$comments->count()}} Reviews )</span>
+
 
                             <!-- Button trigger for review modal  -->
                             <button type="button" class="btn btn-primary" data-toggle="modal"
@@ -94,6 +106,7 @@
                             <h3>About {{$market_details->name}}</h3>
                             <p>{{$market_details->description}}</p>
                         </div>
+                        <br>
                         <div class="detailsInfoBox">
                             <h3>Features</h3>
                             <ul class="list-inline featuresItems">
@@ -106,92 +119,64 @@
                                 <li><i class="fa fa-check-circle-o" aria-hidden="true"></i> Accept Credit Card</li>
                             </ul>
                         </div>
+                        <br>
                         <div class="detailsInfoBox">
-                            <h3>Reviews (3)</h3>
+                            <h3>Reviews ({{$comments->count()}})</h3>
+
+                            <hr>
+
+
+                            @if (session('status'))
+                                <div class="alert alert-success alert-dismissible" role="alert">
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
+                                            aria-hidden="true">&times;</span></button>
+                                    <strong> {{ session('status') }}</strong>.
+                                </div>
+                            @endif
+
+                            @foreach($comments as $comment)
+
                             <div class="media media-comment">
                                 <div class="media-left">
-                                    <img src="{{asset('img/listing/list-user-1.jpg')}}" class="media-object img-circle"
+                                    <img src="{{asset($comment->image)}}" class="media-object img-circle"
                                          alt="Image User">
                                 </div>
                                 <div class="media-body">
-                                    <h4 class="media-heading">Theshan</h4>
+                                    <h4 class="media-heading">{{$comment->username}}</h4>
                                     <ul class="list-inline rating">
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+
+                                        @foreach(range(1,5) as $i)
+                                            <span class="fa-stack" style="width: 10px;">
+                                         <li><i class="fa fa-star-o fa-stack-2x fa-2x" aria-hidden="true"></i></li>
+
+                                                @if($comment->rating >0)
+                                                    @if($comment->rating >0.5)
+                                                        <li><i class="fa fa-star fa-stack-2x fa-2x" aria-hidden="true"></i></li>
+                                                    @else
+                                                        <li><i class="fa fa-star-half fa-stack-2x fa-2x" aria-hidden="true"></i></li>
+                                                    @endif
+                                                @endif
+                                                @php $comment->rating--; @endphp
+                                     </span>
+                                        @endforeach
+
                                     </ul>
-                                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-                                        doloremque laudan
-                                        totam rem ape riam,</p>
+                                    <p class="media">{{ $comment->comment }}</p>
                                 </div>
+
                             </div>
-                            <div class="media media-comment">
-                                <div class="media-left">
-                                    <img src="{{asset('img/listing/list-user-2.jpg')}}" class="media-object img-circle"
-                                         alt="Image User">
-                                </div>
-                                <div class="media-body">
-                                    <h4 class="media-heading">Rock</h4>
-                                    <ul class="list-inline rating">
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
-                                    </ul>
-                                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-                                        doloremque laudan
-                                        totam rem ape riam,</p>
-                                </div>
-                            </div>
-                            <div class="media media-comment">
-                                <div class="media-left">
-                                    <img src="{{ asset('img/listing/list-user-3.jpg') }}"
-                                         class="media-object img-circle" alt="Image User">
-                                </div>
-                                <div class="media-body">
-                                    <h4 class="media-heading">Pasindu</h4>
-                                    <ul class="list-inline rating">
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
-                                    </ul>
-                                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-                                        doloremque laudan
-                                        totam rem ape riam,</p>
-                                </div>
-                            </div>
-                            <div class="media media-comment">
-                                <div class="media-left">
-                                    <img src="{{ asset('img/listing/list-user-3.jpg') }}"
-                                         class="media-object img-circle" alt="Image User">
-                                </div>
-                                <div class="media-body">
-                                    <h4 class="media-heading">Chrishan</h4>
-                                    <ul class="list-inline rating">
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
-                                    </ul>
-                                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-                                        doloremque laudan
-                                        totam rem ape riam,</p>
-                                </div>
-                            </div>
+                                <hr style="padding: 10px">
+                            @endforeach
+
                         </div>
                         <div class="detailsInfoBox">
                             <!-- Button trigger for review modal  -->
-                            <button type="button" class="btn btn-primary" data-toggle="modal"
-                                    data-target="#exampleModal">
-                                Write a review
-                            </button>
-
+                            <div class="listingReview" style="padding-top: 10px">
+                                <button type="button" class="btn btn-primary " data-toggle="modal"
+                                        data-target="#exampleModal">
+                                    Write a review
+                                </button>
+                            </div>
 
                             <!-- Modal -->
                             <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
@@ -249,7 +234,7 @@
                                                     <div class="form-group">
                                                         <label for="userName">Rate {{ $market_details->name }} market
                                                             place</label>
-                                                        <div class="rating">
+                                                        <div class="rating2">
                                                             <label>
                                                                 <input type="radio" name="rating" value="5"
                                                                        title="5 stars">
@@ -282,7 +267,7 @@
                                                     <div class="form-group">
                                                         <label for="userName">Comment </label>
                                                         <textarea name="comment" class="form-control" rows
-                                                                  rows="3">{{old('comment')}}</textarea>
+                                                                  rows="3"></textarea>
                                                     </div>
 
                                                     <div class="form-group">

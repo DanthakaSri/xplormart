@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Rating;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\DB;
 
 class RatingController extends Controller
 {
@@ -36,22 +36,10 @@ class RatingController extends Controller
      */
     public function store(Request $request)
     {
-        //request validation rules
-        $validator = Validator::make($request->all(), [
-            'username' => 'required|string|max:255',
-            'email' => 'required|string|email|max:255|unique:users',
-            'comment' => 'required',
-            'rating' => 'required',
 
-        ]);
-        if ($validator->fails()) {
-            $url = 'shop/' . $request['market_id'];
-            return redirect($url)
-                ->withErrors($validator)
-                ->withInput();
-        }
 
         $filename = '';
+        $verify = 0;
         if ($request->hasFile('image')) {
             $file = $request->file('image');
             $extension = $file->getClientOriginalExtension(); // getting image extension
@@ -61,31 +49,44 @@ class RatingController extends Controller
         } else {
             $filename = 'user_default.jpg';
         }
-
+        if ($request['verify'] == "on") {
+            $verify = 1;
+        } elseif ($request['verify'] == null) {
+            $verify = 0;
+        }
 
         Rating::create([
             'market_id' => $request['market_id'],
             'username' => $request['username'],
             'email' => $request['email'],
-            'rating' => $request['rating'],
+            'rating' => (integer)$request['rating'],
             'image' => '/img/uploads/market/' . (string)$filename,
-            'verify' => $request['verify'],
+            'verify' => $verify,
             'comment' => $request['comment'],
 
         ]);
 
 
+        return redirect()->route('shop.show',$request['market_id'])->with('status', 'Thank you for your feedback');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Rating $rating
-     * @return \Illuminate\Http\Response
+     *
+     * @param $id
+     * @return void
      */
-    public function show(Rating $rating)
+    public function show($id)
     {
-        //
+
+
+        $comments = DB::table('ratings')->where('market_id','=',$id)->get();
+        $verify=DB::table('ratings')->where([['market_id','=',$id],['verify','=',1]])->count();
+
+        return compact('rating','comments','verify');
+
+
     }
 
     /**
@@ -120,5 +121,41 @@ class RatingController extends Controller
     public function destroy(Rating $rating)
     {
         //
+    }
+
+    /**
+     * @param $market_id
+     * @return mixed
+     */
+    public static function getRatingNumber($market_id)
+    {
+        $rating = DB::table('ratings')
+            ->where('market_id','=', $market_id)
+            ->avg('rating');
+
+        return $rating;
+
+    }
+
+    /**
+     * @param $market_id
+     * @return \Illuminate\Support\Collection
+     */
+    public static function getRatingComments($market_id)
+    {
+        $comments = DB::table('ratings')->where('market_id','=',$market_id)->get();
+
+        return $comments;
+    }
+
+    /**
+     * @param $market_id
+     * @return int
+     */
+    public static function getMarketVerifyStatus($market_id)
+    {
+        $verify=DB::table('ratings')->where([['market_id','=',$market_id],['verify','=',1]])->count();
+
+        return $verify;
     }
 }

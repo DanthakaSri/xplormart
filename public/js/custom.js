@@ -655,9 +655,9 @@ function check_email (){
 
 
 // Rating script
-    $('.rating input').change(function () {
+    $('.rating2 input').change(function () {
         var $radio = $(this);
-        $('.rating .selected').removeClass('selected');
+        $('.rating2 .selected').removeClass('selected');
         $radio.closest('label').addClass('selected');
     });
 

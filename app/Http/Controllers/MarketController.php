@@ -124,9 +124,14 @@ class MarketController extends Controller
      */
     public function show($id)
     {
+
+        $rating=RatingController::getRatingNumber($id);
+        $comments=RatingController::getRatingComments($id);
+        $verify=RatingController::getMarketVerifyStatus($id);
+
         $market_details = Market::where('id', '=', $id)->first();
 //        return $market_details;
-        return view('market.viewMarket', compact('market_details'));
+        return view('market.viewMarket', compact('market_details','rating','comments','verify'));
     }
 
 
