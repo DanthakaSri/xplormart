@@ -207,27 +207,43 @@
 
                                         <div class="modal-body">
                                             <div class="panel-body">
-                                                <form class="loginForm" action="{{route('rating.store')}}" method="post" enctype="multipart/form-data">
+                                                <form class="loginForm" action="{{route('rating.store')}}" method="post"
+                                                      enctype="multipart/form-data">
+                                                    @csrf
+
                                                     <div class="form-group">
                                                         <label for="userName">Username *</label>
                                                         <input type="text" name="username" placeholder="Username"
+                                                               value="{{old('username')}}"
                                                                class="form-control">
+                                                        @if ($errors->has('username'))
+                                                            <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('username') }}</strong>
+                                    </span>
+                                                        @endif
                                                     </div>
                                                     <div class="form-group">
                                                         <label for="userName">Email *</label>
                                                         <input type="email" name="email" placeholder="Email"
+                                                               value="{{old('email')}}"
                                                                class="form-control">
+                                                        @if ($errors->has('email'))
+                                                            <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('email') }}</strong>
+                                    </span>
+                                                        @endif
                                                     </div>
                                                     <div class="form-group">
                                                         <label for="userName">User photo</label>
                                                         <input type="file" name="image" class="form-control">
                                                     </div>
                                                     <div class="form-group">
-                                                        <input type="hidden" name="market_id" class="form-control" value="{{$market_details->id}}">
+                                                        <input type="hidden" name="market_id" class="form-control"
+                                                               value="{{$market_details->id}}">
                                                     </div>
                                                     <div class="form-group">
-                                                        <label for="userName">Verify {{ $market_details->name }} market
-                                                            place</label>
+                                                        <label for="userName">Verify this marketplace
+                                                            ({{ $market_details->name }}) </label>
                                                         <input type="checkbox" name="verify">
                                                     </div>
                                                     <div class="form-group">
@@ -235,34 +251,38 @@
                                                             place</label>
                                                         <div class="rating">
                                                             <label>
-                                                                <input type="radio" name="rating" value="5" title="5 stars">
+                                                                <input type="radio" name="rating" value="5"
+                                                                       title="5 stars">
                                                                 5
                                                             </label>
                                                             <label>
-                                                                <input type="radio" name="rating" value="4" title="4 stars">
+                                                                <input type="radio" name="rating" value="4"
+                                                                       title="4 stars">
                                                                 4
                                                             </label>
                                                             <label>
-                                                                <input type="radio" name="rating" value="3" title="3 stars">
+                                                                <input type="radio" name="rating" value="3"
+                                                                       title="3 stars">
                                                                 3
                                                             </label>
                                                             <label>
-                                                                <input type="radio" name="rating" value="2" title="2 stars">
+                                                                <input type="radio" name="rating" value="2"
+                                                                       title="2 stars">
                                                                 2
                                                             </label>
                                                             <label>
-                                                                <input type="radio" name="rating" value="1" title="1 stars">
+                                                                <input type="radio" name="rating" value="1"
+                                                                       title="1 stars">
                                                                 1
                                                             </label>
                                                         </div>
                                                     </div>
 
 
-
                                                     <div class="form-group">
                                                         <label for="userName">Comment </label>
-                                                        <textarea name="comment" class="form-control"rows
-                                                                  rows="3"></textarea>
+                                                        <textarea name="comment" class="form-control" rows
+                                                                  rows="3">{{old('comment')}}</textarea>
                                                     </div>
 
                                                     <div class="form-group">

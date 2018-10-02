@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Rating;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 
 class RatingController extends Controller
 {
@@ -30,34 +31,56 @@ class RatingController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
     {
         //request validation rules
         $validator = Validator::make($request->all(), [
-            'name' => 'required|string|max:255',
+            'username' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
-            'type' => 'required',
-            'street_address' => 'required',
-            'phone_num' => 'string|max:10',
-            'suburb' => 'required',
-            'postcode' => 'required',
-            'city' => 'required',
+            'comment' => 'required',
+            'rating' => 'required',
 
         ]);
         if ($validator->fails()) {
-            return redirect('shop/create')
+            $url = 'shop/' . $request['market_id'];
+            return redirect($url)
                 ->withErrors($validator)
                 ->withInput();
         }
+
+        $filename = '';
+        if ($request->hasFile('image')) {
+            $file = $request->file('image');
+            $extension = $file->getClientOriginalExtension(); // getting image extension
+            $filename = $type . '_' . +time() . '.' . $extension;
+            $destination = public_path('img/uploads/market');
+            $file->move($destination, $filename);
+        } else {
+            $filename = 'user_default.jpg';
+        }
+
+
+        Rating::create([
+            'market_id' => $request['market_id'],
+            'username' => $request['username'],
+            'email' => $request['email'],
+            'rating' => $request['rating'],
+            'image' => '/img/uploads/market/' . (string)$filename,
+            'verify' => $request['verify'],
+            'comment' => $request['comment'],
+
+        ]);
+
+
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Rating  $rating
+     * @param  \App\Rating $rating
      * @return \Illuminate\Http\Response
      */
     public function show(Rating $rating)
@@ -68,7 +91,7 @@ class RatingController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Rating  $rating
+     * @param  \App\Rating $rating
      * @return \Illuminate\Http\Response
      */
     public function edit(Rating $rating)
@@ -79,8 +102,8 @@ class RatingController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Rating  $rating
+     * @param  \Illuminate\Http\Request $request
+     * @param  \App\Rating $rating
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, Rating $rating)
@@ -91,7 +114,7 @@ class RatingController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Rating  $rating
+     * @param  \App\Rating $rating
      * @return \Illuminate\Http\Response
      */
     public function destroy(Rating $rating)
