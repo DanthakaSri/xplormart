@@ -162,41 +162,45 @@
                                                 <span aria-hidden="true">&times;</span>
                                             </button>
                                         </div>
+
                                         <div class="modal-body">
-                                            <form action="#">
-                                                <div class="form-group col-sm-6 col-xs-12">
-                                                    <label for="listingTitle"><span class="mandatory_field">*</span>Market
-                                                        Title</label>
-                                                    <input type="text" class="form-control" name="name"
-                                                           value="{{ old('name') }}" id="listingTitle"
-                                                           placeholder="Market Title">
-
-                                                    @if ($errors->has('name'))
-                                                        <span class="invalid-feedback" role="alert">
-                                                        <strong>{{ $errors->first('name') }}</strong>
-                                                    </span>
-                                                    @endif
-                                                    <span class="error_form" id="market_title_errorMsg"></span>
-                                                </div>
-
-                                                <div class="formSection formSpace">
+                                            <div class="panel-body">
+                                                <form class="loginForm">
                                                     <div class="form-group">
-                                                        <textarea class="form-control" rows="3"
-                                                                  placeholder="Comment"></textarea>
+                                                        <label for="userName">Username *</label>
+                                                        <input type="text" name="username" placeholder="Username" class="form-control" >
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="userName">Email *</label>
+                                                        <input type="email" name="email"  placeholder="Email" class="form-control">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="userName">User photo</label>
+                                                        <input type="file" name="image" class="form-control">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="userName">Verify {{ $market_details->name }} market place</label>
+                                                        <input type="checkbox" name="verify" class="form-control">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="userName">User photo</label>
+                                                        <input type="file" name="image" class="form-control">
                                                     </div>
 
+                                                    <label for="input-1" class="control-label">Give a rating for Skill:</label>
+                                                    <input id="input-1" name="input-1" class="rating rating-loading" data-min="0" data-max="5" data-step="0.1" value="2">
 
-                                                    {{--<div class="form-group mb0">
-                                                        <button type="submit" class="btn btn-primary">Send Review</button>
-                                                    </div>--}}
-                                                </div>
-                                            </form>
-                                        </div>
-                                        <div class="modal-footer form-group mb0">
-                                            <button type="button" class="btn btn-secondary mb0" data-dismiss="modal">
-                                                Close
-                                            </button>
-                                            <button type="submit" class="btn btn-primary mb0">Send Review</button>
+                                                    <div class="form-group">
+                                                        <label for="userName">Comment </label>
+                                                        <textarea name="comment" class="form-control" rows="3"></textarea>
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <button type="submit" class="btn btn-primary pull-left">Send Review
+                                                        </button>
+                                                    </div>
+                                                </form>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
