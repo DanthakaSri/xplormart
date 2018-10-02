@@ -438,8 +438,6 @@ $('#suburb_errorMsg').hide();
 $('#city_errorMsg').hide();
 $('#phone_errorMsg').hide();
 $('#email_errorMsg').hide();
-$('#monday_errorMsg, #tuesday_errorMsg, #wednesday_errorMsg, #thursday_errorMsg, #friday_errorMsg, #saturday_errorMsg, #sunday_errorMsg').hide();
-
 
 
 
