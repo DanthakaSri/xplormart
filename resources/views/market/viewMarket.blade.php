@@ -299,7 +299,7 @@
                                                     </div>
 
                                                     <div class="form-group">
-                                                        <button type="submit" class="btn btn-primary pull-left">Send
+                                                        <button id="submitReviewBtn" type="submit" class="btn btn-primary pull-left">Send
                                                             Review
                                                         </button>
                                                     </div>

@@ -1,9 +1,14 @@
 jQuery(document).ready(function(){
   'use strict';
+
+  $("#addMarketBtn, #homeBtn, #marketsBtn, #submitReviewBtn, .navbar-brand, .allMarkets, .allMarketHomeLink").on('click', function (){
+    $('.loaded #preloader').css('opacity','unset');
+    $('.loaded #preloader').css('visibility','visible');
+  });
   //============================== PRE LOADER =============================================
   setTimeout(function(){
     $('body').addClass('loaded');
-  }, 500);
+  }, 100);
 
 
   //============================== SELECT BOX =========================
@@ -681,3 +686,4 @@ function check_email (){
 // end form validation
 
 });
+
