@@ -66,7 +66,7 @@
                         <h2>{{ $market_details->name }}</h2>
                         <p>{{$market_details->street_address}}, {{$market_details->suburb}}
                             @if($verify >0)
-                                <br><span class="label label-success">Customer verified</span><br>
+                                <br><span class="label label-success">Verified Market</span><br>
                             @endif</p>
 
                         <div class="listingReview">
@@ -85,11 +85,9 @@
                                         @php $rating--; @endphp
                                      </span>
                                 @endforeach
-
-
                             </ul>
                             <span>( {{(integer)$comments->count()}} Reviews )</span>
-                            
+
 
 
                             <!-- Button trigger for review modal  -->
