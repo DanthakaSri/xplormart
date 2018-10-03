@@ -29,7 +29,7 @@ class HomeController extends Controller
         $types=Type::all();
         $latest_markets=DB::table('markets')
             ->groupBy('id')
-            ->having('avg_rating', '>', 3)
+            ->having('avg_rating', '>', 3)->take(10)
             ->get();
         return view('home',compact('latest_markets','types'));
     }

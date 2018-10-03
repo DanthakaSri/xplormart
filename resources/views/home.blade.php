@@ -16,13 +16,13 @@
                             <div class="form-group inputGroup">
                                 <div class="input-group">
                                     <div class="input-group-addon">Find</div>
-                                    <input type="text" class="form-control" id="findItem" placeholder="Keywords">
+                                    <input type="text" name="keyword" class="form-control" id="findItem" placeholder="Keywords">
                                     <div class="input-group-addon addon-right"></div>
                                 </div>
                             </div>
                             <div class="form-group inputGroup">
                                 <div class="input-group">
-                                    <div class="input-group-addon">Type</div>
+                                    <div class="input-group-addon">Market Type</div>
                                     <select class="form-control" name="type" id="type" placeholder="">
                                         @foreach($types as $type)
                                             <option value="{{$type->type}}">{{$type->type}}</option>
@@ -33,9 +33,9 @@
                             <div class="form-group inputGroup">
                                 <div class="input-group">
                                     <div class="input-group-addon">Near</div>
-                                    <input type="text" class="form-control" id="nearLocation" placeholder="Location">
-                                    <div class="input-group-addon addon-right"><i class="icon-listy icon-target"
-                                                                                  aria-hidden="true"></i></div>
+                                    <input type="text" name="location" class="form-control" id="nearLocation" placeholder="Location">
+                                    <div class="input-group-addon addon-right"><a href=""><i class="icon-listy icon-target"
+                                                                                             aria-hidden="true"></i></a></div>
                                 </div>
                             </div>
                             <div class="btnWrapper">
@@ -54,7 +54,7 @@
     <section class="clearfix thingsArea">
         <div class="container">
             <div class="page-header text-center">
-                <h2>Popular Things Near You
+                <h2>Top 10 Popular Markets
                     <small>This are some of most popular markets</small>
                 </h2>
             </div>
@@ -100,7 +100,7 @@
                                                         @endforeach
                                                     </ul>
                                                     <a href="{{ route('shop.show',$market->id) }}">
-                                                        <h2>{{ $market->name }} 
+                                                        <h2>{{ $market->name }}
                                                             @if($market->verify_count > 5)
                                                                 <i class="fa fa-check-circle" aria-hidden="true"></i>
                                                             @endif
