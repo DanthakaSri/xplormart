@@ -62,10 +62,6 @@
                             </div>
                         @endif
                         <h2>We found <span>{{ $markets->count() }}</span> Results for you</h2>
-                        <ul class="list-inline">
-                            <li><a href="{{route('shop.index')}}"><i class="fa fa-shopping-basket fa-2x"
-                                                                     aria-hidden="true"></i></a></li>
-                        </ul>
                     </div>
                     <div class="row">
 
