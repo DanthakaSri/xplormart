@@ -433,6 +433,7 @@
                                 <div class="row">
                                     <!-- banner default image credits - <a href="https://www.freepik.com/free-photo/laptop-and-shopping-bags-online-shopping-concept_1203166.htm">Designed by Snowing</a> -->
                                     <div class="form-group col-xs-12">
+                                    <span class="imgUploadLabel">Recommended image size for the banner is more than (1300 width x 1000 height) pixcels.</span>
                                         {{-- <div class="imageUploader text-center">
                                              <div class="file-upload">
                                                  <div class="upload-area">--}}
