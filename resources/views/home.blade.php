@@ -1,5 +1,10 @@
 @extends('layouts.baseApp')
 
+@section('css')
+
+
+    @endsection
+
 @section('title','Home')
 @section('nvClass','')
 @section('nvClass2','transparent-navbar')
@@ -30,14 +35,17 @@
                                     </select>
                                 </div>
                             </div>
-                            <div class="form-group inputGroup">
+
+                            <div class="form-group inputGroup" >
                                 <div class="input-group">
-                                    <div class="input-group-addon">Near</div>
-                                    <input type="text" name="location" class="form-control" id="nearLocation" placeholder="Location">
-                                    <div class="input-group-addon addon-right"><a href=""><i class="icon-listy icon-target"
+                                    <div class="input-group-addon" >Near</div>
+                                    <input type="text" name="location" id="locality" onFocus="geolocate()" class="form-control " placeholder="Location">
+                                    <div class="input-group-addon addon-right"><a onclick="getCurrentLocation()"><i class="icon-listy icon-target"
                                                                                              aria-hidden="true"></i></a></div>
                                 </div>
                             </div>
+
+
                             <div class="btnWrapper">
                                 <button type="submit" class="btn btn-primary"><i class="fa fa-search"
                                                                                  aria-hidden="true"></i> Search
@@ -134,3 +142,11 @@
     </section>
 
 @endsection
+
+@section('js')
+
+
+    <script src="{{ asset('js/location.js') }}" ></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDm9diXPOG1r9dYhtKFy--gQ3xAhuQ6qnY&libraries=places&callback=initAutocomplete"
+            async defer></script>
+    @endsection

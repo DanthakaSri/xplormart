@@ -15,10 +15,11 @@
 <script src="{{ asset('plugins/fancybox/jquery.fancybox.min.js') }}" defer></script>
 <script src="{{ asset('plugins/isotope/isotope-triger.min.js') }}" defer></script>
 <script src="{{ asset('plugins/rateyo/jquery.rateyo.min.js') }}" defer></script>
-<script src="{{ asset('https://maps.googleapis.com/maps/api/js?key=AIzaSyBEDfNcQRmKQEyulDN8nGWjLYPm8s4YB58') }}" defer></script>
 <script src="{{ asset('plugins/map/js/rich-marker.js') }}" defer></script>
 <script src="{{ asset('plugins/map/js/infobox_packed.js') }}" defer></script>
 <script src="{{ asset('js/single-map.js') }}" defer></script>
 <script src="{{ asset('js/map.js') }}" defer></script>
 <script src="{{ asset('js/jquery.timepicker.js') }}" defer></script>
 <script src="{{ asset('js/custom.js') }}" defer></script>
+
+

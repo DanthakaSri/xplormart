@@ -29,6 +29,9 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+    @section('css')
+        @show
+
 </head>
 
 <body id="body" class="body-wrapper boxed-menu" >
@@ -42,6 +45,9 @@
 </div>
 
 @include('includes.footer')
+
+@section('js')
+    @show
 
 </body>
 
