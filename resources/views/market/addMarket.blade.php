@@ -604,7 +604,7 @@
                             </div>
                         </div>
                         <div class="form-footer text-center">
-                            <button type="submit" class="btn-submit btn-default-1">Submit</button>
+                            <button type="submit" class="btn-submit btn-default-1" id="addMarketSubmit">Submit</button>
                         </div>
                     </form>
                 </div>
