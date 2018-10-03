@@ -44,13 +44,16 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
+
         .ratingForm label {
             font-weight: 400;
         }
-        .close:focus, .close:hover{
+
+        .close:focus, .close:hover {
             color: #00cc67;
         }
-        button.close{
+
+        button.close {
             font-size: 26px;
         }
 
@@ -86,28 +89,26 @@
                                      </span>
                                 @endforeach
                             </ul>
-<<<<<<< HEAD
+
                             <span>( {{(integer)$comments->count()}} Reviews )</span>
 
-
-=======
                             <div class="ratingBottomWrapper col-sm-12 col-md-12 noPadding">
->>>>>>> f5460a586a219adf594d7e64708ba1ba6380cac5
+                                
+                                <div class="col-sm-6 col-md-6 noPadding reviewCount">( {{(integer)$comments->count()}}
+                                    Reviews )
+                                </div>
+                                <div class="col-sm-6 col-md-6 noPadding">
+                                    <button type="button" class="btn btn-primary" data-toggle="modal"
+                                            data-target="#exampleModal">
+                                        Write a review
+                                    </button>
+                                </div>
 
-                           
-                            <div class="col-sm-6 col-md-6 noPadding reviewCount">( {{(integer)$comments->count()}} Reviews )</div>
-                            <div class="col-sm-6 col-md-6 noPadding"><button type="button" class="btn btn-primary" data-toggle="modal"
-                                    data-target="#exampleModal">
-                                Write a review
-                            </button>
                             </div>
-
-                             </div>
-                            
 
 
                             <!-- Button trigger for review modal  -->
-                            
+
                         </div>
                     </div>
                 </div>
@@ -162,35 +163,37 @@
 
                             @foreach($comments as $comment)
 
-                            <div class="media media-comment">
-                                <div class="media-left">
-                                    <img src="{{asset($comment->image)}}" class="media-object img-circle"
-                                         alt="Image User">
-                                </div>
-                                <div class="media-body">
-                                    <h4 class="media-heading">{{$comment->username}}</h4>
-                                    <ul class="list-inline rating">
+                                <div class="media media-comment">
+                                    <div class="media-left">
+                                        <img src="{{asset($comment->image)}}" class="media-object img-circle"
+                                             alt="Image User">
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">{{$comment->username}}</h4>
+                                        <ul class="list-inline rating">
 
-                                        @foreach(range(1,5) as $i)
-                                            <span class="fa-stack" style="width: 10px;">
+                                            @foreach(range(1,5) as $i)
+                                                <span class="fa-stack" style="width: 10px;">
                                          <li><i class="fa fa-star-o fa-stack-2x fa-2x" aria-hidden="true"></i></li>
 
-                                                @if($comment->rating >0)
-                                                    @if($comment->rating >0.5)
-                                                        <li><i class="fa fa-star fa-stack-2x fa-2x" aria-hidden="true"></i></li>
-                                                    @else
-                                                        <li><i class="fa fa-star-half fa-stack-2x fa-2x" aria-hidden="true"></i></li>
+                                                    @if($comment->rating >0)
+                                                        @if($comment->rating >0.5)
+                                                            <li><i class="fa fa-star fa-stack-2x fa-2x"
+                                                                   aria-hidden="true"></i></li>
+                                                        @else
+                                                            <li><i class="fa fa-star-half fa-stack-2x fa-2x"
+                                                                   aria-hidden="true"></i></li>
+                                                        @endif
                                                     @endif
-                                                @endif
-                                                @php $comment->rating--; @endphp
+                                                    @php $comment->rating--; @endphp
                                      </span>
-                                        @endforeach
+                                            @endforeach
 
-                                    </ul>
-                                    <p class="media">{{ $comment->comment }}</p>
+                                        </ul>
+                                        <p class="media">{{ $comment->comment }}</p>
+                                    </div>
+
                                 </div>
-
-                            </div>
                                 <hr style="padding: 10px">
                             @endforeach
 
@@ -210,7 +213,7 @@
                                 <div class="modal-dialog modal-dialog-centered" role="document">
                                     <div class="modal-content">
                                         <div class="modal-header">
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                 <span aria-hidden="true">&times;</span>
                                             </button>
                                             <h4 class="modal-title" id="exampleModalLabel">Write a Review</h4>
@@ -218,7 +221,8 @@
 
                                         <div class="modal-body">
                                             <div class="panel-body">
-                                                <form class="ratingForm" action="{{route('rating.store')}}" method="post"
+                                                <form class="ratingForm" action="{{route('rating.store')}}"
+                                                      method="post"
                                                       enctype="multipart/form-data">
                                                     @csrf
 
