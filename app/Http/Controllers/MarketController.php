@@ -3,10 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Market;
+use App\Rating;
 use App\Type;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Validator;
+use function MongoDB\BSON\toJSON;
 
 class MarketController extends Controller
 {
@@ -17,8 +19,11 @@ class MarketController extends Controller
      */
     public function index()
     {
-        $markets = DB::table('markets')->simplePaginate(8);
+//        $markets = DB::table('markets')->simplePaginate(8);
+        $markets  =Market::all();
+
         $types = Type::all();
+
 
         return view('market.allMarkets', compact('markets', 'types'));
     }
@@ -129,9 +134,13 @@ class MarketController extends Controller
         $comments=RatingController::getRatingComments($id);
         $verify=RatingController::getMarketVerifyStatus($id);
 
+
+
         $market_details = Market::where('id', '=', $id)->first();
-//        return $market_details;
+
         return view('market.viewMarket', compact('market_details','rating','comments','verify'));
+
+
     }
 
 

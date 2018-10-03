@@ -54,7 +54,11 @@
                 <div class=" col-xs-12">
                     <div class="listingTitleArea">
                         <h2>{{ $market_details->name }}</h2>
-                        <p>{{$market_details->street_address}}, {{$market_details->suburb}}</p>
+                        <p>{{$market_details->street_address}}, {{$market_details->suburb}}
+                            @if($verify >0)
+                                <br><span class="label label-success">Customer verified</span><br>
+                            @endif</p>
+
                         <div class="listingReview">
                             <ul class="list-inline rating">
                                 @foreach(range(1,5) as $i)
@@ -75,6 +79,7 @@
 
                             </ul>
                             <span>( {{(integer)$comments->count()}} Reviews )</span>
+                            
 
 
                             <!-- Button trigger for review modal  -->
