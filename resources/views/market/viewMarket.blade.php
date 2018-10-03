@@ -21,6 +21,7 @@
         .rating2 label {
             display: inline-block;
             font-size: 0;
+            cursor: pointer;
         }
 
         .rating2 > label:before {
@@ -42,6 +43,15 @@
             background: -webkit-linear-gradient(-45deg, #fcb551 0%, #d69a45 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+        }
+        .ratingForm label {
+            font-weight: 400;
+        }
+        .close:focus, .close:hover{
+            color: #00cc67;
+        }
+        button.close{
+            font-size: 26px;
         }
 
 
@@ -184,20 +194,20 @@
                                 <div class="modal-dialog modal-dialog-centered" role="document">
                                     <div class="modal-content">
                                         <div class="modal-header">
-                                            <h5 class="modal-title" id="exampleModalLabel">Write a Review</h5>
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                 <span aria-hidden="true">&times;</span>
                                             </button>
+                                            <h4 class="modal-title" id="exampleModalLabel">Write a Review</h4>
                                         </div>
 
                                         <div class="modal-body">
                                             <div class="panel-body">
-                                                <form class="loginForm" action="{{route('rating.store')}}" method="post"
+                                                <form class="ratingForm" action="{{route('rating.store')}}" method="post"
                                                       enctype="multipart/form-data">
                                                     @csrf
 
                                                     <div class="form-group">
-                                                        <label for="userName">Username *</label>
+                                                        <label for="userName">Username</label>
                                                         <input type="text" name="username" placeholder="Username"
                                                                value="{{old('username')}}"
                                                                class="form-control">
@@ -208,7 +218,7 @@
                                                         @endif
                                                     </div>
                                                     <div class="form-group">
-                                                        <label for="userName">Email *</label>
+                                                        <label for="userName">Email</label>
                                                         <input type="email" name="email" placeholder="Email"
                                                                value="{{old('email')}}"
                                                                class="form-control">
