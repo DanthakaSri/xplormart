@@ -8208,13 +8208,17 @@ table.dataTable thead .sorting_desc_disabled:after {
 
 @media (min-width: 768px) {
   .listingReview .btn-primary {
+    float: right;
+  }
+  button.btn.btn-primary.reviewBtn {
     float: left;
   }
 }
 
+
 .listingImage li {
   padding: 0;
-  width: 1140px;
+  /*width: 1140px;*/
   display: block;
   overflow: auto;
   margin: 0 auto;
@@ -9973,6 +9977,26 @@ input#otherType {
 .otherTypelbl {
 margin: 10px 0 0 0;
 }
+
+.noPadding {
+  padding: 0 !important;
+}
+
+.ratingBottomWrapper {
+  margin: -25px 0 0 0;
+}
+
+@media (max-width: 768px) {
+  .ratingBottomWrapper {
+    margin:0;
+  }
+
+  .listingReview .rating {
+    width: 100%;
+  }
+}
+
+
 
 /*
 input[type=text], textarea {

@@ -86,15 +86,28 @@
                                      </span>
                                 @endforeach
                             </ul>
+<<<<<<< HEAD
                             <span>( {{(integer)$comments->count()}} Reviews )</span>
 
 
+=======
+                            <div class="ratingBottomWrapper col-sm-12 col-md-12 noPadding">
+>>>>>>> f5460a586a219adf594d7e64708ba1ba6380cac5
 
-                            <!-- Button trigger for review modal  -->
-                            <button type="button" class="btn btn-primary" data-toggle="modal"
+                           
+                            <div class="col-sm-6 col-md-6 noPadding reviewCount">( {{(integer)$comments->count()}} Reviews )</div>
+                            <div class="col-sm-6 col-md-6 noPadding"><button type="button" class="btn btn-primary" data-toggle="modal"
                                     data-target="#exampleModal">
                                 Write a review
                             </button>
+                            </div>
+
+                             </div>
+                            
+
+
+                            <!-- Button trigger for review modal  -->
+                            
                         </div>
                     </div>
                 </div>
@@ -185,7 +198,7 @@
                         <div class="detailsInfoBox">
                             <!-- Button trigger for review modal  -->
                             <div class="listingReview" style="padding-top: 10px">
-                                <button type="button" class="btn btn-primary " data-toggle="modal"
+                                <button type="button" class="btn btn-primary reviewBtn" data-toggle="modal"
                                         data-target="#exampleModal">
                                     Write a review
                                 </button>
