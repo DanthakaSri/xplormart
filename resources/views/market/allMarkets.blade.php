@@ -5,7 +5,7 @@
 @section('nvClass2','lightHeader')
 
 @section('content')
-    
+
         <section class="clerfix categoryGrid">
             <div class="container">
                 <div class="row">

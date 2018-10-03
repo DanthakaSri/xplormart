@@ -19,10 +19,7 @@ class MarketController extends Controller
      */
     public function index()
     {
-//        $markets = DB::table('markets')->simplePaginate(8);
-//        $markets  =Market::all();
-
-        $markets=Rating::query()->select('*')->distinct()->get();
+        $markets = DB::table('markets')->simplePaginate(8);
 
         $types = Type::all();
 
