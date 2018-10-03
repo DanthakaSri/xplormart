@@ -21,6 +21,7 @@ class MarketController extends Controller
     {
         $markets = DB::table('markets')->simplePaginate(8);
 
+
         $types = Type::all();
 
 
@@ -113,6 +114,8 @@ class MarketController extends Controller
             'friday' => (string)$friday,
             'saturday' => (string)$saturday,
             'sunday' => (string)$sunday,
+            'avg_rating' => '0',
+            'verify_count' => '0',
 
         ]);
 

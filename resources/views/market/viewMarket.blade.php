@@ -68,7 +68,7 @@
                     <div class="listingTitleArea">
                         <h2>{{ $market_details->name }}</h2>
                         <p>{{$market_details->street_address}}, {{$market_details->suburb}}
-                            @if($verify >0)
+                            @if($verify >5)
                                 <br><span class="label label-success">Verified Market</span><br>
                             @endif</p>
 

@@ -66,6 +66,12 @@ class RatingController extends Controller
 
         ]);
 
+        $rating_avg=self::getRatingNumber($request['market_id']);
+        $verify_count=self::getMarketVerifyStatus($request['market_id']);
+
+        DB::table('markets')
+            ->where('id', '=',$request['market_id'])
+            ->update(['avg_rating' => $rating_avg,'verify_count'=>$verify_count]);
 
         return redirect()->route('shop.show',$request['market_id'])->with('status', 'Thank you for your feedback');
     }

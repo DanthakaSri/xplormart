@@ -37,6 +37,8 @@ class CreateMarketsTable extends Migration
             $table->string('friday')->nullable();
             $table->string('saturday')->nullable();
             $table->string('sunday')->nullable();
+            $table->string('avg_rating')->default('0');
+            $table->string('verify_count')->default('0');
             $table->timestamps();
         });
     }
