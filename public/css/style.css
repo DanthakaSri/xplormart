@@ -8208,7 +8208,7 @@ table.dataTable thead .sorting_desc_disabled:after {
 
 @media (min-width: 768px) {
   .listingReview .btn-primary {
-    float: right;
+    float: left;
   }
 }
 
