@@ -93,7 +93,7 @@
                             <span>( {{(integer)$comments->count()}} Reviews )</span>
 
                             <div class="ratingBottomWrapper col-sm-12 col-md-12 noPadding">
-                                
+
                                 <div class="col-sm-6 col-md-6 noPadding reviewCount">( {{(integer)$comments->count()}}
                                     Reviews )
                                 </div>

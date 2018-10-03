@@ -22,6 +22,3 @@
 <script src="{{ asset('js/map.js') }}" defer></script>
 <script src="{{ asset('js/jquery.timepicker.js') }}" defer></script>
 <script src="{{ asset('js/custom.js') }}" defer></script>
-
-<script src="{{asset('js/star-rating.js')}}" type="text/javascript"></script>
-<script src="{{asset('plugins/star-rating/themes/krajee-svg/theme.js')}}"></script>
