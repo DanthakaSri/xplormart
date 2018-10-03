@@ -4,6 +4,7 @@ jQuery(document).ready(function(){
   $("#addMarketBtn, #homeBtn, #addMarketSubmit, #marketsBtn, #submitReviewBtn, .navbar-brand, .allMarkets, .allMarketHomeLink").on('click', function (){
     $('.loaded #preloader').css('opacity','unset');
     $('.loaded #preloader').css('visibility','visible');
+    $('body').removeClass('loaded');
   });
   //============================== PRE LOADER =============================================
   setTimeout(function(){
