@@ -103,7 +103,7 @@ class MarketController extends Controller
             'postcode' => $request['postcode'],
             'suburb' => $request['suburb'],
             'city' => $request['city'],
-            'image' => '/img/uploads/market/' . (string)$filename,
+            'image' => '/img/uploads/market/'.(string)$filename,
             'fb_url' => $request['fb_url'],
             'youtube_url' => $request['youtube_url'],
             'twitter_url' => $request['twitter_url'],

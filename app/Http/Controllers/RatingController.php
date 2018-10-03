@@ -9,6 +9,17 @@ use Illuminate\Support\Facades\DB;
 class RatingController extends Controller
 {
     /**
+     * @param $market_id
+     * @return \Illuminate\Support\Collection
+     */
+    public static function getRatingComments($market_id)
+    {
+        $comments = DB::table('ratings')->where('market_id', '=', $market_id)->get();
+
+        return $comments;
+    }
+
+    /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
@@ -37,13 +48,13 @@ class RatingController extends Controller
     public function store(Request $request)
     {
 
-
+        $name = $request['username'];
         $filename = '';
         $verify = 0;
         if ($request->hasFile('image')) {
             $file = $request->file('image');
             $extension = $file->getClientOriginalExtension(); // getting image extension
-            $filename = $type . '_' . +time() . '.' . $extension;
+            $filename = $name . '_' . +time() . '.' . $extension;
             $destination = public_path('img/uploads/market');
             $file->move($destination, $filename);
         } else {
@@ -66,14 +77,39 @@ class RatingController extends Controller
 
         ]);
 
-        $rating_avg=self::getRatingNumber($request['market_id']);
-        $verify_count=self::getMarketVerifyStatus($request['market_id']);
+        $rating_avg = self::getRatingNumber($request['market_id']);
+        $verify_count = self::getMarketVerifyStatus($request['market_id']);
 
         DB::table('markets')
-            ->where('id', '=',$request['market_id'])
-            ->update(['avg_rating' => $rating_avg,'verify_count'=>$verify_count]);
+            ->where('id', '=', $request['market_id'])
+            ->update(['avg_rating' => $rating_avg, 'verify_count' => $verify_count]);
 
-        return redirect()->route('shop.show',$request['market_id'])->with('status', 'Thank you for your feedback');
+        return redirect()->route('shop.show', $request['market_id'])->with('status', 'Thank you for your feedback');
+    }
+
+    /**
+     * @param $market_id
+     * @return mixed
+     */
+    public static function getRatingNumber($market_id)
+    {
+        $rating = DB::table('ratings')
+            ->where('market_id', '=', $market_id)
+            ->avg('rating');
+
+        return $rating;
+
+    }
+
+    /**
+     * @param $market_id
+     * @return int
+     */
+    public static function getMarketVerifyStatus($market_id)
+    {
+        $verify = DB::table('ratings')->where([['market_id', '=', $market_id], ['verify', '=', 1]])->count();
+
+        return $verify;
     }
 
     /**
@@ -87,10 +123,10 @@ class RatingController extends Controller
     {
 
 
-        $comments = DB::table('ratings')->where('market_id','=',$id)->get();
-        $verify=DB::table('ratings')->where([['market_id','=',$id],['verify','=',1]])->count();
+        $comments = DB::table('ratings')->where('market_id', '=', $id)->get();
+        $verify = DB::table('ratings')->where([['market_id', '=', $id], ['verify', '=', 1]])->count();
 
-        return compact('rating','comments','verify');
+        return compact('rating', 'comments', 'verify');
 
 
     }
@@ -127,41 +163,5 @@ class RatingController extends Controller
     public function destroy(Rating $rating)
     {
         //
-    }
-
-    /**
-     * @param $market_id
-     * @return mixed
-     */
-    public static function getRatingNumber($market_id)
-    {
-        $rating = DB::table('ratings')
-            ->where('market_id','=', $market_id)
-            ->avg('rating');
-
-        return $rating;
-
-    }
-
-    /**
-     * @param $market_id
-     * @return \Illuminate\Support\Collection
-     */
-    public static function getRatingComments($market_id)
-    {
-        $comments = DB::table('ratings')->where('market_id','=',$market_id)->get();
-
-        return $comments;
-    }
-
-    /**
-     * @param $market_id
-     * @return int
-     */
-    public static function getMarketVerifyStatus($market_id)
-    {
-        $verify=DB::table('ratings')->where([['market_id','=',$market_id],['verify','=',1]])->count();
-
-        return $verify;
     }
 }
