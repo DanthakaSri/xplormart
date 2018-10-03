@@ -27,7 +27,10 @@ class HomeController extends Controller
     public function index()
     {
         $types=Type::all();
-        $latest_markets=Market::orderBy('id','desc')->take(5)->get();
+        $latest_markets=DB::table('markets')
+            ->groupBy('id')
+            ->having('avg_rating', '>', 3)
+            ->get();
         return view('home',compact('latest_markets','types'));
     }
 }

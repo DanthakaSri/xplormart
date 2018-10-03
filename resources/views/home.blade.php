@@ -81,18 +81,34 @@
                                                      alt="{{$market->name}}">
                                                 <div class="thingsMask">
                                                     <ul class="list-inline rating">
-                                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                        @foreach(range(1,5) as $i)
+                                                            <span class="fa-stack" style="width: 15px;">
+                                                <li><i class="fa fa-star-o fa-stack-2x fa-2x"
+                                                       aria-hidden="true"></i></li>
+
+                                                                @if($market->avg_rating >0)
+                                                                    @if($market->avg_rating >0.5)
+                                                                        <li><i class="fa fa-star fa-stack-2x fa-2x"
+                                                                               aria-hidden="true"></i></li>
+                                                                    @else
+                                                                        <li><i class="fa fa-star-half fa-stack-2x fa-2x"
+                                                                               aria-hidden="true"></i></li>
+                                                                    @endif
+                                                                @endif
+                                                                @php $market->avg_rating--; @endphp
+                                                    </span>
+                                                        @endforeach
                                                     </ul>
                                                     <a href="{{ route('shop.show',$market->id) }}">
-                                                        <h2>{{ $market->name }} <i
-                                                                class="fa fa-check-circle" aria-hidden="true"></i></h2>
+                                                        <h2>{{ $market->name }} 
+                                                            @if($market->verify_count > 5)
+                                                                <i class="fa fa-check-circle" aria-hidden="true"></i>
+                                                            @endif
+                                                        </h2>
                                                     </a>
-                                                    <p>{{ $market->address }}</p>
-                                                    <p>{{ $market->country }}</p>
+                                                    <p><i class="fa fa-map-marker"
+                                                          aria-hidden="true"></i> {{$market->street_address}},
+                                                        {{$market->suburb}} <br> {{$market->country}}</p>
                                                 </div>
                                             </div>
                                             <div class="thingsCaption ">

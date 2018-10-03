@@ -75,7 +75,8 @@
                                             <ul class="list-inline rating">
                                                 @foreach(range(1,5) as $i)
                                                     <span class="fa-stack" style="width: 15px;">
-                                                <li><i class="fa fa-star-o fa-stack-2x fa-2x" aria-hidden="true"></i></li>
+                                                <li><i class="fa fa-star-o fa-stack-2x fa-2x"
+                                                       aria-hidden="true"></i></li>
 
                                                         @if($market->avg_rating >0)
                                                             @if($market->avg_rating >0.5)
@@ -92,12 +93,14 @@
 
                                             </ul>
                                             <a href="{{ route('shop.show',$market->id) }}"><h2>{{$market->name}}
-                                                @if($market->verify_count > 5)
+                                                    @if($market->verify_count > 5)
                                                         <i class="fa fa-check-circle" aria-hidden="true"></i>
                                                     @endif
 
                                                 </h2></a>
-                                            <p><i class="fa fa-map-marker"  aria-hidden="true"></i> {{$market->street_address}}, {{$market->suburb}} <br> {{$market->country}}</p>
+                                            <p><i class="fa fa-map-marker"
+                                                  aria-hidden="true"></i> {{$market->street_address}}
+                                                , {{$market->suburb}} <br> {{$market->country}}</p>
                                         </div>
                                     </div>
                                     <div class="thingsCaption ">
