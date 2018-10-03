@@ -82,7 +82,7 @@
                                                 <div class="thingsMask">
                                                     <ul class="list-inline rating">
                                                         @foreach(range(1,5) as $i)
-                                                            <span class="fa-stack" style="width: 15px;">
+                                                            <span class="fa-stack" style="width: 3px; margin-right: 10px;">
                                                 <li><i class="fa fa-star-o fa-stack-2x fa-2x"
                                                        aria-hidden="true"></i></li>
 
@@ -99,7 +99,7 @@
                                                     </span>
                                                         @endforeach
                                                     </ul>
-                                                    <a href="{{ route('shop.show',$market->id) }}">
+                                                    <a class="allMarketHomeLink" href="{{ route('shop.show',$market->id) }}">
                                                         <h2>{{ $market->name }}
                                                             @if($market->verify_count > 5)
                                                                 <i class="fa fa-check-circle" aria-hidden="true"></i>

@@ -28,11 +28,11 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse navbar-ex1-collapse">
                     <ul class="nav navbar-nav navbar-right">
-                        <li class=""><a href="{{route('home')}}">Home </a></li>
-                        <li class=""><a href="{{route('shop.index')}}">Markets </a></li>
+                        <li id="homeBtn" class=""><a href="{{route('home')}}">Home </a></li>
+                        <li id="marketsBtn" class=""><a href="{{route('shop.index')}}">Markets </a></li>
                     </ul>
                 </div>
-                <a class="btn btn-default navbar-btn" href="{{ route('shop.create') }}"> + <span>Add Market</span></a>
+                <a id="addMarketBtn" class="btn btn-default navbar-btn" href="{{ route('shop.create') }}"> + <span>Add Market</span></a>
             </div>
         </nav>
     </div>
