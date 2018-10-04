@@ -147,15 +147,10 @@ class SearchController extends Controller
 
     public function getMarketByType($type)
     {
-
-
         $markets = DB::table('markets')
             ->where('type', '=', $type)
             ->get();
-
         $types = Type::all();
-//        return $key;
-
         return view('market.searchResults', compact('markets', 'types'));
     }
 

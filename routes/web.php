@@ -17,8 +17,9 @@ Auth::routes();
 Route::resource('/shop','MarketController');
 Route::resource('/rating','RatingController');
 
-
+Route::get('/searchT/{type}','SearchController@getMarketByType')->name('searchT');
 Route::post('/search','SearchController@getAllSearch')->name('search');
+
 Route::get('/', 'HomeController@index')->name('home');
 
 Route::get('contact/', 'CompanyController@contact' );

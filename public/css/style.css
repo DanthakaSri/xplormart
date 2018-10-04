@@ -10016,6 +10016,18 @@ margin: 10px 0 0 0;
 
 }
 
+
+.list-group-item.active, .list-group-item.active:focus, .list-group-item.active:hover {
+    z-index: 2;
+    color: #fff;
+    background-color: #00cc67;
+    border-color: #00cc5b;
+}
+
+span.invalid-feedback{
+    color: red;
+}
+
 /*
 input[type=text], textarea {
   -webkit-transition: all 0.30s ease-in-out;

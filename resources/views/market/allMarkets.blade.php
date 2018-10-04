@@ -10,45 +10,26 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-4 col-xs-12">
+
                     <div class="sidebarInner sidebarCategory">
-                        <div class="panel panel-default">
-                            <div class="panel-heading">Find Location</div>
-                            <div class="input-group">
-                                <input type="text" class="form-control" placeholder="What are you looking for?"
-                                       aria-describedby="basic-addon2">
-                                <a href="#" class="input-group-addon" id="basic-addon2"><i class="fa fa-search"
-                                                                                           aria-hidden="true"></i></a>
-                            </div>
+                        <div class="mini-submenu">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
                         </div>
-                    </div>
-                    <div class="sidebarInner sidebarCategory">
-                        <div class="panel panel-default">
-                            <div class="panel-heading">Filter by Area</div>
-                            <div class="panel-body">
-                                <ul class="list-unstyle categoryList">
-                                    <li><a href="#">Dhaka</a></li>
-                                    <li><a href="#">Chittagong</a></li>
-                                    <li><a href="#">Rajshahi</a></li>
-                                    <li><a href="#">Khulna</a></li>
-                                    <li><a href="#">Barisal</a></li>
-                                    <li><a href="#">Sylhet</a></li>
-                                    <li><a href="#">Rangpure</a></li>
-                                    <li><a href="#">Gazipure</a></li>
-                                    <li><a href="#">Pabna</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="sidebarInner sidebarCategory">
-                        <div class="panel panel-default">
-                            <div class="panel-heading">Related Categories</div>
-                            <div class="panel-body">
-                                <ul class="list-unstyle categoryList">
-                                    @foreach($types as $type)
-                                        <li><a href="#">{{$type->type}} markets</a></li>
-                                    @endforeach
-                                </ul>
-                            </div>
+                        <div class="list-group">
+                        <span href="#" class="list-group-item active">
+                            Market Categories
+                            <span class="pull-right" id="slide-submenu">
+                                <i class="fa fa-times"></i>
+                            </span>
+                        </span>
+
+                            @foreach($types as $type)
+                                <a href="{{route('searchT',$type->type)}}" class="list-group-item"><i
+                                        class="fa fa-shopping-bag "></i> {{$type->type}} markets</a></li>
+                            @endforeach
+
                         </div>
                     </div>
                 </div>
@@ -92,7 +73,8 @@
                                                 @endforeach
 
                                             </ul>
-                                            <a class="allMarkets" href="{{ route('shop.show',$market->id) }}"><h2>{{$market->name}}
+                                            <a class="allMarkets" href="{{ route('shop.show',$market->id) }}">
+                                                <h2>{{$market->name}}
                                                     @if($market->verify_count > 5)
                                                         <i class="fa fa-check-circle" aria-hidden="true"></i>
                                                     @endif
