@@ -10,12 +10,12 @@
 
                             <img src="{{asset('img/logo.png')}}" alt="footer_log">
                         </a>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend justo vel elit
-                            placerat pulvinar.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend
-                            justo vel elit placerat pulvinar.</p>
+                        <p>Xplormart community platform is a search engine where people can find local markets based on <br>
+                         their preferences and this platform allow users to verify and rate markets based on their experiences. 
+                        Also, this platform enable users to add markets into the system.</p>
                         <ul class="list-styled list-contact">
                             <li><i class="fa fa-phone" aria-hidden="true"></i>[+61] 455 503 013</li>
-                            <li><i class="fa fa-envelope" aria-hidden="true"></i><a href="#">info@xplormart.com</a></li>
+                            <li><i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:info@explormart.com">info@xplormart.com</a></li>
                         </ul>
                     </div>
                 </div>
@@ -37,9 +37,9 @@
                     </div>
                     <div class="useLink">
                         <ul class="list-unstyled">
-                            <li><a href="#">Contact Us</a></li>
-                            <li><a href="#">Terms and Conditions</a></li>
-                            <li><a href="#">How It Works</a></li>
+                            <li><a href="/contact">Contact Us</a></li>
+                            <li><a href="/terms">Terms and Conditions</a></li>
+                            <li><a href="/howitworks">How It Works</a></li>
                         </ul>
                     </div>
                 </div>
