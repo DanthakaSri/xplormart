@@ -1,7 +1,7 @@
 jQuery(document).ready(function(){
   'use strict';
 
-  $("#addMarketBtn, #homeBtn, #addMarketSubmit, #marketsBtn, #submitReviewBtn, .navbar-brand, .allMarkets, .allMarketHomeLink").on('click', function (){
+  $("#addMarketBtn, #homeBtn, #addMarketSubmit, #marketsBtn, .navbar-brand, .allMarkets, .allMarketHomeLink").on('click', function (){
     $('.loaded #preloader').css('opacity','unset');
     $('.loaded #preloader').css('visibility','visible');
     $('body').removeClass('loaded');
@@ -446,6 +446,8 @@ $('#suburb_errorMsg').hide();
 $('#city_errorMsg').hide();
 $('#phone_errorMsg').hide();
 $('#email_errorMsg').hide();
+$('#email_errorMsg_ratings').hide();
+
 
 
 
@@ -523,6 +525,10 @@ $('#listingPhone').focusout(function (){
 
 $('#listingEmail').focusout(function (){
   check_email();
+});
+
+$('#ratingEmailValue').focusout(function (){
+  check_email_rating();
 });
 
 
@@ -654,7 +660,7 @@ function check_phone (){
   else {
     $('#phone_errorMsg').html('Invalid mobile number or field cannot be empty');
     $('#phone_errorMsg').show();
-    error_city = true;
+    error_mobile = true;
   }
 }
 
@@ -670,7 +676,7 @@ function check_email (){
   else {
     $('#email_errorMsg').html('Invalid email address or field cannot be empty');
     $('#email_errorMsg').show();
-    error_city = true;
+    error_email = true;
   }
 }
 
@@ -682,6 +688,43 @@ function check_email (){
         $radio.closest('label').addClass('selected');
     });
 
+
+
+
+
+    $("#ratingForm").submit(function(e){
+      var email_rating = $('#ratingEmailValue').val();
+      var emailRegex_ratings = new RegExp(/^\b[A-Z0-9._%-]+@[A-Z0-9.-]+\.[A-Z]{2,4}\b$/i);
+
+      if (emailRegex_ratings.test(email_rating)) {
+        $('#email_errorMsg_ratings').hide();
+        $('.loaded #preloader').css('opacity','unset');
+        $('.loaded #preloader').css('visibility','visible');
+        $('body').removeClass('loaded');
+      }
+    
+      else {
+        e.preventDefault();
+        $('.reviewModal').scrollTop(0);
+        $('#email_errorMsg_ratings').html('Invalid email address or field cannot be empty');
+        $('#email_errorMsg_ratings').show();
+      }
+
+    });
+
+    function check_email_rating (){
+      var email_rating = $('#ratingEmailValue').val();
+      var emailRegex_ratings = new RegExp(/^\b[A-Z0-9._%-]+@[A-Z0-9.-]+\.[A-Z]{2,4}\b$/i);
+
+      if (emailRegex_ratings.test(email_rating)) {
+        $('#email_errorMsg_ratings').hide();
+      }
+    
+      else {
+        $('#email_errorMsg_ratings').html('Invalid email address or field cannot be empty');
+        $('#email_errorMsg_ratings').show();
+      }
+    }
 
 /*$('#addMarketForm').submit(function (){
   error_marketTitle = false;
