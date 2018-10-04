@@ -10004,6 +10004,9 @@ margin: 10px 0 0 0;
   font-size: 12px;
 }
 
+.getGPSLocation {
+  cursor: pointer;
+}
 /*
 input[type=text], textarea {
   -webkit-transition: all 0.30s ease-in-out;

@@ -1,7 +1,7 @@
 jQuery(document).ready(function(){
   'use strict';
 
-  $("#addMarketBtn, #homeBtn, #addMarketSubmit, #marketsBtn, .navbar-brand, .allMarkets, .allMarketHomeLink").on('click', function (){
+  $("#addMarketBtn, #homeBtn, #addMarketSubmit, #marketsBtn, .navbar-brand, .allMarkets, .allMarketHomeLink, .searchBtn").on('click', function (){
     $('.loaded #preloader').css('opacity','unset');
     $('.loaded #preloader').css('visibility','visible');
     $('body').removeClass('loaded');

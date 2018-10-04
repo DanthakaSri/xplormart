@@ -42,14 +42,14 @@
                                 <div class="input-group">
                                     <div class="input-group-addon" >Near</div>
                                     <input type="text" name="location" id="locality" onFocus="geolocate()" class="form-control " placeholder="Location">
-                                    <div class="input-group-addon addon-right"><a onclick="getCurrentLocation()"><i class="icon-listy icon-target"
+                                    <div class="input-group-addon addon-right"><a onclick="getCurrentLocation()" class="getGPSLocation"><i class="icon-listy icon-target"
                                                                                              aria-hidden="true"></i></a></div>
                                 </div>
                             </div>
 
 
                             <div class="btnWrapper">
-                                <button type="submit" class="btn btn-primary"><i class="fa fa-search"
+                                <button type="submit" class="btn btn-primary searchBtn"><i class="fa fa-search"
                                                                                  aria-hidden="true"></i> Search
                                 </button>
                             </div>
