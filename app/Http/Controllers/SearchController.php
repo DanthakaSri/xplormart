@@ -16,7 +16,6 @@ class SearchController extends Controller
         if ($request->has('keyword') && ($request->input('keyword') != null)) {
             if ($request->has('type') && ($request->input('type') != null)) {
                 if ($request->has('location') && ($request->input('location') != null)) {
-                    echo 'worked all';
                     return $this->getAllFieldSearch($request);
                 }
             }
@@ -43,16 +42,16 @@ class SearchController extends Controller
 
 
         if ($request->has('keyword') && ($request->input('keyword') != null)) {
-            echo 'worked keyword';
+
             return $this->getMarketByKeyword($request->input('keyword'));
         }
         if ($request->has('type') && ($request->input('type') != null)) {
-            echo 'worked type';
+
             return $this->getMarketByType($request->input('type'));
         }
 
         if ($request->has('location') && ($request->input('location') != null)) {
-            echo 'worked location';
+
             return $this->getMarketByLocation($request->input('location'));
         }
 
