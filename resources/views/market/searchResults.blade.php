@@ -30,7 +30,7 @@
                                 <a href="{{route('searchT',$type->type)}}" class="list-group-item"><i
                                         class="fa fa-shopping-bag "></i> {{$type->type}} markets</a></li>
                             @endforeach
-
+                            {{$types->links()}}
                         </div>
 
 

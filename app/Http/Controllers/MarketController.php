@@ -19,10 +19,10 @@ class MarketController extends Controller
      */
     public function index()
     {
-        $markets = DB::table('markets')->simplePaginate(8);
+        $markets = DB::table('markets')->paginate(8);
 
 
-        $types = Type::all();
+        $types = DB::table('types')->paginate(10);
 
 
         return view('market.allMarkets', compact('markets', 'types'));

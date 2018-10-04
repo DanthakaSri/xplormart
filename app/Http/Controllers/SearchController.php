@@ -78,7 +78,7 @@ class SearchController extends Controller
         ])->get();
 
 
-        $types = Type::all();
+        $types = DB::table('types')->paginate(10);
 
         return view('market.searchResults', compact('markets', 'types'));
     }
@@ -92,7 +92,7 @@ class SearchController extends Controller
         ])->get();
 
 
-        $types = Type::all();
+        $types = DB::table('types')->paginate(10);
 
         return view('market.searchResults', compact('markets', 'types'));
     }
@@ -109,7 +109,7 @@ class SearchController extends Controller
         ])->get();
 
 
-        $types = Type::all();
+        $types = DB::table('types')->paginate(10);
 
         return view('market.searchResults', compact('markets', 'types'));
     }
@@ -126,7 +126,7 @@ class SearchController extends Controller
         ])->get();
 
 
-        $types = Type::all();
+        $types = DB::table('types')->paginate(10);
 
         return view('market.searchResults', compact('markets', 'types'));
     }
@@ -138,7 +138,7 @@ class SearchController extends Controller
             ->where('name', 'like', "%{$keyword}%")
             ->get();
 
-        $types = Type::all();
+        $types = DB::table('types')->paginate(10);
 
         return view('market.searchResults', compact('markets', 'types'));
 
@@ -150,7 +150,7 @@ class SearchController extends Controller
         $markets = DB::table('markets')
             ->where('type', '=', $type)
             ->get();
-        $types = Type::all();
+        $types = DB::table('types')->paginate(10);
         return view('market.searchResults', compact('markets', 'types'));
     }
 
@@ -160,7 +160,7 @@ class SearchController extends Controller
             ->where('suburb', 'like', "%{$location}%")->orWhere('city', 'like', "%{$location}%")
             ->get();
 
-        $types = Type::all();
+        $types = DB::table('types')->paginate(10);
 //        return $key;
         return view('market.searchResults', compact('markets', 'types'));
     }
