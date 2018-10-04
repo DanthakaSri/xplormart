@@ -36,15 +36,13 @@ function fillInAddress() {
     }
 
 
-
-
     // Get each component of the address from the place details
     // and fill the corresponding field on the form.
     for (var i = 0; i < place.address_components.length; i++) {
         var addressType = place.address_components[i].types[0];
         if (componentForm[addressType]) {
             var val = place.address_components[i][componentForm[addressType]];
-                document.getElementById('locality').value = val;
+            document.getElementById('locality').value = val;
         }
 
     }
@@ -54,7 +52,7 @@ function fillInAddress() {
 // as supplied by the browser's 'navigator.geolocation' object.
 function geolocate() {
     if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(function(position) {
+        navigator.geolocation.getCurrentPosition(function (position) {
             var geolocation = {
                 lat: position.coords.latitude,
                 lng: position.coords.longitude
@@ -68,10 +66,9 @@ function geolocate() {
     }
 }
 
-function getCurrentLocation()
-{
+function getCurrentLocation() {
     if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(function(position) {
+        navigator.geolocation.getCurrentPosition(function (position) {
             var geolocation = {
                 lat: position.coords.latitude,
                 lng: position.coords.longitude
@@ -86,7 +83,7 @@ function getCurrentLocation()
 function geocodeLatLng(latlng) {
 
     var geocoder = new google.maps.Geocoder;
-    geocoder.geocode({'location': latlng}, function(results, status) {
+    geocoder.geocode({'location': latlng}, function (results, status) {
         if (status === 'OK') {
             if (results[0]) {
 

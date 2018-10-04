@@ -91,6 +91,13 @@ class MarketController extends Controller
         $saturday = $request['saturdayFrom'] . '-' . $request['saturdayTo'];
         $sunday = $request['sundayFrom'] . '-' . $request['sundayTo'];
 
+        if($request['otherType']!=null)
+        {
+            Type::create([
+                'type'=>$request['otherType'],
+            ]);
+        }
+
         Market::create([
             'name' => $request['name'],
             'type' => $request['type'],
