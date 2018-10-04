@@ -206,7 +206,7 @@
                             </div>
 
                             <!-- Modal -->
-                            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+                            <div class="modal fade reviewModal" id="exampleModal" tabindex="-1" role="dialog"
                                  aria-labelledby="exampleModalLabel" aria-hidden="true">
                                 <div class="modal-dialog modal-dialog-centered" role="document">
                                     <div class="modal-content">
@@ -219,7 +219,7 @@
 
                                         <div class="modal-body">
                                             <div class="panel-body">
-                                                <form class="ratingForm" action="{{route('rating.store')}}"
+                                                <form id="ratingForm" class="ratingForm" action="{{route('rating.store')}}"
                                                       method="post"
                                                       enctype="multipart/form-data">
                                                     @csrf
@@ -236,15 +236,16 @@
                                                         @endif
                                                     </div>
                                                     <div class="form-group">
-                                                        <label for="userName">Email</label>
-                                                        <input type="email" name="email" placeholder="Email"
+                                                        <label for="userName"><span class="mandatory_field">*</span>Email</label>
+                                                        <input id="ratingEmailValue" type="email" name="email" placeholder="Email"
                                                                value="{{old('email')}}"
-                                                               class="form-control">
+                                                               class="form-control ratingEmail">
                                                         @if ($errors->has('email'))
                                                             <span class="invalid-feedback" role="alert">
                                         <strong>{{ $errors->first('email') }}</strong>
                                     </span>
                                                         @endif
+                                                        <span class="error_form" id="email_errorMsg_ratings"></span>
                                                     </div>
                                                     <div class="form-group">
                                                         <label for="userName">User photo</label>

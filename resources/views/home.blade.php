@@ -30,6 +30,7 @@
                                 <div class="input-group">
                                     <div class="input-group-addon">Market Type</div>
                                     <select class="form-control" name="type" id="type" placeholder="">
+                                    <option disabled="" selected="" value="">Please select</option>
                                         @foreach($types as $type)
                                             <option value="{{$type->type}}">{{$type->type}}</option>
                                         @endforeach
