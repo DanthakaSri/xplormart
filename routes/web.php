@@ -20,3 +20,7 @@ Route::resource('/rating','RatingController');
 
 Route::post('/search','SearchController@getAllSearch')->name('search');
 Route::get('/', 'HomeController@index')->name('home');
+
+Route::get('contact/', 'CompanyController@contact' );
+Route::get('terms/', 'CompanyController@terms' );
+Route::get('howitworks/', 'CompanyController@howitworks' );

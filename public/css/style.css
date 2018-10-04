@@ -10007,6 +10007,15 @@ margin: 10px 0 0 0;
 .getGPSLocation {
   cursor: pointer;
 }
+
+@media (min-width: 768px) {
+  .form-group .sendQ {
+    width: auto;
+    padding: 18px 20px;
+  }
+
+}
+
 /*
 input[type=text], textarea {
   -webkit-transition: all 0.30s ease-in-out;
