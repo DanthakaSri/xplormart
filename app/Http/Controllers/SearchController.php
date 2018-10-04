@@ -11,6 +11,10 @@ class SearchController extends Controller
 
     public function getAllSearch(Request $request)
     {
+        //get correct location
+        $location = $request->input('location');
+        $newlocation = explode(" ", $location);
+        $request['location'] = $newlocation[0];
 
 
         if ($request->has('keyword') && ($request->input('keyword') != null)) {
@@ -157,8 +161,6 @@ class SearchController extends Controller
 
     public function getMarketByLocation($location)
     {
-
-
         $markets = DB::table('markets')
             ->where('suburb', 'like', "%{$location}%")->orWhere('city', 'like', "%{$location}%")
             ->get();
