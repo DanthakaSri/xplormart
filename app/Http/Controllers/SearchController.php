@@ -13,28 +13,47 @@ class SearchController extends Controller
     {
 
 
-        $keyword = $request['keyword'];
-        $type = $request['type'];
-        $location = $request['location'];
-
-
-        if ($request->has('keyword')) {
-            if($request->has('type'))
-            {
-                if ($request->has('location'))
-                {
+        if ($request->has('keyword') && ($request->input('keyword') != null)) {
+            if ($request->has('type') && ($request->input('type') != null)) {
+                if ($request->has('location') && ($request->input('location') != null)) {
+                    echo 'worked all';
                     return $this->getAllFieldSearch($request);
                 }
             }
         }
-        if ($request->has('keyword')) {
-            return $this->getMarketByKeyword($keyword);
+
+        if ($request->has('keyword') && ($request->input('keyword') != null)) {
+            if ($request->has('type') && ($request->input('type') != null)) {
+                return $this->getKeywordAndType($request->input('keyword'), $request->input('type'));
+            }
+
         }
-        if ($request->has('type')) {
-            return $this->getMarketByKeyword($type);
+        if ($request->has('keyword') && ($request->input('keyword') != null)) {
+            if ($request->has('location') && ($request->input('location') != null)) {
+                return $this->getKeywordAndLocation($request->input('keyword'), $request->input('location'));
+            }
+
         }
-        if ($request->has('location')) {
-            return $this->getMarketByKeyword($location);
+        if ($request->has('type') && ($request->input('type') != null)) {
+            if ($request->has('location') && ($request->input('location') != null)) {
+                return $this->getTypeAndLocation($request->input('type'), $request->input('location'));
+            }
+
+        }
+
+
+        if ($request->has('keyword') && ($request->input('keyword') != null)) {
+            echo 'worked keyword';
+            return $this->getMarketByKeyword($request->input('keyword'));
+        }
+        if ($request->has('type') && ($request->input('type') != null)) {
+            echo 'worked type';
+            return $this->getMarketByType($request->input('type'));
+        }
+
+        if ($request->has('location') && ($request->input('location') != null)) {
+            echo 'worked location';
+            return $this->getMarketByLocation($request->input('location'));
         }
 
 
@@ -48,39 +67,87 @@ class SearchController extends Controller
         $type = $request['type'];
         $location = $request['location'];
 
-        $key= $keyword . '%';
+
         $markets = DB::table('markets')->where([
-            ['name', 'like',$key ],
+            ['name', 'like', "%{$keyword}%"],
             ['type', '=', $type],
-            ['suburb', '=', $location],
+            ['suburb', 'like', "%{$location}%"],
         ])->get();
+
 
         $types = Type::all();
 
-//        return $markets;
+        return view('market.searchResults', compact('markets', 'types'));
+    }
+
+    public function getKeywordAndType($keyword, $type)
+    {
+
+        $markets = DB::table('markets')->where([
+            ['name', 'like', "%{$keyword}%"],
+            ['type', '=', $type],
+        ])->get();
+
+
+        $types = Type::all();
+
+        return view('market.searchResults', compact('markets', 'types'));
+    }
+
+    public function getKeywordAndLocation($keyword, $location)
+    {
+
+        $markets = DB::table('markets')->where([
+            ['name', 'like', "%{$keyword}%"],
+            ['suburb', 'like', "%{$location}%"],
+        ])->orWhere([
+            ['name', 'like', "%{$keyword}%"],
+            ['city', 'like', "%{$location}%"],
+        ])->get();
+
+
+        $types = Type::all();
+
+        return view('market.searchResults', compact('markets', 'types'));
+    }
+
+    public function getTypeAndLocation($type, $location)
+    {
+
+        $markets = DB::table('markets')->where([
+            ['type', 'like', "%{$type}%"],
+            ['suburb', 'like', "%{$location}%"],
+        ])->orWhere([
+            ['type', 'like', "%{$type}%"],
+            ['city', 'like', "%{$location}%"],
+        ])->get();
+
+
+        $types = Type::all();
 
         return view('market.searchResults', compact('markets', 'types'));
     }
 
     public function getMarketByKeyword($keyword)
     {
-        $key='%' . $keyword . '%';
+
         $markets = DB::table('markets')
-            ->where('name', 'like', $key)
+            ->where('name', 'like', "%{$keyword}%")
             ->get();
 
         $types = Type::all();
-//        return $key;
 
         return view('market.searchResults', compact('markets', 'types'));
+
+
     }
 
     public function getMarketByType($type)
     {
 
-        $key='%' . $type . '%';
+
         $markets = DB::table('markets')
-            ->where('type', '=', $key)
+            ->where('type', '=', $type)
             ->get();
 
         $types = Type::all();
@@ -92,13 +159,15 @@ class SearchController extends Controller
     public function getMarketByLocation($location)
     {
 
-        $key='%' . $location . '%';
+
         $markets = DB::table('markets')
-            ->where('suburb', 'like', $key)
+            ->where('suburb', 'like', "%{$location}%")->orWhere('city', 'like', "%{$location}%")
             ->get();
 
         $types = Type::all();
 //        return $key;
         return view('market.searchResults', compact('markets', 'types'));
     }
+
+
 }
