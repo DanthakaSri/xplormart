@@ -482,6 +482,21 @@ $("#marketType").change(function(){
    }
 });
 
+$(".timePick").on('change', function(){
+  if($(this).val()=="Closed")
+  {
+    $(this).siblings('input').attr('disabled','disabled');
+    $(this).siblings('input').val('');
+  }
+   else
+   {
+    $(this).siblings('input').removeAttr('disabled');
+   }
+});
+
+
+
+
 $('#listingCountry').focusout(function (){
   check_country();
 });
