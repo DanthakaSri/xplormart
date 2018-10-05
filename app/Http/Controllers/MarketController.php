@@ -60,6 +60,7 @@ class MarketController extends Controller
             'suburb' => 'required',
             'postcode' => 'required',
             'city' => 'required',
+            'country' => 'required',
 
         ]);
         if ($validator->fails()) {

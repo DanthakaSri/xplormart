@@ -28,6 +28,12 @@
                                                placeholder="Market Title">
 
                                         <span class="error_form" id="market_title_errorMsg"></span>
+
+                                        @if ($errors->has('name'))
+                                            <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('name') }}</strong>
+                                    </span>
+                                        @endif
                                     </div>
                                     <div class="form-group col-sm-6 col-xs-12">
                                         <label for="listingCategory"><span class="mandatory_field">*</span>Type</label>
@@ -383,7 +389,7 @@
 
                                     <div class="form-group col-sm-6 col-xs-12">
                                         <label for="listingPhone"><span class="mandatory_field">*</span>Phone</label>
-                                        <input type="number" name="phone_num" value="{{old('phone_num')}}" class="form-control" id="listingPhone"
+                                        <input type="text" name="phone_num" value="{{old('phone_num')}}" class="form-control" id="listingPhone"
                                                placeholder="(+xx) xxxxxxxxx">
                                         @if ($errors->has('phone_num'))
                                             <span class="invalid-feedback" role="alert">
