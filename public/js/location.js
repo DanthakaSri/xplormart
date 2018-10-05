@@ -105,7 +105,12 @@ function geocodeLatLng(latlng) {
                 window.alert('No results found');
             }
         } else {
-            window.alert('Geocoder failed due to: ' + status);
+            console.log('Geocoder failed due to: ' + status);
+            $.get("http://ipinfo.io", function (response) {
+                //$("#ip").html("IP: " + response.ip);
+                $("#locality").html(response.city);
+                //$("#details").html(JSON.stringify(response, null, 4));
+            }, "jsonp");
         }
     });
 }
