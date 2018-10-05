@@ -9,31 +9,6 @@
     <section class="clerfix categoryGrid">
         <div class="container">
             <div class="row">
-                <div class="col-sm-4 col-xs-12">
-
-                    <div class="sidebarInner sidebarCategory">
-                        <div class="mini-submenu">
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </div>
-                        <div class="list-group">
-                        <span href="#" class="list-group-item active">
-                            Market Categories
-                            <span class="pull-right" id="slide-submenu">
-                                <i class="fa fa-times"></i>
-                            </span>
-                        </span>
-
-                            @foreach($types as $type)
-                                <a href="{{route('searchT',$type->type)}}" class="list-group-item"><i
-                                        class="fa fa-shopping-bag "></i> {{$type->type}} markets</a></li>
-                            @endforeach
-
-                           {{ $types->links()}}
-                        </div>
-                    </div>
-                </div>
                 <div class="col-sm-8 col-xs-12">
                     <div class="resultBar">
                         @if (session('status'))
@@ -101,6 +76,32 @@
 
                     {{ $markets->links() }}
                 </div>
+                <div class="col-sm-4 col-xs-12">
+
+                    <div class="sidebarInner sidebarCategory">
+                        <div class="mini-submenu">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </div>
+                        <div class="list-group">
+                        <span href="#" class="list-group-item active">
+                            Market Categories
+                            <span class="pull-right" id="slide-submenu">
+                                <i class="fa fa-times"></i>
+                            </span>
+                        </span>
+
+                            @foreach($types as $type)
+                                <a href="{{route('searchT',$type->type)}}" class="list-group-item"><i
+                                        class="fa fa-shopping-bag "></i> {{$type->type}} markets</a></li>
+                            @endforeach
+
+                           {{ $types->links()}}
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
