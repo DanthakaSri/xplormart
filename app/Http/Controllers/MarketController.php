@@ -56,7 +56,7 @@ class MarketController extends Controller
             'email' => 'required|string|email|max:255|unique:users',
             'type' => 'required',
             'street_address' => 'required',
-            'phone_num' => 'string|max:10',
+            'phone_num' => 'string|max:13',
             'suburb' => 'required',
             'postcode' => 'required',
             'city' => 'required',
