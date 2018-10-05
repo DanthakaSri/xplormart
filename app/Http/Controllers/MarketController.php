@@ -92,7 +92,7 @@ class MarketController extends Controller
         $saturday = $request['saturdayFrom'] . '-' . $request['saturdayTo'];
         $sunday = $request['sundayFrom'] . '-' . $request['sundayTo'];
 
-        if($request->has('otherType'))
+        if($request->has('otherType')&&($request->input('otherType')!=null))
         {
             if(Type::create([
                 'type'=>$request['otherType'],
