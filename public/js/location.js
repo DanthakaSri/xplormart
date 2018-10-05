@@ -108,7 +108,7 @@ function geocodeLatLng(latlng) {
             console.log('Geocoder failed due to: ' + status);
             $.get("https://ipinfo.io", function (response) {
                 //$("#ip").html("IP: " + response.ip);
-                $("#locality").html(response.city);
+                $("#locality").val(response.city);
                 //$("#details").html(JSON.stringify(response, null, 4));
             }, "jsonp");
         }
