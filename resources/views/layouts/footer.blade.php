@@ -11,7 +11,7 @@
                             <img src="{{asset('img/logo.png')}}" alt="footer_log">
                         </a>
                         <p>Xplormart community platform is a search engine where people can find local markets based on <br>
-                         their preferences and this platform allow users to verify and rate markets based on their experiences. 
+                         their preferences and this platform allow users to verify and rate markets based on their experiences.
                         Also, this platform enable users to add markets into the system.</p>
                         <ul class="list-styled list-contact">
                             <li><i class="fa fa-phone" aria-hidden="true"></i>[+61] 455 503 013</li>
@@ -62,7 +62,7 @@
                             </div>
                             <div class="col-sm-7 col-sm-pull-5 col-xs-12">
                                 <div class="copyRightText">
-                                    <p>Copyright &copy; 2018. All Rights Reserved by Xploremart (CDU Strikers)</p>
+                                    <p>Copyright &copy; 2018. All Rights Reserved by Xplormart (CDU Strikers)</p>
                                 </div>
                             </div>
                         </div>
