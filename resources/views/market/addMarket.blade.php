@@ -1,3 +1,4 @@
+<!-- Add market view -->
 @extends('layouts.baseApp')
 
 @section('title','Add Market')

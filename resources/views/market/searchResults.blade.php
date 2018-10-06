@@ -1,3 +1,5 @@
+<!-- Search market view -->
+
 @extends('layouts.baseApp')
 
 @section('title','Search Results')

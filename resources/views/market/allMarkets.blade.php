@@ -1,3 +1,5 @@
+<!-- All markets view -->
+
 @extends('layouts.baseApp')
 
 @section('title','All Markets')
