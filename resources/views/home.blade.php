@@ -16,7 +16,7 @@
                 <div class="col-xs-12">
                     <div class="banerInfo">
                         <h1>Explore Your Local Market</h1>
-                        <p>Xplormart helps to find out local markets arround you</p>
+                        <p>Xplormart helps to find out local markets around you</p>
                         <form class="form-inline" action="{{route('search')}}" method="post">
                             @csrf
                             <div class="form-group inputGroup">
