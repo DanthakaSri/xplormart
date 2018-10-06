@@ -20,16 +20,7 @@
                     </div>
                 </div>
                 <div class="col-sm-3 col-xs-12">
-                    <div class="footerInfoTitle">
-                        <h4>Links</h4>
-                    </div>
-                    <div class="useLink">
-                        <ul class="list-unstyled">
-                            <li><a href="#">Dashboard</a></li>
-                            <li><a href="#">Login</a></li>
 
-                        </ul>
-                    </div>
                 </div>
                 <div class="col-sm-2 col-xs-12">
                     <div class="footerInfoTitle">
