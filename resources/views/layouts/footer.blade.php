@@ -28,9 +28,9 @@
                     </div>
                     <div class="useLink">
                         <ul class="list-unstyled">
-                            <li><a href="/contact">Contact Us</a></li>
-                            <li><a href="/terms">Terms and Conditions</a></li>
-                            <li><a href="/howitworks">How It Works</a></li>
+                            <li><a href="/contact" class="contactus">Contact Us</a></li>
+                            <li><a href="/terms" class="tnc">Terms and Conditions</a></li>
+                            <li><a href="/howitworks" class="hworks">How It Works</a></li>
                         </ul>
                     </div>
                 </div>

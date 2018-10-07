@@ -9,7 +9,7 @@
         </div>
     </div>
 </div>-->
-<!--div id="preloader" class="smooth-loader-wrapper">
+<div id="preloader" class="smooth-loader-wrapper">
 <div class="smooth-loader">
 <div class="sk-cube-grid">
   <div class="sk-cube sk-cube1"></div>
@@ -23,8 +23,9 @@
   <div class="sk-cube sk-cube9"></div>
 </div>
 </div>
-</div-->
+</div>
 
+<!--
 <style>
 body {
   -webkit-font-smoothing: antialiased;
@@ -222,3 +223,4 @@ particleground(document.getElementById('particles-background'), {
 });
 
 </script>
+-->
