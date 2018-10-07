@@ -23,12 +23,8 @@ class searchMarketTest extends TestCase
      */
     public function testMarketSearch()
     {
-       /* $search = SearchController::getKeywordAndType('Dragon food', 'Vietnamese');
+        $search = SearchController::getKeywordAndType('Dragon', 'Vietnamese');
 
-        $this->assertEquals('Dragon', $search);*/
-
-        $this->assertDatabaseHas('markets', [
-            'name' => 'Dragon food'
-        ]);
+        $this->assertEquals('Dragon', $search);
     }
 }
