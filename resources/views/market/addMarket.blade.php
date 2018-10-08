@@ -10,7 +10,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-xs-12">
-                    <h1>Add Market</h1>
+                    <h1 style="padding-bottom: 10px;font-weight: 400">Add Market</h1>
                     <form action="{{ route('shop.store') }}" method="post" id="addMarketForm" class="listing__form"
                           enctype="multipart/form-data">
                         <div class="dashboardBoxBg mb30">
