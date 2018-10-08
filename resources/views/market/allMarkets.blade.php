@@ -100,7 +100,7 @@
                                         class="fa fa-shopping-bag "></i> {{$type->type}} markets</a></li>
                             @endforeach
 
-                           {{ $types->links()}}
+                            {{ $types->links()}}
                         </div>
                     </div>
                 </div>

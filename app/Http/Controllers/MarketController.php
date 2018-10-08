@@ -3,17 +3,15 @@
 namespace App\Http\Controllers;
 
 use App\Market;
-use App\Rating;
 use App\Type;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Validator;
-use function MongoDB\BSON\toJSON;
 
 class MarketController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Display all the markets and paginate 8 market for a page
      *
      * @return \Illuminate\Http\Response
      */
@@ -29,7 +27,7 @@ class MarketController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
+     * load add market view with Type retrieve from database
      *
      * @return \Illuminate\Http\Response
      */
@@ -69,7 +67,8 @@ class MarketController extends Controller
                 ->withInput();
         }
 
-//image uploading and save
+
+        //image uploading
         $type = $request['type'];
         $filename = '';
 
@@ -79,9 +78,8 @@ class MarketController extends Controller
             $filename = $type . '_' . +time() . '.' . $extension;
             $destination = public_path('img/uploads/market');
             $file->move($destination, $filename);
-        }else
-        {
-            $filename='default.jpg';
+        } else {
+            $filename = 'default.jpg';
         }
 
         $monday = $request['mondayFrom'] . '-' . $request['mondayTo'];
@@ -92,12 +90,11 @@ class MarketController extends Controller
         $saturday = $request['saturdayFrom'] . '-' . $request['saturdayTo'];
         $sunday = $request['sundayFrom'] . '-' . $request['sundayTo'];
 
-        if($request->has('otherType')&&($request->input('otherType')!=null))
-        {
-            if(Type::create([
-                'type'=>$request['otherType'],
-            ])){
-                $request['type']=$request['otherType'];
+        if ($request->has('otherType') && ($request->input('otherType') != null)) {
+            if (Type::create([
+                'type' => $request['otherType'],
+            ])) {
+                $request['type'] = $request['otherType'];
             }
 
 
@@ -115,7 +112,7 @@ class MarketController extends Controller
             'postcode' => $request['postcode'],
             'suburb' => $request['suburb'],
             'city' => $request['city'],
-            'image' => '/img/uploads/market/'.(string)$filename,
+            'image' => '/img/uploads/market/' . (string)$filename,
             'fb_url' => $request['fb_url'],
             'youtube_url' => $request['youtube_url'],
             'twitter_url' => $request['twitter_url'],
@@ -145,15 +142,14 @@ class MarketController extends Controller
     public function show($id)
     {
 
-        $rating=RatingController::getRatingNumber($id);
-        $comments=RatingController::getRatingComments($id);
-        $verify=RatingController::getMarketVerifyStatus($id);
-
+        $rating = RatingController::getRatingNumber($id);
+        $comments = RatingController::getRatingComments($id);
+        $verify = RatingController::getMarketVerifyStatus($id);
 
 
         $market_details = Market::where('id', '=', $id)->first();
 
-        return view('market.viewMarket', compact('market_details','rating','comments','verify'));
+        return view('market.viewMarket', compact('market_details', 'rating', 'comments', 'verify'));
 
 
     }
@@ -162,7 +158,8 @@ class MarketController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @return \Illuminate\Http\Response
+     * @param $id
+     * @return void
      */
     public function edit($id)
     {

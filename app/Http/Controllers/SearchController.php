@@ -2,13 +2,16 @@
 
 namespace App\Http\Controllers;
 
-use App\Type;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
 class SearchController extends Controller
 {
 
+    /**
+     *  Get all search inputs and passing to correct method
+     *
+     */
     public function getAllSearch(Request $request)
     {
         //get correct location
@@ -64,6 +67,11 @@ class SearchController extends Controller
 
     }
 
+    /**
+     * Get the market results if request has all the request fields
+     * @return \Illuminate\Http\Response
+     */
+
     public function getAllFieldSearch(Request $request)
     {
         $keyword = $request['keyword'];
@@ -83,6 +91,10 @@ class SearchController extends Controller
         return view('market.searchResults', compact('markets', 'types'));
     }
 
+    /**
+     * Get Market results if request has only keyword and market type
+     * @return \Illuminate\Http\Response
+     */
     public function getKeywordAndType($keyword, $type)
     {
 
@@ -96,6 +108,12 @@ class SearchController extends Controller
 
         return view('market.searchResults', compact('markets', 'types'));
     }
+
+
+    /**
+     * Get Market results if request has only keyword and market location
+     * @return \Illuminate\Http\Response
+     */
 
     public function getKeywordAndLocation($keyword, $location)
     {
@@ -114,6 +132,11 @@ class SearchController extends Controller
         return view('market.searchResults', compact('markets', 'types'));
     }
 
+
+    /**
+     * Get Market results if request has only market type and market location
+     * @return \Illuminate\Http\Response
+     */
     public function getTypeAndLocation($type, $location)
     {
 
@@ -131,6 +154,13 @@ class SearchController extends Controller
         return view('market.searchResults', compact('markets', 'types'));
     }
 
+
+    /**
+     *
+     * Get Market results if request has only keyword
+     * @return \Illuminate\Http\Response
+     */
+
     public function getMarketByKeyword($keyword)
     {
 
@@ -145,6 +175,12 @@ class SearchController extends Controller
 
     }
 
+    /**
+     *
+     * Get Market results if request has only market type
+     * @return \Illuminate\Http\Response
+     */
+
     public function getMarketByType($type)
     {
         $markets = DB::table('markets')
@@ -153,6 +189,12 @@ class SearchController extends Controller
         $types = DB::table('types')->paginate(10);
         return view('market.searchResults', compact('markets', 'types'));
     }
+
+    /**
+     *
+     * Get Market results if request has only market location
+     * @return \Illuminate\Http\Response
+     */
 
     public function getMarketByLocation($location)
     {
