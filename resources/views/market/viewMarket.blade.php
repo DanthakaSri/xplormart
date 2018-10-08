@@ -169,6 +169,9 @@
                                     </div>
                                     <div class="media-body">
                                         <h4 class="media-heading">{{$comment->username}}</h4>
+                                        <p class="pull-right">
+                                            {{ Carbon\Carbon::parse($comment->created_at)->diffForHumans()}}
+                                        </p>
                                         <ul class="list-inline rating">
 
                                             @foreach(range(1,5) as $i)
@@ -189,6 +192,7 @@
                                             @endforeach
 
                                         </ul>
+
                                         <p class="media">{{ $comment->comment }}</p>
                                     </div>
 

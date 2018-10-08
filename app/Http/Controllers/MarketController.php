@@ -19,7 +19,7 @@ class MarketController extends Controller
      */
     public function index()
     {
-        $markets = DB::table('markets')->paginate(8);
+        $markets = DB::table('markets')->latest()->paginate(8);
 
 
         $types = DB::table('types')->paginate(10);
@@ -139,6 +139,7 @@ class MarketController extends Controller
     /**
      * Display the specified resource.
      *
+     * @param $id
      * @return \Illuminate\Http\Response
      */
     public function show($id)
