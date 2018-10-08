@@ -75,7 +75,7 @@
                         </div>
                         <div class="dashboardBoxBg mb30">
                             <div class="profileIntro paraMargin">
-                                <h3>Shop Details</h3>
+                                <h3>Market Details</h3>
                                 <div class="row">
                                 <div class="col-sm-12 col-xs-12">
                                     <div class="form-group col-sm-6 col-xs-12">
