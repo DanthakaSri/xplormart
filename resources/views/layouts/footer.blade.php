@@ -10,12 +10,15 @@
 
                             <img src="{{asset('img/logo.png')}}" alt="footer_log">
                         </a>
-                        <p>Xplormart community platform is a search engine where people can find local markets based on <br>
-                         their preferences and this platform allow users to verify and rate markets based on their experiences.
-                        Also, this platform enable users to add markets into the system.</p>
+                        <p>Xplormart community platform is a search engine where people can find local markets based on
+                            <br>
+                            their preferences and this platform allow users to verify and rate markets based on their
+                            experiences.
+                            Also, this platform enable users to add markets into the system.</p>
                         <ul class="list-styled list-contact">
                             <li><i class="fa fa-phone" aria-hidden="true"></i>[+61] 455 503 013</li>
-                            <li><i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:info@explormart.com">info@xplormart.com</a></li>
+                            <li><i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:info@explormart.com">info@xplormart.com</a>
+                            </li>
                         </ul>
                     </div>
                 </div>

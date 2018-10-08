@@ -3,7 +3,7 @@
 @section('css')
 
 
-    @endsection
+@endsection
 
 @section('title','Home')
 @section('nvClass','')
@@ -22,15 +22,16 @@
                             <div class="form-group inputGroup">
                                 <div class="input-group">
                                     <div class="input-group-addon">Find</div>
-                                    <input type="text" name="keyword" class="form-control" id="findItem" placeholder="Keywords">
+                                    <input type="text" name="keyword" class="form-control" id="findItem"
+                                           placeholder="Keywords">
                                     <div class="input-group-addon addon-right"></div>
                                 </div>
                             </div>
                             <div class="form-group inputGroup">
                                 <div class="input-group">
                                     <div class="input-group-addon">Market Type</div>
-                                    <select class="form-control" name="type" id="type" >
-                                    <option  value="" selected>Please select</option>
+                                    <select class="form-control" name="type" id="type">
+                                        <option value="" selected>Please select</option>
                                         @foreach($types as $type)
                                             <option value="{{$type->type}}">{{$type->type}}</option>
                                         @endforeach
@@ -38,19 +39,21 @@
                                 </div>
                             </div>
 
-                            <div class="form-group inputGroup" >
+                            <div class="form-group inputGroup">
                                 <div class="input-group">
-                                    <div class="input-group-addon" >Near</div>
-                                    <input type="text" name="location" id="locality" onFocus="geolocate()" class="form-control " placeholder="Location">
-                                    <div class="input-group-addon addon-right"><a onclick="getCurrentLocation()" class="getGPSLocation"><i class="icon-listy icon-target"
-                                                                                             aria-hidden="true"></i></a></div>
+                                    <div class="input-group-addon">Near</div>
+                                    <input type="text" name="location" id="locality" onFocus="geolocate()"
+                                           class="form-control " placeholder="Location">
+                                    <div class="input-group-addon addon-right">
+                                        <a onclick="getCurrentLocation()" class="icon-listy icon-target" aria-hidden="true"></i></a>
+                                    </div>
                                 </div>
                             </div>
 
 
                             <div class="btnWrapper">
-                                <button type="submit" class="btn btn-primary searchBtn"><i class="fa fa-search"
-                                                                                 aria-hidden="true"></i> Search
+                                <button type="submit" class="btn btn-primary searchBtn"><i class="fa fa-search" aria-hidden="true"></i>
+                                    Search
                                 </button>
                             </div>
                         </form>
@@ -92,7 +95,8 @@
                                                 <div class="thingsMask">
                                                     <ul class="list-inline rating">
                                                         @foreach(range(1,5) as $i)
-                                                            <span class="fa-stack" style="width: 3px; margin-right: 10px;">
+                                                            <span class="fa-stack"
+                                                                  style="width: 3px; margin-right: 10px;">
                                                 <li><i class="fa fa-star-o fa-stack-2x fa-2x"
                                                        aria-hidden="true"></i></li>
 
@@ -109,7 +113,8 @@
                                                     </span>
                                                         @endforeach
                                                     </ul>
-                                                    <a class="allMarketHomeLink" href="{{ route('shop.show',$market->id) }}">
+                                                    <a class="allMarketHomeLink"
+                                                       href="{{ route('shop.show',$market->id) }}">
                                                         <h2>{{ $market->name }}
                                                             @if($market->verify_count > 5)
                                                                 <i class="fa fa-check-circle" aria-hidden="true"></i>
@@ -148,7 +153,8 @@
 @section('js')
 
 
-    <script src="{{ asset('js/location.js') }}" ></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDm9diXPOG1r9dYhtKFy--gQ3xAhuQ6qnY&libraries=places&callback=initAutocomplete"
-            async defer></script>
-    @endsection
+    <script src="{{ asset('js/location.js') }}"></script>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDm9diXPOG1r9dYhtKFy--gQ3xAhuQ6qnY&libraries=places&callback=initAutocomplete"
+        async defer></script>
+@endsection

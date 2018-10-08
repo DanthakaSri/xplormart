@@ -9,9 +9,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>@yield('title') | {{ config('app.name', 'Laravel') }}</title>
 
-    @include('includes.header')
+@include('includes.header')
 
-    <!-- GOOGLE FONT -->
+<!-- GOOGLE FONT -->
     <link href="https://fonts.googleapis.com/css?family=Muli:200,300,400,600,700,800,900" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
@@ -20,7 +20,7 @@
 
 
     <!-- FAVICON -->
-    <link href= "{{ asset('img/favicon.png') }}" rel="shortcut icon">
+    <link href="{{ asset('img/favicon.png') }}" rel="shortcut icon">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -30,24 +30,28 @@
     <![endif]-->
 
     @section('css')
-        @show
+    @show
 
 </head>
 
-<body id="body" class="body-wrapper boxed-menu" >
+<body id="body" class="body-wrapper boxed-menu">
 
+
+{{--including preload section from includes section--}}
 @include('includes.preloader')
 
+{{--main html design will be shown here--}}
 <div class="main-wrapper">
     @include('layouts.navbar')
     @yield('content')
-  @include('layouts.footer')
+    @include('layouts.footer')
 </div>
+
 
 @include('includes.footer')
 
 @section('js')
-    @show
+@show
 
 </body>
 

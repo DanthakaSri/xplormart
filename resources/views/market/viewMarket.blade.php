@@ -224,7 +224,8 @@
 
                                         <div class="modal-body">
                                             <div class="panel-body">
-                                                <form id="ratingForm" class="ratingForm" action="{{route('rating.store')}}"
+                                                <form id="ratingForm" class="ratingForm"
+                                                      action="{{route('rating.store')}}"
                                                       method="post"
                                                       enctype="multipart/form-data">
                                                     @csrf
@@ -242,7 +243,8 @@
                                                     </div>
                                                     <div class="form-group">
                                                         <label for="userName"><span class="mandatory_field">*</span>Email</label>
-                                                        <input id="ratingEmailValue" type="email" name="email" placeholder="Email"
+                                                        <input id="ratingEmailValue" type="email" name="email"
+                                                               placeholder="Email"
                                                                value="{{old('email')}}"
                                                                class="form-control ratingEmail">
                                                         @if ($errors->has('email'))
@@ -305,7 +307,8 @@
                                                     </div>
 
                                                     <div class="form-group">
-                                                        <button id="submitReviewBtn" type="submit" class="btn btn-primary pull-left">Send
+                                                        <button id="submitReviewBtn" type="submit"
+                                                                class="btn btn-primary pull-left">Send
                                                             Review
                                                         </button>
                                                     </div>
