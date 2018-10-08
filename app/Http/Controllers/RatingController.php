@@ -14,7 +14,7 @@ class RatingController extends Controller
      */
     public static function getRatingComments($market_id)
     {
-        $comments = DB::table('ratings')->where('market_id', '=', $market_id)->get();
+        $comments = DB::table('ratings')->where('market_id', '=', $market_id)->latest()->get();
 
         return $comments;
     }
