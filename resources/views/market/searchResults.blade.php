@@ -12,6 +12,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-8 col-xs-12">
+                    <h1>Search Results</h1>
                     <div class="resultBar">
                         @if (session('status'))
                             <div class="alert alert-success alert-dismissible" role="alert">
