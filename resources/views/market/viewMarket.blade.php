@@ -133,18 +133,18 @@
                             <p>{{$market_details->description}}</p>
                         </div>
                         <br>
-                        <div class="detailsInfoBox">
-                            <h3>Features</h3>
-                            <ul class="list-inline featuresItems">
-                                <li><i class="fa fa-check-circle-o" aria-hidden="true"></i> Ingrediants</li>
-                                <li><i class="fa fa-check-circle-o" aria-hidden="true"></i> Bulk order</li>
-                                <li><i class="fa fa-check-circle-o" aria-hidden="true"></i> Beverages</li>
-                                <li><i class="fa fa-check-circle-o" aria-hidden="true"></i> Vegetarian</li>
-                                <li><i class="fa fa-check-circle-o" aria-hidden="true"></i> Dry food</li>
-                                <li><i class="fa fa-check-circle-o" aria-hidden="true"></i> Street Parking</li>
-                                <li><i class="fa fa-check-circle-o" aria-hidden="true"></i> Accept Credit Card</li>
-                            </ul>
-                        </div>
+                        {{--<div class="detailsInfoBox">--}}
+                            {{--<h3>Features</h3>--}}
+                            {{--<ul class="list-inline featuresItems">--}}
+                                {{--<li><i class="fa fa-check-circle-o" aria-hidden="true"></i> Ingrediants</li>--}}
+                                {{--<li><i class="fa fa-check-circle-o" aria-hidden="true"></i> Bulk order</li>--}}
+                                {{--<li><i class="fa fa-check-circle-o" aria-hidden="true"></i> Beverages</li>--}}
+                                {{--<li><i class="fa fa-check-circle-o" aria-hidden="true"></i> Vegetarian</li>--}}
+                                {{--<li><i class="fa fa-check-circle-o" aria-hidden="true"></i> Dry food</li>--}}
+                                {{--<li><i class="fa fa-check-circle-o" aria-hidden="true"></i> Street Parking</li>--}}
+                                {{--<li><i class="fa fa-check-circle-o" aria-hidden="true"></i> Accept Credit Card</li>--}}
+                            {{--</ul>--}}
+                        {{--</div>--}}
                         <br>
                         <div class="detailsInfoBox">
                             <h3>Reviews ({{$comments->count()}})</h3>
