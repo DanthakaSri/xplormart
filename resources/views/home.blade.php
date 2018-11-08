@@ -45,7 +45,7 @@
                                     <input type="text" name="location" id="locality" onFocus="geolocate()"
                                            class="form-control " placeholder="Location">
                                     <div class="input-group-addon addon-right">
-                                        <a onclick="getCurrentLocation()" class="icon-listy icon-target" aria-hidden="true"></i></a>
+                                        <a onclick="getCurrentLocation()" class="glyphicon glyphicon-map-marker location_icon" aria-hidden="true"></i></a>
                                     </div>
                                 </div>
                             </div>
