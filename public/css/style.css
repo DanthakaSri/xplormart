@@ -10028,6 +10028,10 @@ span.invalid-feedback{
     color: red;
 }
 
+.location_icon {
+  cursor:pointer;
+}
+
 /*
 input[type=text], textarea {
   -webkit-transition: all 0.30s ease-in-out;

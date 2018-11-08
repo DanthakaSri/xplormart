@@ -623,7 +623,7 @@ function check_suburb (){
   var suburb_length = $('#listingSuburb').val().length;
 
   if (suburb_length <= 0) {
-    $('#suburb_errorMsg').html('Postcode cannot be empty');
+    $('#suburb_errorMsg').html('Suburb cannot be empty');
     $('#suburb_errorMsg').show();
     error_suburb = true;
   }
@@ -638,7 +638,7 @@ function check_city (){
   var city_length = $('#listingCity').val().length;
 
   if (city_length <= 0) {
-    $('#city_errorMsg').html('Postcode cannot be empty');
+    $('#city_errorMsg').html('City cannot be empty');
     $('#city_errorMsg').show();
     error_city = true;
   }
